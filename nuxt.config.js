@@ -57,6 +57,6 @@ export default {
   },
 
   proxy: {
-    '/api/': { target: 'http://localhost:8000/api/query', pathRewrite: {'^/api/': ''}, changeOrigin: true }
+    '/api/': { target: 'https://aammon.ch/api/query', pathRewrite: {'^/api/': ''}, changeOrigin: true }
   }
 }
