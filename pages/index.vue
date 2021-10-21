@@ -2,7 +2,6 @@
   <main>
     <Intro :title="page.content.title" />
     <h1>{{ page }}</h1>
-    <h1>hallo aurelian</h1>
 
     <ul v-if="page" class="grid">
       <li v-for="album in page.children" :key="album.uri">
