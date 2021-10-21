@@ -24,7 +24,6 @@
 <script>
 export default {
   async asyncData({ params, $axios }) {
-    // This could also be an action dispatch or whatever
     const data = await $axios.$post('/api/',{
       query: "page('test')"
     }, {
