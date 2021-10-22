@@ -53,10 +53,10 @@ export default {
   },
 
   axios: {
-    proxy: true // Can be also an object with default options
+    proxy: false // Can be also an object with default options
   },
 
   proxy: {
-    '/api/': { target: 'https://aammon.ch/api/query', pathRewrite: {'^/api/': ''}, changeOrigin: true }
+    '/api/': { target: 'http://localhost:8000/api/query', pathRewrite: {'^/api/': ''}, changeOrigin: true }
   }
 }
