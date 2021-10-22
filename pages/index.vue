@@ -1,41 +1,25 @@
 <template>
   <main>
-    <Intro :title="page.content.title" />
-    <h1>{{ page }}</h1>
+    <Intro :title="content.title" />
+    <h1>{{ content }}</h1>
     <h1>hallo carlo</h1>
-
-    <ul v-if="page" class="grid">
-      <li v-for="album in page.children" :key="album.uri">
-        <nuxt-link :to="'/' + album.uri">
-          <figure>
-            <span v-if="album.coverHome" v-html="album.coverHome.html" />
-
-            <figcaption>
-              <span>
-                <span class="example-name">{{ album.title }}</span>
-              </span>
-            </figcaption>
-          </figure>
-        </nuxt-link>
-      </li>
-    </ul>
   </main>
 </template>
 
 <script>
 export default {
   async asyncData({ params, $axios }) {
-    const data = await $axios.$post('/api/',{
-      query: "page('test')"
+    const data = await $axios.$post('http://localhost:8000/api/query',{
+      query: "site"
     }, {
       auth: {
-        username: "aurelianammon@gmail.com",
-        password: "password"
+        username: "hello@alles-negativ.ch",
+        password: "letmein123"
       }
     })
-    const page = data.result
+    const content = data.result
     return { 
-      page 
+      content 
     }
   }
 }
