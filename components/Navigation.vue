@@ -2,11 +2,11 @@
     <nav>
         <ul>
             <li v-for="link in links">
-                <nuxt-link :to="'/' + link" v-if="link != 'error' & link != 'home'">
-                    {{ link }}
+                <nuxt-link :to="'/' + link.slug" v-if="link.status == 'listed' & !link.isHomePage">
+                    {{ link.title }}
                 </nuxt-link>
-                <nuxt-link to="/" v-else-if="link != 'error'">
-                    {{ link }}
+                <nuxt-link to="/" v-else-if="link.isHomePage">
+                    {{ link.title }}
                 </nuxt-link>
             </li>
         </ul>
@@ -25,14 +25,21 @@ export default {
     methods: {
         async getLinks() {
             const data = await this.$axios.$post('http://localhost:8000/api/query',{
-                query: "site.children"
+            "query": "site.children",
+            "select": {
+                "title": true,
+                "slug": true,
+                "isHomePage": true,
+                "isErrorPage": true,
+                "status": true
+            }
             }, {
                 auth: {
                     username: "hello@alles-negativ.ch",
                     password: "letmein123"
                 }
             })
-            this.links = data.result
+            this.links = data.result.data
         }
     },
     created() {
