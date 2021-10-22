@@ -1,6 +1,6 @@
 <template>
-  <header class="intro">
-    <h1>{{ title }}</h1>
+  <header>
+    <h1>Header</h1>
   </header>
 </template>
 
@@ -12,11 +12,12 @@ export default {
 </script>
 
 <style>
-.intro {
+header {
   padding: 10vh 0;
   text-align: center;
+  background:red;
 }
-.intro h1 {
+header h1 {
   position: relative;
   margin-bottom: 1rem;
   font-weight: 900;

@@ -9,7 +9,7 @@
 export default {
   async asyncData({ params, $axios }) {
     const data = await $axios.$post('http://localhost:8000/api/query',{
-      query: "page('home')"
+      query: "page('angebote')"
     }, {
       auth: {
         username: "hello@alles-negativ.ch",
