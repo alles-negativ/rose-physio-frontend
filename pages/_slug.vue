@@ -13,6 +13,7 @@ export default {
         password: "letmein123"
       }
     })
+    console.log(params)
     const content = data.result
     return { 
       content 

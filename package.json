@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/i18n": "^7.1.0",
     "axios": "^0.23.0",
     "core-js": "^3.15.1",
     "dart-sass": "^1.25.0",

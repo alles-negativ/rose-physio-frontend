@@ -2,12 +2,15 @@
     <nav>
         <ul>
             <li v-for="link in links">
-                <nuxt-link :to="'/' + link.slug" v-if="link.status == 'listed' & !link.isHomePage">
+                <nuxt-link :to="localePath('/' + link.slug)" v-if="link.status == 'listed' & !link.isHomePage">
                     {{ link.title }}
                 </nuxt-link>
-                <nuxt-link to="/" v-else-if="link.isHomePage">
+                <nuxt-link :to="localePath('/')" v-else-if="link.isHomePage">
                     {{ link.title }}
                 </nuxt-link>
+            </li>
+            <li>
+                <LanguageInput />
             </li>
         </ul>
     </nav>

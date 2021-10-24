@@ -1,6 +1,8 @@
 <template>
   <main>
     <h1>{{ content.title }}</h1>
+    <h1 class="title">{{ $t('welcome') }}</h1>
+    <p>{{this.$i18n.locale}}</p>
     <p>{{ content }}</p>
   </main>
 </template>
@@ -14,8 +16,13 @@ export default {
       auth: {
         username: "hello@alles-negativ.ch",
         password: "letmein123"
+      },
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Language': 'de'
       }
     })
+    console.log(params)
     const content = data.result
     return { 
       content 
