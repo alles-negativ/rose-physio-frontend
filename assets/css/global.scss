@@ -6,3 +6,10 @@ Using @use to add all the global styles
 
 @use 'reset/_reset';
 @use 'reset/_normalize';
+
+@use 'main/_main';
+@use 'main/_typography';
+@use 'main/_fonts';
+@use 'main/_grids';
+@use 'main/_zindex';
+@use 'main/_colors';
