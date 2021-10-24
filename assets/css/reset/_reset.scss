@@ -1,0 +1,34 @@
+/* 
+reset
+if normalize isn't entirely useful potentially copy some aspects into this and delete normalize
+*/
+
+$green: green;
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section, summary {
+  /* Add correct display for IE 9- and some newer browsers */
+  display: block;
+}
+
+table, th, td {
+  text-align: left;
+  border-collapse: collapse;
+}
+
+main {
+  display: block;
+  min-height: 100%;
+} 
+
+p{
+  color: $green;
+}
