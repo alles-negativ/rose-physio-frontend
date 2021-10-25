@@ -1,9 +1,7 @@
 <template>
   <main>
     <h1>{{ content.content.headertext }}</h1>
-    <h1 class="title">{{ $t('welcome') }}</h1>
-    <p>{{this.$i18n.locale}}</p>
-    <p>{{ content }}</p>
+    <Articles />
   </main>
 </template>
 
