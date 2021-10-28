@@ -1,3 +1,85 @@
 /*
 Global definitions of typography
 */
+
+@use "breakpoints" as *;
+
+h1 {
+    font-family: SpaceGrotesk;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+
+  @include tablet {
+        font-size: 45px;
+  }
+
+  @include desktop {
+        font-size: 60px;
+  }
+}
+
+h2 {
+    font-family: SpaceGrotesk;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+}
+
+h3 {
+    font-family: SpaceGrotesk;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+}
+
+p {
+    font-family: SpaceGrotesk;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.text {
+    font-family: SpaceGrotesk;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 26px;
+
+    &__big {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 38px;
+
+        &--narrow {
+            line-height: 30px;
+        }
+    }
+
+    &__medium {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    &__small {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__menu {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: auto;
+        text-transform: capitalize;
+    }
+}
+
+span {
+    font-family: SpaceGrotesk;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 55px;
+    line-height: 70px;
+}

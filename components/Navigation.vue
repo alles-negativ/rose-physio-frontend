@@ -63,34 +63,6 @@ export default {
 }
 </script>
   
-<style>
-nav {
-  text-align: center;
-  background:black;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav li {
-  float: left;
-}
-
-nav li a {
-  display: block;
-  padding: 8px;
-  text-decoration: none;
-  color: white;
-}
-
-nav li a.nuxt-link-exact-active {
-  color: red;
-}
+<style lang="scss" scoped>
+    @use "Navigation";
 </style>

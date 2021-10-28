@@ -4,12 +4,11 @@ it is declared in the config file under the css-config
 Using @use to add all the global styles
 */
 
-@use 'reset/_reset';
-@use 'reset/_normalize';
+@use 'reset/reset';
 
-@use 'main/_main';
-@use 'main/_typography';
-@use 'main/_fonts';
+@use 'main/main';
+@use 'main/typography';
+@use 'main/fonts';
 @use 'main/_grids';
-@use 'main/_zindex';
-@use 'main/_colors';
+@use 'main/zindex';
+@use 'main/colors';
