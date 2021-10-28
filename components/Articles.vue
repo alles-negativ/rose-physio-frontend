@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-for="article in articles">
+        <div v-for="article in articles" :key="article.id">
             <h3>{{ article.title }}</h3>
             <p>{{ article.contenttext }}</p>
             <img :src="article.images[0].url">
