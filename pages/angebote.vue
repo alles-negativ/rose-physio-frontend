@@ -2,7 +2,7 @@
   <main>
     <div class="grid">
       <h1>{{ content.title }}</h1>
-      <p class="text__big">{{ content }}</p>
+      <p>{{ content }}</p>
     </div>
   </main>
 </template>

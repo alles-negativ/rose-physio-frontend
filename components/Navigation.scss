@@ -1,6 +1,24 @@
+@use "assets/css/main/colors" as *;
+
 nav {
-  text-align: center;
-  background:black;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    position: fixed;
+    display: flex;
+    bottom: 36px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 45px;
+    background: $black;
+    border-radius: 200px;
+    padding: 5px;
 }
 
 nav ul {
@@ -9,21 +27,48 @@ nav ul {
   padding: 0;
   overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
 }
 
 nav li {
-  float: left;
+    display: flex;  
+    height: 35px;
+    width: auto;
+    border-radius: 200px;
+    color: $white;
+    background-color: $black;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: $white;
+        border-radius: 200px;
+        
+        .text__menu {
+            color: $black;
+        }
+    }
+}
+
+p {
+    height: 35px;
+    width: auto;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-bottom: 4px;
+    padding-top: 4px;
 }
 
 nav li a {
   display: block;
-  padding: 8px;
   text-decoration: none;
   color: white;
 }
 
 nav li a.nuxt-link-exact-active {
-  color: red;
+  color: $black;
+  background-color: $white;
+  border-radius: 200px; 
 }
