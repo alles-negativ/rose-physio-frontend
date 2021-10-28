@@ -2,6 +2,11 @@
     <nav>
         <div class="nav">
             <ul>
+                <li>
+                    <nuxt-link :to="localePath('/')">
+                        <img src="/home.svg" alt="">
+                    </nuxt-link>
+                </li>
                 <li v-for="element in menu_elements" :key="element.id">
                     <nuxt-link :to="localePath('/' + element.slug)">
                         <p class="text__menu">{{ element.title }}</p>
@@ -48,11 +53,12 @@ export default {
         menu_elements: function() {
             let elements = []
             for (let i = 0; i < this.links.length; i++) {
-                if (this.links[i].isHomePage) {
-                    let home = this.links[i]
-                    home.slug = ""
-                    elements.push(home)
-                } else if (this.links[i].status == "listed") {
+                // if (this.links[i].isHomePage) {
+                //     let home = this.links[i]
+                //     home.slug = ""
+                //     elements.push(home)
+                // }
+                if (this.links[i].status == "listed" && !this.links[i].isHomePage) {
                     elements.push(this.links[i])
                 }
             }
