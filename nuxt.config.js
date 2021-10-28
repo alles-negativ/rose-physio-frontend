@@ -68,14 +68,6 @@ export default {
     defaultLocale: 'de',
     vueI18n: {
       fallbackLocale: 'de',
-      messages: {
-        de: {
-          welcome: 'Willkommen'
-        },
-        en: {
-          welcome: 'Welcome'
-        }
-      }
     }
   },
 
