@@ -1,6 +1,12 @@
 <template>
   <main>
     <h1>{{ content.content.headertext }}</h1>
+    <div v-if="$device.isDesktop">
+      Desktop
+    </div>
+    <div v-if="$device.isMobile">
+      Mobile
+    </div>
     <Articles />
   </main>
 </template>
