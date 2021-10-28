@@ -4,7 +4,9 @@
             <ul>
                 <li>
                     <nuxt-link class="image" :to="localePath('/')">
-                        <object type="image/svg+xml" data="/home.svg"></object>
+                        <svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                            <path class="path" d="M7.25969 1.80083L11.7596 5.76086C12.0077 5.97918 12.1499 6.29369 12.1499 6.62417V11C12.1499 11.6351 11.635 12.15 10.9999 12.15H2C1.36487 12.15 0.85 11.6351 0.85 11V6.62417C0.85 6.29369 0.992177 5.97918 1.24027 5.76086L5.74023 1.80083C6.17459 1.41859 6.82532 1.41859 7.25969 1.80083Z" stroke-width="1.7"/>
+                        </svg>
                     </nuxt-link>
                 </li>
                 <li v-for="element in menu_elements" :key="element.id">

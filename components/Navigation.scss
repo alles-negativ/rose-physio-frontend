@@ -19,35 +19,40 @@ nav {
     background: $black;
     border-radius: 200px;
     padding: 5px;
-}
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
 
-nav li {
-    display: flex;  
-    height: 35px;
-    width: auto;
-    border-radius: 200px;
-    color: $white;
-    background-color: $black;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-        background-color: $white;
+    li {
+        display: flex;  
+        height: 35px;
+        width: auto;
         border-radius: 200px;
-        
-        .text__menu {
-            color: $black;
+        color: $white;
+        background-color: $black;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: $white;
+            border-radius: 200px;
+            
+            .text__menu {
+                color: $black;
+            }
+
+            svg {
+                stroke: black;
+                fill: none; 
+            }
         }
     }
 }
@@ -58,12 +63,21 @@ nav li {
     align-items: center;
     width: 35px;
     height: 35px;
-    background-color: $black;
     border-radius: 50%;
-}
 
-img {
-    stroke: white
+    svg {
+        stroke: white
+    }
+
+    &__active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: $white;
+    }
 }
 
 p {
@@ -84,5 +98,10 @@ nav li a {
 nav li a.nuxt-link-exact-active {
   color: $black;
   background-color: $white;
-  border-radius: 200px; 
+  border-radius: 200px;
+
+  svg {
+      stroke: black;
+      fill: none;
+  }
 }
