@@ -4,7 +4,7 @@
             <ul>
                 <li>
                     <nuxt-link class="image" :to="localePath('/')">
-                        <img src="/home.svg" alt="">
+                        <object type="image/svg+xml" data="/home.svg"></object>
                     </nuxt-link>
                 </li>
                 <li v-for="element in menu_elements" :key="element.id">
