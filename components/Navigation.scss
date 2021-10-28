@@ -52,8 +52,18 @@ nav li {
     }
 }
 
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: $black;
+    border-radius: 50%;
+}
+
 img {
-  padding: 10.1px 0px 0.5px 11px;
+    stroke: white
 }
 
 p {

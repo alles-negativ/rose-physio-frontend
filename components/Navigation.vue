@@ -3,7 +3,7 @@
         <div class="nav">
             <ul>
                 <li>
-                    <nuxt-link :to="localePath('/')">
+                    <nuxt-link class="image" :to="localePath('/')">
                         <img src="/home.svg" alt="">
                     </nuxt-link>
                 </li>
