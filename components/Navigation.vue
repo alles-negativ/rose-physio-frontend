@@ -1,15 +1,14 @@
 <template>
     <nav>
-        <ul>
-            <li v-for="element in menu_elements" :key="element.id">
-                <nuxt-link :to="localePath('/' + element.slug)">
-                    {{ element.title }}
-                </nuxt-link>
-            </li>
-            <li>
-                <LanguageInput />
-            </li>
-        </ul>
+        <div class="nav">
+            <ul>
+                <li v-for="element in menu_elements" :key="element.id">
+                    <nuxt-link :to="localePath('/' + element.slug)">
+                        <p class="text__menu">{{ element.title }}</p>
+                    </nuxt-link>
+                </li>
+            </ul>
+        </div>    
     </nav>
 </template>
 
