@@ -1,12 +1,9 @@
 <template>
     <nav>
         <ul>
-            <li v-for="link in links">
-                <nuxt-link :to="localePath('/' + link.slug)" v-if="link.status == 'listed' & !link.isHomePage">
-                    {{ link.title }}
-                </nuxt-link>
-                <nuxt-link :to="localePath('/')" v-else-if="link.isHomePage">
-                    {{ link.title }}
+            <li v-for="element in menu_elements">
+                <nuxt-link :to="localePath('/' + element.slug)">
+                    {{ element.title }}
                 </nuxt-link>
             </li>
             <li>
@@ -48,6 +45,21 @@ export default {
     created() {
         this.getLinks()
     },
+    computed: {
+        menu_elements: function() {
+            let elements = []
+            for (let i = 0; i < this.links.length; i++) {
+                if (this.links[i].isHomePage) {
+                    let home = this.links[i]
+                    home.slug = ""
+                    elements.push(home)
+                } else if (this.links[i].status == "listed") {
+                    elements.push(this.links[i])
+                }
+            }
+            return elements
+        }
+    }
 }
 </script>
   

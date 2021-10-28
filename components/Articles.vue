@@ -38,7 +38,6 @@ export default {
                 }
             };
             this.$axios.request(options).then((response) => {
-                console.log(response.data.result.data);
                 this.articles = response.data.result.data
             }).catch(function (error) {
                 console.error(error);
