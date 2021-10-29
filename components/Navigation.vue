@@ -4,7 +4,7 @@
             <ul>
                 <li>
                     <nuxt-link class="image image__home" :to="localePath('/')">
-                        <a class="image image_link" href=""></a>
+                        <a class="image image_link"></a>
                     </nuxt-link>
                 </li>
                 <li class="item" v-for="element in menu_elements" :key="element.id">
