@@ -1,15 +1,15 @@
 <template>
-    <div class="grid">
-        <div v-for="article in articles" :key="article.id">
-            <div class="container" >
+    <div class="wrapper">
+        <magic-grid max-cols="2" max-col-width="650" col-gap="30" wrapper="article-grid">
+            <div class="container" v-for="article in articles" :key="article.id">
                 <div class="content">
                     <img :src="article.images[0].url">
                     <h3>{{ article.title }}</h3>
                     <p class="text__big">{{ $moment(article.date).format("DD.MM.YYYY") }}</p>
                     <p>{{ article.contenttext }}</p>
                 </div>
-            </div>
-        </div>  
+            </div>  
+        </magic-grid>
     </div>
 </template>
 
