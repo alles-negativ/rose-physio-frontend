@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Header</h1>
+    <h1>{{ title }}</h1>
       <li>
         <LanguageInput />
       </li>
@@ -10,7 +10,12 @@
 <script>
 export default {
   name: 'Header',
-  props: ['title'],
+
+  computed: {
+    title() {
+      return this.$store.getters['header/getTitle']
+    }
+  }
 }
 </script>
 
