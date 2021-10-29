@@ -1,10 +1,13 @@
 <template>
   <header>
-    <h1>{{ title }}</h1>
-    <p>{{ text }}</p>
-      <li>
-        <LanguageInput />
-      </li>
+    <div class="header__links">
+      <nuxt-link class="header__logo" :to="localePath('/')">
+        <img src="~/assets/images/logo.svg" alt="">
+      </nuxt-link>
+      <LanguageInput />
+    </div>
+    <h1 class="header__title">{{ title }}</h1>
+    <p class="header__text">{{ text }}</p>
   </header>
 </template>
 
@@ -23,16 +26,6 @@ export default {
 }
 </script>
 
-<style>
-header {
-  padding: 10vh 0;
-  text-align: center;
-  background:red;
-}
-header h1 {
-  position: relative;
-  margin-bottom: 1rem;
-  font-weight: 900;
-  font-size: calc(1vw + 2rem);
-}
+<style lang="scss" scoped>
+    @use "Header";
 </style>

@@ -1,7 +1,8 @@
 <template>
   <main>
-    <h1>{{ page.title }}</h1>
-    <p>{{ page }}</p>
+    <h3>{{ page.content.contenttitle }}</h3>
+    <p>{{ page.content.contenttext }}</p>
+    <Standorte />
   </main>
 </template>
 

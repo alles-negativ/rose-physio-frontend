@@ -1,0 +1,30 @@
+@use "assets/css/main/colors" as *;
+
+
+header {
+    text-align: center;
+    background:red;
+}
+
+.header__links {
+    background-color: green;
+    // height: 30px;
+
+    .header__logo {
+        float: left;
+        padding: 10px;
+    }
+
+    .language__switch {
+        float:right;
+        padding: 10px;
+    }
+}
+
+.header__title {
+    clear: both;
+}
+
+.header__text {
+
+}

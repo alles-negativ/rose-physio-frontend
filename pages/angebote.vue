@@ -1,8 +1,9 @@
 <template>
   <main>
     <div class="grid">
-      <h1>{{ page.title }}</h1>
-      <p>{{ page }}</p>
+      <h1>{{ page.content.contenttitle }}</h1>
+      <p>{{ page.content.contenttext }}</p>
+      <AngeboteListe />
     </div>
   </main>
 </template>
@@ -13,6 +14,7 @@ export default {
     const { json: page } = await $kirby.find({
       "query": "page('angebote')"
     }, app.i18n.locale)
+    // set header data
     store.commit('header/setTitle', page.content.headertitle)
     store.commit('header/setText', page.content.headertext)
     return { page }
