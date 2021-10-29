@@ -1,9 +1,9 @@
 const Sass = require('sass')
 
 export default {
-  server: {
-    host: '0' // default: localhost
-  },
+  // server: {
+  //   host: '0' // default: localhost
+  // },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
