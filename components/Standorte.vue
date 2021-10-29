@@ -1,11 +1,20 @@
 <template>
-    <div>
-        <div v-for="element in data" :key="element.id">
-            <h3>{{ element.title }}</h3>
-            <p>{{ element.contenttext }}</p>
-            <HtmlContent :html="element.mapframe" />
-        </div>
-    </div>
+  <div>
+    <Accordion v-for="element in data" :key="element.id">
+          <template v-slot:title>
+            <span
+             style="color: white"
+              ><h3>{{ element.title }}</h3>
+            <p>{{ element.contenttext }}</p></span
+            >
+          </template>
+          <template v-slot:content>
+            <span style="color: white">
+              <HtmlContent :html="element.mapframe" />
+            </span>
+          </template>
+    </Accordion>
+  </div>
 </template>
 
 <script>
