@@ -15,10 +15,10 @@
                     </nuxt-link>
                 </li>
                 <li class="image image__phone" v-if="$device.isMobileOrTablet">
-                    <a href=""></a>
+                    <a href="tel:+4733378901"></a>
                 </li>
                 <li class="image image__mail" v-if="$device.isDesktop">
-                    <a href=""></a>
+                    <a href="mailto:info@rose-physio-fake.ch?subject=Termin&body=Guten%20Tag%2C%0A%0Aich%20w%C3%BCrde%20gerne%20einen%20Termin%20abmachen.%0A%0AGruss"></a>
                 </li>
             </ul>
         </div>    
