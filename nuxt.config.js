@@ -26,9 +26,9 @@ export default {
 
   publicRuntimeConfig: {
     kirby: {
-      url: process.env.KIRBY_SITE || 'https://aammon.ch',
-      username: process.env.KIRBY_USERNAME || 'aurelianammon@gmail.com',
-      password: process.env.KIRBY_PASSWORD || 'password'
+      url: process.env.KIRBY_SITE || 'http://localhost:8000',
+      username: process.env.KIRBY_USERNAME || 'hello@alles-negativ.ch',
+      password: process.env.KIRBY_PASSWORD || 'letmein123'
     }
   },
 
@@ -39,7 +39,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    './node_modules/nuxt-kirby-kql'
+    '~plugins/nuxt-kirby-kql'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
