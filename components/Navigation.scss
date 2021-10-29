@@ -60,6 +60,7 @@ nav {
 
 .image {
     display: flex;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
     width: 35px;
@@ -80,27 +81,37 @@ nav {
         background-color: $white;
     }
 
-    &--phone {
+    &__phone {
         background-image: url('~assets/icons/phone_white.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
         border-radius: 50%;
         border: thin solid white;
 
         &:hover {
             background-image: url('~assets/icons/phone_black.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
             border: none;
             background: white;
+            transition: 0.2s;
         }
     }
 
-    &--mail {
+    &__mail {
         background-image: url('~assets/icons/mail_white.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
         border-radius: 50%;
         border: thin solid white;
 
         &:hover {
-            background-image: url('~assets/icons/mail_black.svg');
-            border: none;
             background: white;
+            background-image: url('~assets/icons/mail_black.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            border: none;
+            transition: 0.2s;
         }
     }
 }
