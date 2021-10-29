@@ -3,7 +3,7 @@
         <div v-for="element in data" :key="element.id">
             <h3>{{ element.title }}</h3>
             <p>{{ element.contenttext }}</p>
-            {{ element.mapframe }}
+            <HtmlContent :html="element.mapframe" />
         </div>
     </div>
 </template>

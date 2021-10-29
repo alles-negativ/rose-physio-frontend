@@ -83,6 +83,10 @@ export default {
       scss: {
         implementation: Sass
       }
+    },
+    extend(config, ctx) {
+      // You can extend webpack config here
+      config.resolve.alias["vue$"] = "vue/dist/vue.esm.js";
     }
   },
 
