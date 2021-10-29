@@ -61,8 +61,6 @@ export default {
             de: data_de.data,
             en: data_en.data
         }
-
-        console.log(translation.de)
         this.translation = translation
     },    
     computed: {
@@ -83,7 +81,6 @@ export default {
                     }
                 }
             }
-
             return elements
         }
     }
