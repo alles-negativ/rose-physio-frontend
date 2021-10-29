@@ -49,11 +49,6 @@ nav {
             .text__menu {
                 color: $black;
             }
-
-            svg {
-                stroke: black;
-                fill: none; 
-            }
         }
     }
 }
@@ -67,17 +62,13 @@ nav {
     height: 35px;
     border-radius: 50%;
 
-    svg {
-        stroke: white
-    }
-
     &__home {
         background-image: url('~assets/icons/home_white.svg');
         background-repeat: no-repeat;
         background-position: center center;
 
         &:hover {
-            background: white;
+            background: $white;
             background-image: url('~assets/icons/home_black.svg');
             background-repeat: no-repeat;
             background-position: center center;
@@ -85,7 +76,7 @@ nav {
         }
 
         &.nuxt-link-exact-active {
-            background: white;
+            background: $white;
             background-image: url('~assets/icons/home_black.svg');
             background-repeat: no-repeat;
             background-position: center center;
@@ -97,10 +88,10 @@ nav {
         background-repeat: no-repeat;
         background-position: center center;
         border-radius: 50%;
-        border: thin solid white;
+        border: thin solid $white;
 
         &:hover {
-            background: white;
+            background: $white;
             background-image: url('~assets/icons/phone_black.svg');
             background-repeat: no-repeat;
             background-position: center center;
@@ -114,10 +105,10 @@ nav {
         background-repeat: no-repeat;
         background-position: center center;
         border-radius: 50%;
-        border: thin solid white;
+        border: thin solid $white;
 
         &:hover {
-            background: white;
+            background: $white;
             background-image: url('~assets/icons/mail_black.svg');
             background-repeat: no-repeat;
             background-position: center center;
@@ -144,7 +135,7 @@ p {
 nav li a {
   display: block;
   text-decoration: none;
-  color: white;
+  color: $white;
 }
 
 nav li a.nuxt-link-exact-active {
