@@ -20,7 +20,7 @@ export default {
     //   content 
     // }
     const { json: page } = await $kirby.find({
-      "query": "page('home')"
+      "query": "page('" + params.slug + "')"
     }, app.i18n.locale)
     return { page }
   }
