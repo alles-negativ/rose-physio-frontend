@@ -39,7 +39,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~plugins/nuxt-kirby-kql'
+    '~plugins/nuxt-kirby-kql',
+    '~/plugins/magicgrid.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
