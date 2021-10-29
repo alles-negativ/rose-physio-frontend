@@ -29,12 +29,14 @@ export default {
 
     data() {
         return {
-            links: []
+            translation: {
+                de: [],
+                en: []
+            }
         }
     },
-    methods: {
-        async getLinks() {
-            const data = await this.$axios.$post('http://localhost:8000/api/query',{
+    async fetch() {
+        const { json: data_de } = await this.$kirby.find({
             "query": "site.children",
             "select": {
                 "title": true,
@@ -43,31 +45,45 @@ export default {
                 "isErrorPage": true,
                 "status": true
             }
-            }, {
-                auth: {
-                    username: "hello@alles-negativ.ch",
-                    password: "letmein123"
-                }
-            })
-            this.links = data.result.data
+        }, 'de')
+        const { json: data_en } = await this.$kirby.find({
+            "query": "site.children",
+            "select": {
+                "title": true,
+                "slug": true,
+                "isHomePage": true,
+                "isErrorPage": true,
+                "status": true
+            }
+        }, 'en')
+
+        const translation = {
+            de: data_de.data,
+            en: data_en.data
         }
-    },
-    created() {
-        this.getLinks()
-    },
+
+        console.log(translation.de)
+        this.translation = translation
+    },    
     computed: {
         menu_elements: function() {
             let elements = []
-            for (let i = 0; i < this.links.length; i++) {
-                // if (this.links[i].isHomePage) {
-                //     let home = this.links[i]
-                //     home.slug = ""
-                //     elements.push(home)
-                // }
-                if (this.links[i].status == "listed" && !this.links[i].isHomePage) {
-                    elements.push(this.links[i])
+
+            if (this.$i18n.locale == "de") {
+                for (let i = 0; i < this.translation.de.length; i++) {
+                    if (this.translation.de[i].status == "listed" && !this.translation.de[i].isHomePage) {    
+                        elements.push(this.translation.de[i])
+                    }
                 }
             }
+            else {
+                for (let i = 0; i < this.translation.en.length; i++) {
+                    if (this.translation.en[i].status == "listed" && !this.translation.en[i].isHomePage) {    
+                        elements.push(this.translation.en[i])
+                    }
+                }
+            }
+
             return elements
         }
     }

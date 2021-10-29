@@ -1,6 +1,7 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
+    <p>{{ text }}</p>
       <li>
         <LanguageInput />
       </li>
@@ -14,6 +15,9 @@ export default {
   computed: {
     title() {
       return this.$store.getters['header/getTitle']
+    },
+    text() {
+      return this.$store.getters['header/getText']
     }
   }
 }
