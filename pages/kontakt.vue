@@ -1,25 +1,19 @@
 <template>
   <main>
-    <h1>{{ content.title }}</h1>
-    <p>{{ content }}</p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page }}</p>
   </main>
 </template>
 
 <script>
 export default {
-  async asyncData({ params, $axios }) {
-    const data = await $axios.$post('http://localhost:8000/api/query',{
-      query: "page('kontakt')"
-    }, {
-      auth: {
-        username: "hello@alles-negativ.ch",
-        password: "letmein123"
-      }
-    })
-    const content = data.result
-    return { 
-      content 
-    }
+  async asyncData({ app, params, $kirby, store }) {
+    const { json: page } = await $kirby.find({
+      "query": "page('kontakt')"
+    }, app.i18n.locale)
+    store.commit('header/setTitle', page.content.headertitle)
+    store.commit('header/setText', page.content.headertext)
+    return { page }
   }
 }
 </script>
