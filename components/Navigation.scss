@@ -31,7 +31,7 @@ nav {
         align-items: center;
     }
 
-    li {
+    .item {
         display: flex;  
         height: 35px;
         width: auto;
@@ -44,6 +44,7 @@ nav {
         &:hover {
             background-color: $white;
             border-radius: 200px;
+            transition: 0.2s;
             
             .text__menu {
                 color: $black;
@@ -77,6 +78,30 @@ nav {
         height: 35px;
         border-radius: 50%;
         background-color: $white;
+    }
+
+    &--phone {
+        background-image: url('~assets/icons/phone_white.svg');
+        border-radius: 50%;
+        border: thin solid white;
+
+        &:hover {
+            background-image: url('~assets/icons/phone_black.svg');
+            border: none;
+            background: white;
+        }
+    }
+
+    &--mail {
+        background-image: url('~assets/icons/mail_white.svg');
+        border-radius: 50%;
+        border: thin solid white;
+
+        &:hover {
+            background-image: url('~assets/icons/mail_black.svg');
+            border: none;
+            background: white;
+        }
     }
 }
 

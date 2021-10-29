@@ -9,15 +9,15 @@
                         </svg>
                     </nuxt-link>
                 </li>
-                <li v-for="element in menu_elements" :key="element.id">
+                <li class="item" v-for="element in menu_elements" :key="element.id">
                     <nuxt-link :to="localePath('/' + element.slug)">
                         <p class="text__menu">{{ element.title }}</p>
                     </nuxt-link>
                 </li>
-                <li class="phone__menu" v-if="$device.isMobileOrTablet">
+                <li class="image image--phone" v-if="$device.isMobileOrTablet">
                     <a href=""></a>
                 </li>
-                <li class="mail__menu" v-if="$device.isDesktop">
+                <li class="image image--mail" v-if="$device.isDesktop">
                     <a href=""></a>
                 </li>
             </ul>
