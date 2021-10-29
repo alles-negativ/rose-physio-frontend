@@ -7,6 +7,7 @@
     <div v-if="$device.isMobile">
       Mobile
     </div>
+    <p>{{ $device }}</p>
     <Articles />
   </main>
 </template>
