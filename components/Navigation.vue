@@ -9,7 +9,7 @@
                 </li>
                 <li class="item" v-for="element in menu_elements" :key="element.id">
                     <nuxt-link :to="localePath('/' + element.slug)">
-                        <p class="text__menu">{{ element.title }}</p>
+                        <p :class="$i18n.locale" class="text__menu">{{ element.title }}</p>
                     </nuxt-link>
                 </li>
                 <li class="image image__phone" v-if="$device.isMobileOrTablet">
