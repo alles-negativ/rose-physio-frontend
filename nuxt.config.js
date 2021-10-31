@@ -11,7 +11,7 @@ export default {
   head: {
     title: 'rose-physio',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'de'
     },
     meta: [
       { charset: 'utf-8' },
@@ -40,7 +40,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~plugins/nuxt-kirby-kql',
-    '~/plugins/magicgrid.js'
+    '~/plugins/magicgrid.js',
+    {src: '~/plugins/vue-badger-accordion', ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -48,7 +49,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/device'
+    '@nuxtjs/device',
+    '@nuxtjs/ngrok'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -78,7 +80,7 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-   build: {
+  build: {
     loaders: {
       scss: {
         implementation: Sass
@@ -96,5 +98,10 @@ export default {
 
   proxy: {
     '/api/': { target: 'http://localhost:8000/api/query', pathRewrite: {'^/api/': ''}, changeOrigin: true }
+  },
+
+  ngrok: {
+    // module options
+    authtoken: process.env.NGROK_AUTHTOKEN
   }
 }
