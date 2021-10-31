@@ -50,7 +50,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/device',
-    '@nuxtjs/ngrok'
+    // '@nuxtjs/ngrok'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -103,5 +103,6 @@ export default {
   ngrok: {
     // module options
     authtoken: process.env.NGROK_AUTHTOKEN
+    // subdomain: 'nuxt' 
   }
 }
