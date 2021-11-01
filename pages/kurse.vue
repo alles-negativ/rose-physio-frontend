@@ -8,7 +8,7 @@
 <script>
 export default {
   async asyncData({ params, $axios }) {
-    const data = await $axios.$post('http://localhost:8000/api/query',{
+    const data = await $axios.$post('http://localhost:8888/rose-physio-backend/api/query',{
       query: "page('kurse')"
     }, {
       auth: {

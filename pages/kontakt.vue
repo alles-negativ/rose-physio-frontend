@@ -9,14 +9,13 @@
 <script>
 export default {
   async asyncData({ app, params, $kirby, store }) {
-    await $kirby.find({
+    const { json: page } = await $kirby.find({
       "query": "page('kontakt')"
-    }, app.i18n.locale).then((page) => {
-      console.log(page.json)
-      store.commit('header/setTitle', page.content.headertitle)
-      store.commit('header/setText', page.content.headertext)
-      return { page: page.json }
-    })
+    }, app.i18n.locale)
+    // set header data
+    store.commit('header/setTitle', page.content.headertitle)
+    store.commit('header/setText', page.content.headertext)
+    return { page }
   }
 }
 </script>

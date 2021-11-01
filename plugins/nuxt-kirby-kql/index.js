@@ -17,7 +17,7 @@ export default function ({
       }
 
       try {
-        return unWrap(await fetch(`http://[::1]:8000/api/query`, {
+        return unWrap(await fetch(`http://localhost:8888/rose-physio-backend/api/query`, {
           headers,
           method: 'POST',
           body: JSON.stringify(request),

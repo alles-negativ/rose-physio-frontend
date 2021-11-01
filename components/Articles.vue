@@ -26,7 +26,7 @@ export default {
         async getArticles() {
             const options = {
                 method: 'POST',
-                url: 'http://localhost:8000/api/query',
+                url: 'http://localhost:8888/rose-physio-backend/api/query',
                 headers: {
                     'Content-Type': 'application/json',
                     'X-Language': 'de',

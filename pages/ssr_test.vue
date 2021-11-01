@@ -12,7 +12,7 @@ export default {
     async asyncData({ app, params, $kirby, store }) {
         try {
             // const data_f = await fetch(`https://aammon.ch/api/query`, {
-            const data_f = await fetch(`http://[::1]:8000/api/query`, {
+            const data_f = await fetch(`http://localhost:8888/rose-physio-backend/api/query`, {
             headers: {
                 // Authorization: 'Basic ' + Buffer.from('aurelianammon@gmail.com' + ':' + 'password').toString('base64'),
                 Authorization: 'Basic ' + Buffer.from('hello@alles-negativ.ch' + ':' + 'letmein123').toString('base64'),
