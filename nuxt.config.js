@@ -5,7 +5,7 @@ export default {
   //   host: '0' // default: localhost
   // },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // create a static page
   target: 'static',
@@ -43,7 +43,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~plugins/nuxt-kirby-kql',
-    '~/plugins/magicgrid.js',
+    // '~/plugins/vue-magic-grid',
     {src: '~/plugins/vue-badger-accordion', ssr: false}
   ],
 
