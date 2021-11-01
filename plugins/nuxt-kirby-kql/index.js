@@ -17,7 +17,7 @@ export default function ({
       }
 
       try {
-        return unWrap(await fetch(`${config.url}/api/query`, {
+        return unWrap(await fetch(`http://[::1]:8000/api/query`, {
           headers,
           method: 'POST',
           body: JSON.stringify(request),

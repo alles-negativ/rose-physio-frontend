@@ -29,7 +29,7 @@ export default {
 
   publicRuntimeConfig: {
     kirby: {
-      url: process.env.KIRBY_SITE || 'http://localhost:8000',
+      url: process.env.KIRBY_SITE || 'http://[::1]:8000',
       username: process.env.KIRBY_USERNAME || 'hello@alles-negativ.ch',
       password: process.env.KIRBY_PASSWORD || 'letmein123'
     }
@@ -43,7 +43,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~plugins/nuxt-kirby-kql',
-    // '~/plugins/vue-magic-grid',
+    {src: '~/plugins/vue-magic-grid', ssr: false},
     {src: '~/plugins/vue-badger-accordion', ssr: false}
   ],
 

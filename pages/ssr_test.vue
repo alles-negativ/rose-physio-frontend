@@ -20,7 +20,7 @@ export default {
             },
             method: 'POST',
             body: {
-                query: "page('kontakt')"
+                "query": "page('kontakt')"
             },
             mode: 'no-cors'
             })
