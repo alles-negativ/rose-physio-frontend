@@ -51,7 +51,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/device'
+    '@nuxtjs/device',
+    '@nuxt/image'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -100,4 +101,8 @@ export default {
   proxy: {
     '/api/': { target: 'http://localhost:8000/api/query', pathRewrite: {'^/api/': ''}, changeOrigin: true }
   },
+
+  image: {
+    // Options
+  }
 }
