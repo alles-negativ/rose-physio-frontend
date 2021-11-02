@@ -1,50 +1,19 @@
 <template>
   <main>
-      <!-- <h1>{{ content.content.headertext }}</h1> -->
       <Articles />
   </main>
 </template>
 
 <script>
 export default {
-  async asyncData({ params, $axios }) {
-    const data_de = await $axios.$post('http://localhost:8888/rose-physio-backend/api/query',{
-      query: "page('home')",
-    }, {
-      auth: {
-        username: "hello@alles-negativ.ch",
-        password: "letmein123"
-      },
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Language': 'de'
-      }
-    })
-    const data_en = await $axios.$post('http://localhost:8888/rose-physio-backend/api/query',{
-      query: "page('home')"
-    }, {
-      auth: {
-        username: "hello@alles-negativ.ch",
-        password: "letmein123"
-      },
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Language': 'en'
-      }
-    })
-    const pre_content = {
-      de: data_de.result,
-      en: data_en.result
-    }
-    return { 
-      pre_content 
-    }
-  },
-  computed: {
-    content: function() {
-      if (this.$i18n.locale == "de") { return this.pre_content.de }
-      else { return this.pre_content.en }
-    }
+  async asyncData({ app, params, $kirby, store }) {
+    const { json: page } = await $kirby.find({
+      "query": "page('home')"
+    }, app.i18n.locale)
+    // set header data
+    store.commit('header/setTitle', page.content.headertitle)
+    store.commit('header/setText', page.content.headertext)
+    return { page }
   }
 }
 </script>

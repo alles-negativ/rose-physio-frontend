@@ -17,7 +17,7 @@ export default function ({
       }
 
       try {
-        return unWrap(await fetch(`http://localhost:8888/rose-physio-backend/api/query`, {
+        return unWrap(await fetch(`${config.url}/api/query`, {
           headers,
           method: 'POST',
           body: JSON.stringify(request),
@@ -36,13 +36,12 @@ export default function ({
         statusText
       } = response
       return {
-        json: jsonResponse.result,
+        json: (jsonResponse.result.data) ? jsonResponse.result.data:jsonResponse.result,
         ok,
         status,
         statusText
       }
     }
-  
     function getErrorResponse (error) {
       return {
         ok: false,

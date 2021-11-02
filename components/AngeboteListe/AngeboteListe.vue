@@ -35,7 +35,7 @@ export default {
                 }
             }
         }, this.$nuxt.context.app.i18n.locale)
-        this.data = data.data
+        this.data = data
     }
 }
 </script>

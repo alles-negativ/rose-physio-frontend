@@ -18,7 +18,8 @@
     "dart-sass": "^1.25.0",
     "nuxt": "^2.15.7",
     "vue-badger-accordion": "^2.0.2",
-    "vue-magic-grid": "^0.0.4"
+    "vue-cookieconsent-component": "^1.2.0",
+    "vue-if-bot": "^1.2.0"
   },
   "devDependencies": {
     "@nuxtjs/device": "^2.1.0",

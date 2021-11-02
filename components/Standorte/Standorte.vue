@@ -7,7 +7,7 @@
                 <p>{{ element.contenttext }}</p>
             </template>    
             <template slot="content">
-                <HtmlContent :html="element.mapframe" />
+                <div v-html="element.mapframe" />
             </template>  
         </badger-accordion-item>
     </badger-accordion>
@@ -32,7 +32,7 @@ export default {
                 "mapframe": true
             }
         }, this.$nuxt.context.app.i18n.locale)
-        this.data = data.data
+        this.data = data
     }
 }
 </script>

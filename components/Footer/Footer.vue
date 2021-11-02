@@ -25,5 +25,5 @@
 </template>
 
 <style lang="scss" scoped>
-@use "Footer";
+  @use "Footer";
 </style>

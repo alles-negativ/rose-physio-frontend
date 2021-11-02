@@ -29,7 +29,7 @@ export default {
 
   publicRuntimeConfig: {
     kirby: {
-      url: process.env.KIRBY_SITE || 'http://localhost:8888/rose-physio-backend/api/query',
+      url: process.env.KIRBY_SITE || 'http://localhost:8888/rose-physio-backend',
       username: process.env.KIRBY_USERNAME || 'hello@alles-negativ.ch',
       password: process.env.KIRBY_PASSWORD || 'letmein123'
     }
@@ -43,7 +43,6 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~plugins/nuxt-kirby-kql',
-    {src: '~/plugins/vue-magic-grid', ssr: false},
     {src: '~/plugins/vue-badger-accordion', ssr: false}
   ],
 
@@ -52,8 +51,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/device',
-    // '@nuxtjs/ngrok'
+    '@nuxtjs/device'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -102,10 +100,4 @@ export default {
   proxy: {
     '/api/': { target: 'http://localhost:8000/api/query', pathRewrite: {'^/api/': ''}, changeOrigin: true }
   },
-
-  ngrok: {
-    // module options
-    authtoken: process.env.NGROK_AUTHTOKEN
-    // subdomain: 'nuxt' 
-  }
 }
