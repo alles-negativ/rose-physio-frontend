@@ -11,8 +11,8 @@ export default {
       "query": "page('home')"
     }, app.i18n.locale)
     // set header data
-    store.commit('header/setTitle', page.content.headertitle)
-    store.commit('header/setText', page.content.headertext)
+    store.commit('header/setTitle', page.content.headertext)
+    store.commit('header/setText', "")
     return { page }
   }
 }
