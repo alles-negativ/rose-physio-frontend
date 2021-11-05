@@ -11,9 +11,12 @@
                         <p :class="$i18n.locale" class="text__menu">{{ element.title }}</p>
                     </nuxt-link>
                 </li>
-                <li class="image image__phone" v-if="$device.isMobileOrTablet">
+                <!-- <li class="image image__phone" v-if="$device.isMobileOrTablet">
                     <a class="image image_link" href="tel:+4733378901"></a>
                 </li>
+                <li class="image image__mail" v-if="$device.isDesktop">
+                    <a class="image image_link" href="mailto:info@rose-physio-fake.ch?subject=Termin&body=Guten%20Tag%2C%0A%0Aich%20w%C3%BCrde%20gerne%20einen%20Termin%20abmachen.%0A%0AGruss"></a>
+                </li> -->
                 <li class="image image__mail" v-if="$device.isDesktop">
                     <a class="image image_link" href="mailto:info@rose-physio-fake.ch?subject=Termin&body=Guten%20Tag%2C%0A%0Aich%20w%C3%BCrde%20gerne%20einen%20Termin%20abmachen.%0A%0AGruss"></a>
                 </li>

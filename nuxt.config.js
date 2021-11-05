@@ -62,8 +62,9 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/device',
-    '@nuxt/image'
+    // '@nuxtjs/device',
+    '@nuxt/image',
+    '@nuxtjs/html-validator'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
