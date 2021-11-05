@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  layout: 'contact',
   async asyncData({ app, params, $kirby, store }) {
     const { json: page } = await $kirby.find({
       "query": "page('kontakt')"
