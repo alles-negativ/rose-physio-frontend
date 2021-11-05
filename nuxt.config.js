@@ -23,7 +23,12 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "stylesheet", href: "https://unpkg.com/splitting/dist/splitting.css" },
+      { rel: "stylesheet", href: "https://unpkg.com/splitting/dist/splitting-cells.css" }
+    ],
+    script: [
+      // { src: "https://unpkg.com/splitting/dist/splitting.min.js" }
     ]
   },
 
@@ -43,7 +48,9 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~plugins/nuxt-kirby-kql',
-    {src: '~/plugins/vue-badger-accordion', ssr: false}
+    {src: '~/plugins/vue-badger-accordion', mode: 'client'},
+    {src: '~/plugins/alles-negativ-splitting', mode: 'client'},
+    '~/plugins/preview.client.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
