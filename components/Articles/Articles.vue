@@ -2,7 +2,7 @@
     <div class="wrapper"> 
         <div class="container" v-for="article in articles" :key="article.id">
             <div class="content">
-                <img :src="article.images[0].url">
+                <nuxt-img :src="article.images[0].url" />
                 <h3>{{ article.title }}</h3>
                 <p class="text__big">{{ $moment(article.date).format("DD.MM.YYYY") }}</p>
                 <p>{{ article.contenttext }}</p>

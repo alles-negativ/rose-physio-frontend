@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-for="element in data" :key="element.id">
-            <img :src="element.images[0].url">
+            <nuxt-img :src="element.images[0].url" />
             <h3>{{ element.title }}</h3>
             <p style="color: grey;">{{ element.introtext }}</p>
             <p>{{ element.contenttext }}</p>

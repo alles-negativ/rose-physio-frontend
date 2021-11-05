@@ -10,6 +10,10 @@ export default {
   // create a static page
   target: 'static',
 
+  generate: {
+    fallback: true
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'rose-physio',
@@ -110,6 +114,6 @@ export default {
   },
 
   image: {
-    // Options
+    domains: ['http://localhost:8888']
   }
 }
