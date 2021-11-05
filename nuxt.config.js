@@ -114,6 +114,9 @@ export default {
   },
 
   image: {
-    domains: ['http://localhost:8888']
+    domains: [
+      'http://localhost:8888',
+      'https://aammon.ch/'
+    ]
   }
 }
