@@ -1,0 +1,49 @@
+@use "assets/css/main/colors" as *;
+@use "assets/css/main/breakpoints" as *;
+
+$contentpadding: 0.75em;
+$contentpaddingLarge: 3em;
+
+.wrapper {
+    margin-top: 10em;
+
+    @include tablet {
+        padding-left: $contentpaddingLarge;
+        padding-right: $contentpaddingLarge;
+    }
+
+    @include desktop {
+        padding-left: $contentpaddingLarge;
+        padding-right: $contentpaddingLarge;
+    }
+}
+
+.accordion {
+    width: 100%;
+    border-top: thin solid $black;
+    border-bottom: thin solid $black;
+    margin-top: -1px;
+    padding-top: $contentpadding;
+    padding-bottom: $contentpadding;
+
+        &__title {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+
+            .plus {
+            font-size: 60px;
+            font-weight: 300;
+        }
+    }
+
+    &__content {
+        display: flex;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.45s ease-out;
+    }
+}   

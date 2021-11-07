@@ -3,8 +3,8 @@
     <div class="grid">
       <h1>{{ page.content.contenttitle }}</h1>
       <p>{{ page.content.contenttext }}</p>
-      <AngeboteListe />
     </div>
+    <AngeboteListe />
   </main>
 </template>
 

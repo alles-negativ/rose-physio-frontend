@@ -1,11 +1,13 @@
 <template>
-    <div>
-        <div v-for="person in people" :key="person.id">
-            <nuxt-img :src="person.images[0].url" />
-            <h3>{{ person.title }}</h3>
-            <p style="color: grey;">{{ person.introtext }}</p>
-            <p>{{ person.contenttext }}</p>
-        </div>
+    <div class="wrapper">
+        <ul class="container">
+            <li v-for="person in people" :key="person.id" class="content">
+                <nuxt-img :src="person.images[0].url" />
+                <h3>{{ person.title }}</h3>
+                <p class="text__big">{{ person.introtext }}</p>
+                <p>{{ person.contenttext }}</p>
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -39,3 +41,7 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+    @use "People";
+</style>

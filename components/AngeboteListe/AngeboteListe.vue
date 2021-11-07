@@ -1,10 +1,17 @@
 <template>
-    <div>
-        <div v-for="element in data" :key="element.id">
-            <nuxt-img :src="element.images[0].url" />
-            <h3>{{ element.title }}</h3>
-            <p style="color: grey;">{{ element.introtext }}</p>
-            <p>{{ element.contenttext }}</p>
+    <div class="wrapper">
+        <div v-for="(element, index) in data" :key="element.id">
+            <div class="accordion" @click="itemClick(index)">
+                <div class="accordion__title">
+                    <h3>{{ element.title }} {{ element.id }}</h3>
+                    <p class="plus">+</p>
+                </div>    
+                <div :data-element-id="index" class="accordion__content">
+                    <nuxt-img :src="element.images[0].url" />
+                    <p class="text__big">{{ element.introtext }}</p>
+                    <p>{{ element.contenttext }}</p>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -36,6 +43,24 @@ export default {
             }
         }, this.$nuxt.context.app.i18n.locale)
         this.data = data
+    },
+    methods: {
+    itemClick (elementIndex) {
+      const infoElement = document.querySelectorAll('[data-element-id="' + elementIndex + '"]')[0]
+      if (infoElement.classList.contains('block')) {
+        infoElement.style['max-height'] = '0px';
+        infoElement.classList.add('hidden')
+        infoElement.classList.remove('block')
+      } else {
+        infoElement.style['max-height'] = '1500px';
+        infoElement.classList.add('block')
+        infoElement.classList.remove('hidden')
+      }
     }
+  }
 }
 </script>
+
+<style lang="scss" scoped>
+    @use "AngeboteListe";
+</style>

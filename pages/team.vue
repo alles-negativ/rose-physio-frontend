@@ -1,7 +1,9 @@
 <template>
   <div>
-    <h3>{{ page.content.contenttitle }}</h3>
-    <p>{{ page.content.contenttext }}</p>
+    <div class="grid">
+      <h1>{{ page.content.contenttitle }}</h1>
+      <p>{{ page.content.contenttext }}</p>
+    </div> 
     <People />
   </div>
 </template>
