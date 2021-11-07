@@ -1,13 +1,13 @@
 <template>
     <div class="wrapper"> 
-        <div class="container" v-for="article in articles" :key="article.id">
-            <div class="content">
+        <ul class="container">
+            <li v-for="article in articles" :key="article.id" class="content">
                 <nuxt-img :src="article.images[0].url" />
                 <h3>{{ article.title }}</h3>
                 <p class="text__big">{{ $moment(article.date).format("DD.MM.YYYY") }}</p>
                 <p>{{ article.contenttext }}</p>
-            </div>
-        </div>  
+            </li>
+        </ul>  
     </div>
 </template>
 

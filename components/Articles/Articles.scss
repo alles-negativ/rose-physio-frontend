@@ -1,14 +1,25 @@
 @use "assets/css/main/colors" as *;
 @use "assets/css/main/breakpoints" as *;
 
+$contentpadding: 0.75em;
+$contentpaddingLarge: 3em;
+
 .wrapper {
     margin-top: 10em;
+
+    @include tablet {
+        padding-left: $contentpaddingLarge;
+        padding-right: $contentpaddingLarge;
+    }
+
+    @include desktop {
+        padding-left: $contentpaddingLarge;
+        padding-right: $contentpaddingLarge;
+    }
 }
 
 .container {
-    display: flex;
     width: 100%;
-    flex-flow: column nowrap;
     margin-top: 1em;
     margin-bottom: 1em;
     padding-left: 12px;
@@ -17,16 +28,25 @@
     @include tablet {
         padding-left: 0px;
         padding-right: 0px;
+        columns: 2;
+        column-gap: 2.5em;
     }
 
     @include desktop {
         padding-left: 0px;
         padding-right: 0px;
+        columns: 2;
+        column-gap: 2em;
     }
-}
 
-.content {
-    border-bottom: thin solid $black;
+    .content {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        page-break-inside: avoid;
+        margin-bottom: 5em;
+        border-bottom: thin solid $black;
+    }
 }
 
 h3 {
@@ -34,7 +54,7 @@ h3 {
 }
 
 p {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 
 img {
