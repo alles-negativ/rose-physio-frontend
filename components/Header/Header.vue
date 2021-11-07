@@ -1,14 +1,23 @@
 <template>
-  <header>
+  <div class="header">
     <div class="header__links">
-      <nuxt-link class="header__logo" :to="localePath('/')">
+      <nuxt-link class="header__link--logo" :to="localePath('/')">
         <img src="~/assets/images/logo.svg" alt="">
       </nuxt-link>
-      <LanguageInput />
+      <div class="header__links--utility">
+        <p class="text__menu">{{ sitetitle }}</p>
+        <LanguageInput />
+      </div>  
     </div>
-    <h1 class="header__title" v-html="title" />
-    <p class="header__text">{{ text }}</p>
-  </header>
+    <div class="header__content">
+      <div class="header__content--text">
+        <span v-html="title" />
+        <p class="text">{{ text }}</p>
+      </div>
+      <div class="header__content--image">
+      </div>
+    </div>  
+  </div>
 </template>
 
 <script>
@@ -25,6 +34,9 @@ export default {
     },
     text() {
       return this.$store.getters['header/getText']
+    },
+    sitetitle() {
+      return this.$store.getters['header/getSitetitle']
     }
   },
   mounted() {

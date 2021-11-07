@@ -1,7 +1,8 @@
 // header store initialisation
 export const state = () => ({
     title: '',
-    text: ''
+    text: '',
+    sitetitle: ''
   })
   
 export const mutations = {
@@ -10,10 +11,14 @@ export const mutations = {
     },
     setText(state, text) {
         state.text = text
+    },
+    setSitetitle(state, sitetitle) {
+        state.sitetitle = sitetitle
     }
 }
 
 export const getters = {
     getTitle: (state) => state.title,
-    getText: (state) => state.text
+    getText: (state) => state.text,
+    getSitetitle: (state) => state.sitetitle
 }

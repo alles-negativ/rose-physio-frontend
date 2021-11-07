@@ -1,0 +1,23 @@
+@use "assets/css/main/colors" as *;
+@use "assets/css/main/typography" as *;
+
+.text {
+    font-family: SpaceGrotesk;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 26px;
+
+    &__menu {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: auto;
+        text-transform: capitalize;
+        color: $black;
+        margin-left: 1em;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

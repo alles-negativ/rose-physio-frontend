@@ -17,6 +17,7 @@ export default {
     // set header data
     store.commit('header/setTitle', page.content.headertitle)
     store.commit('header/setText', page.content.headertext)
+    store.commit('header/setSitetitle', page.content.title)
     return { page }
   }
 }
