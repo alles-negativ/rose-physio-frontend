@@ -52,8 +52,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~plugins/nuxt-kirby-kql',
-    {src: '~/plugins/vue-badger-accordion', mode: 'client'},
-    {src: '~/plugins/alles-negativ-splitting', mode: 'client'},
+    {src: '~/plugins/vue-badger-accordion', ssr: false},
+    {src: '~/plugins/alles-negativ-splitting', ssr: false},
     '~/plugins/preview.client.js'
   ],
 
@@ -64,7 +64,7 @@ export default {
   buildModules: [
     // '@nuxtjs/device',
     '@nuxt/image',
-    '@nuxtjs/html-validator'
+    // '@nuxtjs/html-validator'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -128,61 +128,58 @@ $contentpaddingLarge: 3em;
     }
 }
 
-// .header__title {
-//     clear: both;
-//     text-align: left;
+.splitting__header {
 
-//     ::v-deep a {
-//         color: white;
-//         text-decoration: none;
-//     }
-// }
+    ::v-deep .headline {
 
-// .header__text {
-//     text-align: left;
-// }
+        &--fall {
 
+            .char {
+                animation: fall 600ms infinite calc(var(--char-index) * 0.05s) cubic-bezier(0.165, 0.44, 0.64, 1);
+            }
+                
+            @keyframes fall {
+                0% {
+                    transform: rotateY(-25deg);
+                }
+                25% {
+                    transform: translateY(2%) rotateY(25deg);
+                }
+                50% {
+                    transform: rotateY(-25deg);
+                }
+                75% {
+                    transform: translateY(4%) rotateY(25deg);
+                }
+                100% {
+                    transform: rotateY(-25deg);
+                }
+            }
+        }   
 
-// .header__title {
+        &--jump {
 
-//     ::v-deep.word, ::v-deep.char {
-//         animation-delay: var(--del);
-//         animation-direction: var(--dir, normal);
-//         animation-duration: var(--dur);
-//         animation-iteration-count: var(--it, infinite);
-//         animation-name: var(--name);
-//         animation-timing-function: var(--tf);
-//         animation-fill-mode: var(--fill, forwards);
-//         display: inline-block;
-//         position: relative;
-//         transform-origin: 50% 100%;
-//         z-index: 1;
-//       }
-    
-//     ::v-deep.headline--fall {
-//         ::v-deep.char {
-//             --name: fall;
-//             --dur: 600ms;
-//             --del: calc(var(--char-index) * -0.05s);
-//             --tf: cubic-bezier(0.165, 0.44, 0.64, 1);
-//         }
-
-//         @keyframes fall {
-//             0% {
-//             transform: rotateY(-25deg);
-//             }
-//             25% {
-//             transform: translateY(2%) rotateY(25deg);
-//             }
-//             50% {
-//             transform: rotateY(-25deg);
-//             }
-//             75% {
-//             transform: translateY(4%) rotateY(25deg);
-//             }
-//             100% {
-//             transform: rotateY(-25deg);
-//             }
-//         }
-//     }
-// }
+            .char {
+                animation: jump 800ms infinite calc(var(--char-index) * 0.075s) cubic-bezier(0.165, 0.44, 0.64, 1);
+            }
+                
+            @keyframes jump {
+                20% {
+                  transform: translateY(2%) scaleY(0.9);
+                }
+                40% {
+                  transform: translateY(-50) scaleY(1.2);
+                }
+                50% {
+                  transform: translateY(10%) scaleY(0.8);
+                }
+                70% {
+                  transform: translateY(-5%) scaleY(1);
+                }
+                80%, 100% {
+                  transform: translateY(0) scaleY(1);
+                }
+            }
+        }   
+    }
+}
