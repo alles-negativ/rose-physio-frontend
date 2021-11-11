@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <div v-for="(element, index) in data" :key="element.id">
+        <!-- <div v-for="(element, index) in data" :key="element.id">
             <div class="accordion" @click="itemClick(index)">
                 <div class="accordion__title">
                     <h3>{{ element.title }} {{ element.id }}</h3>
@@ -12,6 +12,14 @@
                     <p>{{ element.contenttext }}</p>
                 </div>
             </div>
+        </div> -->
+        <div v-for="element in data" :key="element.id">
+            <Accordion>
+              <h3 slot="title"> {{ element.title }} </h3>
+              <p class="text__big" slot="introtext"> {{ element.introtext }} </p>
+              <p class="text" slot="contenttext"> {{ element.contenttext }} </p>
+              <div class="image" slot="image"><nuxt-img :src="element.images[0].url" /></div>
+            </Accordion>
         </div>
     </div>
 </template>
@@ -22,7 +30,7 @@ export default {
 
     data() {
         return {
-            data: []
+            data: [],
         }
     },
     async fetch() {
@@ -44,20 +52,6 @@ export default {
         }, this.$nuxt.context.app.i18n.locale)
         this.data = data
     },
-    methods: {
-    itemClick (elementIndex) {
-      const infoElement = document.querySelectorAll('[data-element-id="' + elementIndex + '"]')[0]
-      if (infoElement.classList.contains('block')) {
-        infoElement.style['max-height'] = '0px';
-        infoElement.classList.add('hidden')
-        infoElement.classList.remove('block')
-      } else {
-        infoElement.style['max-height'] = '1500px';
-        infoElement.classList.add('block')
-        infoElement.classList.remove('hidden')
-      }
-    }
-  }
 }
 </script>
 

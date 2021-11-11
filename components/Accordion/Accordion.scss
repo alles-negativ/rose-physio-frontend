@@ -1,0 +1,61 @@
+@use "assets/css/main/colors" as *;
+@use "assets/css/main/breakpoints" as *;
+
+$contentpadding: 0.75em;
+$contentpaddingLarge: 3em;
+
+.accordion {
+    width: 100%;
+    border-top: thin solid $black;
+    border-bottom: thin solid $black;
+    margin-top: -1px;
+    padding-top: $contentpadding;
+    padding-bottom: $contentpadding;
+
+        &__title {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+
+            .plus {
+            font-size: 60px;
+            font-weight: 300;
+            transform: rotate(0deg);
+            transition-duration: 0.3s;
+
+            .header-icon.rotate {
+                transform: rotate(45deg);
+                transition-duration: 0.3s;
+            }
+        }
+    }
+
+    &__body {
+        overflow: hidden;
+        border-top: 0;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        transition: 500ms ease-out;
+
+        .content {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+            &__intro {
+                width: 100%;
+            }
+
+            &__text {
+                width: 55%;
+            }
+
+            &__image {
+                height: auto;
+            }
+        }
+    }
+}

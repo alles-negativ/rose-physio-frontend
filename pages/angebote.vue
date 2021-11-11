@@ -19,6 +19,6 @@ export default {
     store.commit('header/setText', page.content.headertext)
     store.commit('header/setSitetitle', page.content.title)
     return { page }
-  }
+  } 
 }
 </script>
