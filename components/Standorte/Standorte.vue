@@ -1,16 +1,15 @@
 <template>
   <div>
-    <badger-accordion v-for="element in data" :key="element.id">
-        <badger-accordion-item>
-            <template slot="header">
-                <h3>{{ element.title }}</h3>
-                <p>{{ element.contenttext }}</p>
-            </template>    
-            <template slot="content">
+    <div v-for="element in data" :key="element.id">
+        <Accordion>
+             <template v-slot:title>
+                <h3 class="title"> {{ element.title }} </h3>
+              </template>
+              <template v-slot:body>
                 <div v-html="element.mapframe" />
-            </template>  
-        </badger-accordion-item>
-    </badger-accordion>
+              </template>
+        </Accordion>
+    </div>
   </div>  
 </template>
 

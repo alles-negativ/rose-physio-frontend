@@ -9,15 +9,8 @@
           v-on:before-leave="beforeLeave" v-on:leave="leave">
           <div class="accordion__body" v-show="show">
               <div class="content">
-                  <div class="content__intro">
-                    <slot name="introtext">Default Intro</slot>
-                  </div>  
-                  <div class="content__text">
-                    <slot name="contenttext">Default Text</slot>
-                  </div>
-                  <div class="content__image">  
-                    <slot name="image">Image</slot>
-                  </div>
+                  <slot name="body">
+                  </slot>
               </div>
           </div>
         </transition>
