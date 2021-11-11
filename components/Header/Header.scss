@@ -5,8 +5,6 @@ $contentpadding: 0.75em;
 $contentpaddingLarge: 3em;
 
 .header {
-    display: flex;
-    flex-flow: row wrap;
     height: 450px;
     background: $red;
     padding: $contentpadding;
@@ -85,20 +83,6 @@ $contentpaddingLarge: 3em;
             
             .text {
                 margin-top: 1em;
-
-                @include tablet {
-                    font-weight: 500;
-                    font-size: 30px;
-                    line-height: 38px;
-                    margin-top: 3em;
-                }
-
-                @include desktop {
-                    font-weight: 500;
-                    font-size: 30px;
-                    line-height: 38px;
-                    margin-top: 3em;
-                }
             }    
         }
 

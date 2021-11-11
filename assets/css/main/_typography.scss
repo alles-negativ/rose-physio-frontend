@@ -3,19 +3,20 @@ Global definitions of typography
 */
 
 @use "breakpoints" as *;
+@use "colors" as *;
 
 h1 {
     font-family: SpaceGrotesk;
     font-weight: 700;
     font-style: normal;
-    font-size: 30px;
+    font-size: 35px;
 
   @include tablet {
         font-size: 45px;
   }
 
   @include desktop {
-        font-size: 60px;
+        font-size: 55px;
   }
 }
 
@@ -47,11 +48,28 @@ p, button {
     font-style: normal;
     font-size: 18px;
     line-height: 26px;
+    text-decoration: none;
 
     &__big {
         font-weight: 500;
-        font-size: 30px;
-        line-height: 38px;
+
+        @include tablet {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        @include desktop {
+            font-size: 30px;
+            line-height: 38px;
+        }
+
+        &--black {
+            color: $black;
+        }
+
+        &--white {
+            color: $white;
+        }
 
         &--narrow {
             line-height: 30px;

@@ -1,20 +1,54 @@
 <template>
-  <header>
+  <div class="header">
     <div class="header__links">
-      <nuxt-link class="header__logo" :to="localePath('/')">
+      <nuxt-link class="header__link--logo" :to="localePath('/')">
         <img src="~/assets/images/logo.svg" alt="">
       </nuxt-link>
-      <LanguageInput />
+      <div class="header__links--utility">
+        <p class="text__menu">{{ sitetitle }}</p>
+        <LanguageInput />
+      </div>  
     </div>
-    <p>this is the contact header</p>
-    <h1 class="header__title">{{ title }}</h1>
-    <p class="header__text">{{ text }}</p>
-  </header>
+    <div class="header__content">
+      <div class="header__content--text">
+        <span v-html="title" />
+        <p class="text__big">{{ text }}</p>
+        <p class="text">{{ contact.headertram }}</p>
+        <p class="text">{{ contact.headeropening }}</p>
+      </div>  
+        <div class="header__content--contact">
+          <a class="text text__big--black" href="mailto:info@rose-physio-fake.ch?subject=Termin&body=Guten%20Tag%2C%0A%0Aich%20w%C3%BCrde%20gerne%20einen%20Termin%20abmachen.%0A%0AGruss">{{ contact.headeremail }}</a>
+          <a class="text text__big--black" href="tel:+4733378901">{{ contact.headertel }}</a>
+        </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import linkClickRouting from "../../mixins/linkClickRouting";
+
 export default {
-  name: 'Header',
+  name: 'Headercontact',
+
+  data() {
+        return {
+            contact: []
+        }
+    },
+    async fetch() {
+        const { json: data } = await this.$kirby.find({
+            "query": "page('kontakt')",
+            "select": {
+                "headertram": true,
+                "headeremail": true,
+                "headertel": true,
+                "headeropening": true,
+            }
+        }, this.$nuxt.context.app.i18n.locale)
+        this.contact = data
+    },
+
+  mixins: [linkClickRouting],
 
   computed: {
     title() {
@@ -22,7 +56,13 @@ export default {
     },
     text() {
       return this.$store.getters['header/getText']
-    }
+    },
+    sitetitle() {
+      return this.$store.getters['header/getSitetitle']
+    },
+  },
+  mounted() {
+    // this.$Splitting()
   }
 }
 </script>
