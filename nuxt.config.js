@@ -52,7 +52,6 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~plugins/nuxt-kirby-kql',
-    {src: '~/plugins/vue-badger-accordion', ssr: false},
     {src: '~/plugins/alles-negativ-splitting', ssr: false},
     '~/plugins/preview.client.js'
   ],
