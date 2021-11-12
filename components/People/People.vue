@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
-        <ul class="container">
-            <li v-for="person in people" :key="person.id" class="content">
+        <ul v-for="columns in sortedPeople" :key="columns.id" class="container">
+            <li v-for="person in columns" :key="person.id" class="content">
                 <nuxt-img :src="person.images[0].url" />
                 <h3>{{ person.title }}</h3>
                 <p class="text__big">{{ person.introtext }}</p>
@@ -17,7 +17,8 @@ export default {
 
     data() {
         return {
-            people: []
+            people: [],
+            numberOfColumns: 0
         }
     },
     async fetch() {
@@ -38,7 +39,43 @@ export default {
             }
         }, this.$nuxt.context.app.i18n.locale)
         this.people = data
-    }
+    },
+
+    methods: {
+        getScreen: function(){
+            if (process.client) {
+                if (window.innerWidth < 575) {
+                    this.numberOfColumns = 1
+                }
+                else if(window.innerWidth > 1200 ) {
+                    this.numberOfColumns = 3
+                }
+                else {
+                    this.numberOfColumns = 2
+                }
+           } 
+        }
+    },
+
+    computed: {
+        sortedPeople(){
+            var output = []
+            for (var i=0; i<this.numberOfColumns; i++) {
+                output[i] = []
+                for (var j=i; j<this.people.length; j=j+this.numberOfColumns) {
+                    output[i].push(this.people[j]) 
+                }
+            }
+            return output
+        }
+    },
+
+    mounted() {
+        this.getScreen()
+        window.addEventListener('resize', () => {
+        this.getScreen()
+    })
+  },
 }
 </script>
 
