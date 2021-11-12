@@ -115,6 +115,13 @@ $contentpaddingLarge: 3em;
 .splitting__header {
 
     ::v-deep .headline {
+        .word {
+            pointer-events: none;
+        }
+
+        .char {
+            pointer-events: none;
+        }
 
         &--fall {
 
