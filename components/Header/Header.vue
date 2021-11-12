@@ -43,6 +43,7 @@ export default {
   },
   watch: {
       $route() {
+        this.header = [] 
         this.$fetch()
       }
   },
