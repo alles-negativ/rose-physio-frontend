@@ -5,7 +5,15 @@ $contentpadding: 0.75em;
 $contentpaddingLarge: 3em;
 
 .wrapper {
+    display: flex;
     margin-top: 10em;
+    padding-left: $contentpadding;
+    padding-right: $contentpadding;
+    
+    :last-child{
+            margin-top: 0em;
+            margin-right: 0em;
+        }
 
     @include tablet {
         padding-left: $contentpaddingLarge;
@@ -20,23 +28,21 @@ $contentpaddingLarge: 3em;
 
 .container {
     width: 100%;
-    margin-top: 1em;
+    margin-top: 10em;
     margin-bottom: 1em;
-    padding-left: 12px;
-    padding-right: 12px;
 
     @include tablet {
-        padding-left: 0px;
-        padding-right: 0px;
-        columns: 2;
+        width: 50%;
+        columns: 1;
         column-gap: 2.5em;
+        margin-right: 2em;
     }
 
     @include desktop {
-        padding-left: 0px;
-        padding-right: 0px;
-        columns: 2;
+        width: 33%;
+        columns: 1;
         column-gap: 2em;
+        margin-right: 2em;
     }
 
     .content {
