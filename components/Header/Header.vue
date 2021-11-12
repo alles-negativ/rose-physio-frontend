@@ -41,12 +41,6 @@ export default {
     this.header = data.content
     this.title = data.title
   },
-  watch: {
-      $route() {
-        // this.header = [] 
-        // this.$fetch()
-      }
-  },
   computed: {
     slug() {
       const path = this.$route.name
