@@ -1,41 +1,40 @@
 <template>
-  <div class="wrapper">
-    <div v-for="element in data" :key="element.id">
-        <Accordion>
+    <div class="wrapper">
+        <div v-for="element in data" :key="element.id">
+            <Accordion>
              <template v-slot:title>
                 <h3 class="title"> {{ element.title }} </h3>
               </template>
               <template v-slot:body>
-                <div v-html="element.mapframe" />
+                <p class="text" slot="contenttext"> {{ element.introtext }} </p>
               </template>
-        </Accordion>
+          </Accordion>
+        </div>
     </div>
-  </div>  
 </template>
 
 <script>
 export default {
-    name: 'Standorte',
+    name: 'KurseListe',
 
     data() {
         return {
-            data: []
+            data: [],
         }
     },
     async fetch() {
         const { json: data } = await this.$kirby.find({
-           	"query": "page('kontakt').children",
+            "query": "page('kurse').children",
             "select": {
                 "title": true,
-                "contenttext": true,
-                "mapframe": true
+                "introtext": true,
             }
         }, this.$nuxt.context.app.i18n.locale)
         this.data = data
-    }
+    },
 }
 </script>
 
 <style lang="scss">
-    @use "Standorte";
+    @use "KurseListe";
 </style>

@@ -1,7 +1,13 @@
 <template>
   <main>
-    <h1>{{ page.content.contenttitle }}</h1>
-    <p>{{ page.content.contenttext }}</p>
+    <div class="grid">
+      <h1>Placeholder Stundenplan</h1>
+    </div>
+    <KurseListe />
+    <div class="grid">
+      <h1>{{ page.content.contenttitle }}</h1>
+      <p>{{ page.content.contenttext }}</p>
+    </div>
   </main>
 </template>
 

@@ -60,10 +60,14 @@ export default {
     computed: {
         sortedArticles(){
             var output = []
+            var input = this.articles.sort(function(a,b){
+                return new Date(b.date) - new Date(a.date);
+            })
+            console.log(this.articles)
             for (var i=0; i<this.numberOfColumns; i++) {
                 output[i] = []
-                for (var j=i; j<this.articles.length; j=j+this.numberOfColumns) {
-                    output[i].push(this.articles[j]) 
+                for (var j=i; j<input.length; j=j+this.numberOfColumns) {
+                    output[i].push(input[j]) 
                 }
             }
             return output
