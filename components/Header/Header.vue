@@ -43,8 +43,8 @@ export default {
   },
   watch: {
       $route() {
-        this.header = [] 
-        this.$fetch()
+        // this.header = [] 
+        // this.$fetch()
       }
   },
   computed: {
