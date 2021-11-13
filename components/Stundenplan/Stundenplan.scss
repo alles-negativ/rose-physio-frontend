@@ -1,0 +1,64 @@
+@use "assets/css/main/colors" as *;
+@use "assets/css/main/breakpoints" as *;
+
+$contentpadding: 0.75em;
+$contentpaddingLarge: 3em;
+
+.wrapper {
+    margin-top: 10em;
+    margin-bottom: 10em;
+    padding-left: $contentpadding;
+    padding-right: $contentpadding;
+
+    @include tablet {
+        padding-left: $contentpaddingLarge;
+        padding-right: $contentpaddingLarge;
+    }
+
+    @include desktop {
+        padding-left: $contentpaddingLarge;
+        padding-right: $contentpaddingLarge;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+
+    @include tablet {
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 0.75em;
+    }
+
+    @include desktop {
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 1em;
+    }
+
+    .text__big {
+        text-transform: uppercase;
+        border-top: thin solid $black;
+        border-bottom: thin solid $black;
+    }
+
+    .content {
+        display: flex;
+        flex-flow: column wrap;
+        height: 12em;
+        width: 100%;
+        margin-bottom: 1em;
+        border-bottom: thin solid $black;
+
+        .text__big {
+            text-transform: none;
+            border-top: none;
+            border-bottom: none;
+        }
+
+        :last-child {
+            margin-top: 3em;
+            border-bottom: none;
+        }
+    }
+}

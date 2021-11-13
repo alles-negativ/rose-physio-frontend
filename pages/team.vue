@@ -15,9 +15,6 @@ export default {
     const { json: page } = await $kirby.find({
       "query": "page('team')"
     }, app.i18n.locale)
-    store.commit('header/setTitle', page.content.headertitle)
-    store.commit('header/setText', page.content.headertext)
-    store.commit('header/setSitetitle', page.content.title)
     return { page }
   }
 }
