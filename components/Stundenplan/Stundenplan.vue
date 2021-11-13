@@ -30,12 +30,11 @@ export default {
     computed: {
         days(){
             var output = {}
-            console.log(this.courses[0]["day"])
-            for (var i=0; i<this.courses; i++) {
+            for (var i=0; i<this.courses.length; i++) {
+                if(output[this.courses[i]["day"]] == undefined) {
+                    output[this.courses[i]["day"]] = []
+                }
                 output[this.courses[i]["day"]].push(this.courses[i])
-                // for (var j=i; j<input.length; j=j+this.numberOfColumns) {
-                //     output[i].push(input[j]) 
-                // }
             }
             return output
         }
