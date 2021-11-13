@@ -8,34 +8,35 @@ $contentpaddingLarge: 3em;
 .header {
     height: 550px;
     background: $red;
-    padding: $contentpadding;
-    padding-top: 1.25em;
     margin-bottom: 80px;
 
         @include tablet {
             min-height: 900px;
-            padding: $contentpaddingLarge;
             margin-bottom: 500px;
         }
 
         @include desktop {
             height: 100vh;
-            padding: $contentpaddingLarge;
             margin-bottom: 500px;
         }
 
     &__links {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         margin-bottom: 50px;
+        height: 100px;
+        padding: $contentpadding;
 
-            @include tablet {
+             @include tablet {
                 margin-bottom: 70px;
+                padding: $contentpaddingLarge;
             }
 
             @include desktop {
                 margin-bottom: 85px;
+                padding: $contentpaddingLarge;
             }
 
             &--utility {
@@ -54,6 +55,14 @@ $contentpaddingLarge: 3em;
         flex-flow: row nowrap;
         justify-content: space-between;
         width: 100%;
+
+            @include tablet {
+                padding: $contentpaddingLarge;
+            }
+
+            @include desktop {
+                padding: $contentpaddingLarge;
+            }
 
             &--text {
                 width: 100%;
@@ -79,62 +88,3 @@ $contentpaddingLarge: 3em;
         }
     }
 }
-
-// .header__title {
-//     clear: both;
-//     text-align: left;
-
-//     ::v-deep a {
-//         color: white;
-//         text-decoration: none;
-//     }
-// }
-
-// .header__text {
-//     text-align: left;
-// }
-
-
-// .header__title {
-
-//     ::v-deep.word, ::v-deep.char {
-//         animation-delay: var(--del);
-//         animation-direction: var(--dir, normal);
-//         animation-duration: var(--dur);
-//         animation-iteration-count: var(--it, infinite);
-//         animation-name: var(--name);
-//         animation-timing-function: var(--tf);
-//         animation-fill-mode: var(--fill, forwards);
-//         display: inline-block;
-//         position: relative;
-//         transform-origin: 50% 100%;
-//         z-index: 1;
-//       }
-    
-//     ::v-deep.headline--fall {
-//         ::v-deep.char {
-//             --name: fall;
-//             --dur: 600ms;
-//             --del: calc(var(--char-index) * -0.05s);
-//             --tf: cubic-bezier(0.165, 0.44, 0.64, 1);
-//         }
-
-//         @keyframes fall {
-//             0% {
-//             transform: rotateY(-25deg);
-//             }
-//             25% {
-//             transform: translateY(2%) rotateY(25deg);
-//             }
-//             50% {
-//             transform: rotateY(-25deg);
-//             }
-//             75% {
-//             transform: translateY(4%) rotateY(25deg);
-//             }
-//             100% {
-//             transform: rotateY(-25deg);
-//             }
-//         }
-//     }
-// }

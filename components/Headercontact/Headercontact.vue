@@ -1,8 +1,8 @@
 <template>
   <div class="header">
     <div class="header__links">
-      <nuxt-link class="header__link--logo" :to="localePath('/')">
-        <img src="~/assets/images/logo.svg" alt="">
+      <nuxt-link :to="localePath('/')">
+        <img class="header__links--logo" src="~/assets/images/logo.svg" alt="">
       </nuxt-link>
       <div class="header__links--utility">
         <p class="text__menu">{{ sitetitle }}</p>
