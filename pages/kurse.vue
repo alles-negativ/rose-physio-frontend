@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="content">
     <div class="grid">
       <h1>Stundenplan</h1>
     </div>

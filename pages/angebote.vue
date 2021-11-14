@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="content">
     <div class="grid">
       <h1>{{ page.content.contenttitle }}</h1>
       <p>{{ page.content.contenttext }}</p>

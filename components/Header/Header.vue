@@ -14,9 +14,12 @@
         <span class="splitting__header" v-html="header.headertext" />
         <p class="text"></p>
       </div>
-      <div v-if="header.contentimage"  class="header__content--image">
+        <div v-if="header.contentimage"  class="header__content--image">
+        </div>
+    </div>
+      <div class="arrow" onclick="arrowScroll()">
+          <img class="arrow__img" src="~/assets/images/arrow.svg" alt="">
       </div>
-    </div>  
   </div>
 </template>
 

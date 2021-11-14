@@ -6,12 +6,12 @@ $contentpadding: 0.75em;
 $contentpaddingLarge: 3em;
 
 .header {
-    height: 550px;
+    height: 100vh;
     background: $red;
     margin-bottom: 80px;
 
         @include tablet {
-            min-height: 900px;
+            height: 100vh;
             margin-bottom: 500px;
         }
 
@@ -30,12 +30,10 @@ $contentpaddingLarge: 3em;
         padding: $contentpadding;
 
              @include tablet {
-                margin-bottom: 70px;
                 padding: $contentpaddingLarge;
             }
 
             @include desktop {
-                margin-bottom: 85px;
                 padding: $contentpaddingLarge;
             }
 
@@ -51,40 +49,82 @@ $contentpaddingLarge: 3em;
         }
 
     &__content {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr;
         width: 100%;
+        height: 70vh;
+        padding-left: $contentpadding;
+        padding-right: $contentpadding;
+        padding-bottom: $contentpadding;
 
             @include tablet {
-                padding: $contentpaddingLarge;
+                grid-template-columns: 1fr 1fr;
+                padding-left: $contentpaddingLarge;
+                padding-right: $contentpaddingLarge;
+                padding-bottom: $contentpaddingLarge;
             }
 
             @include desktop {
-                padding: $contentpaddingLarge;
+                grid-template-columns: 1fr 1fr;
+                padding-left: $contentpaddingLarge;
+                padding-right: $contentpaddingLarge;
+                padding-bottom: $contentpaddingLarge;
+            }
+
+            .text__big {
+                grid-column: 1;
+                grid-row: 2;
             }
 
             &--text {
-                width: 100%;
+                grid-column: 1;
+                grid-row: 3;
+            }
+        &--contact {
+                display: flex;
+                flex-flow: column wrap;
 
                 @include tablet {
-                    width: 55%;
+                    text-align: right;
+                    grid-column: 2;
+                    grid-row:  3;
                 }
 
                 @include desktop {
-                    width: 55%;
-                }
-            
-            .text__big {
-                min-height: 200px;
-            }
+                   text-align: right;
+                   grid-column: 2;
+                   grid-row: 3;
+                } 
+            } 
+    }
+}
 
-            &--contact {
-                display: flex;
-                justify-content: flex-end;
-                flex-flow: column wrap;
-                width: 10%;
-            }      
+.arrow {
+    padding-left: $contentpadding;
+    padding-right: $contentpadding;
+    padding-bottom: $contentpadding;
+
+        @include tablet {
+            padding-left: $contentpaddingLarge;
+            padding-right: $contentpaddingLarge;
+            padding-bottom: $contentpaddingLarge;
+        }
+
+        @include desktop {
+            padding-left: $contentpaddingLarge;
+            padding-right: $contentpaddingLarge;
+            padding-bottom: $contentpaddingLarge;
+        }
+    
+    &__img {
+        animation: pulse 1s ease-in infinite;
+    }
+    @keyframes pulse {
+        0%, 100% {
+            transform: translate(0, 5px)
+        }
+        50% {
+            transform: translate(0, 0)
         }
     }
 }

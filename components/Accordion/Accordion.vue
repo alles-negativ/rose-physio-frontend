@@ -2,7 +2,7 @@
     <div class="accordion">
         <div class="accordion__title" v-on:click="toggle">
           <slot name="title">Default Title</slot>
-          <p class="plus">+</p>
+          <p v-bind:class="{ rotate: show }" class="plus">+</p>
         </div>
         <transition name="accordion"
           v-on:before-enter="beforeEnter" v-on:enter="enter"

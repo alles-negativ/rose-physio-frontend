@@ -10,17 +10,20 @@
       </div>  
     </div>
     <div class="header__content">
-      <div class="header__content--text">
         <span v-html="title" />
         <p class="text__big">{{ text }}</p>
-        <p class="text">{{ contact.headertram }}</p>
-        <p class="text">{{ contact.headeropening }}</p>
-      </div>  
+        <div class="header__content--text">
+          <p class="text" v-html="contact.headertram"/>
+          <p class="text">{{ contact.headeropening }}</p>
+        </div> 
         <div class="header__content--contact">
-          <a class="text text__big--black" href="mailto:info@rose-physio-fake.ch?subject=Termin&body=Guten%20Tag%2C%0A%0Aich%20w%C3%BCrde%20gerne%20einen%20Termin%20abmachen.%0A%0AGruss">{{ contact.headeremail }}</a>
-          <a class="text text__big--black" href="tel:+4733378901">{{ contact.headertel }}</a>
+          <a class="text text__big--white" href="mailto:info@rose-physio-fake.ch?subject=Termin&body=Guten%20Tag%2C%0A%0Aich%20w%C3%BCrde%20gerne%20einen%20Termin%20abmachen.%0A%0AGruss">{{ contact.headeremail }}</a>
+          <a class="text text__big--white" href="tel:+4733378901">{{ contact.headertel }}</a>
         </div>
     </div>
+      <div class="arrow" onclick="arrowScroll()">
+          <img class="arrow__img" src="~/assets/images/arrow.svg" alt="">
+      </div>
   </div>
 </template>
 

@@ -33,6 +33,8 @@ export default {
     ],
     script: [
       // { src: "https://unpkg.com/splitting/dist/splitting.min.js" }
+      // script in static folder for global JS
+      {src: "/script.js"}
     ]
   },
 

@@ -29,12 +29,10 @@ $contentpaddingLarge: 3em;
         padding: $contentpadding;
 
             @include tablet {
-                margin-bottom: 70px;
                 padding: $contentpaddingLarge;
             }
 
             @include desktop {
-                margin-bottom: 85px;
                 padding: $contentpaddingLarge;
             }
 
@@ -122,65 +120,32 @@ $contentpaddingLarge: 3em;
     }
 }
 
-.splitting__header {
+.arrow {
+    padding-left: $contentpadding;
+    padding-right: $contentpadding;
+    padding-bottom: $contentpadding;
 
-    ::v-deep .headline {
-        .word {
-            pointer-events: none;
+        @include tablet {
+            padding-left: $contentpaddingLarge;
+            padding-right: $contentpaddingLarge;
+            padding-bottom: $contentpaddingLarge;
         }
 
-        .char {
-            pointer-events: none;
+        @include desktop {
+            padding-left: $contentpaddingLarge;
+            padding-right: $contentpaddingLarge;
+            padding-bottom: $contentpaddingLarge;
         }
-
-        &--fall {
-
-            .char {
-                animation: fall 600ms infinite calc(var(--char-index) * 0.05s) cubic-bezier(0.165, 0.44, 0.64, 1);
-            }
-                
-            @keyframes fall {
-                0% {
-                    transform: rotateY(-25deg);
-                }
-                25% {
-                    transform: translateY(2%) rotateY(25deg);
-                }
-                50% {
-                    transform: rotateY(-25deg);
-                }
-                75% {
-                    transform: translateY(4%) rotateY(25deg);
-                }
-                100% {
-                    transform: rotateY(-25deg);
-                }
-            }
-        }   
-
-        &--jump {
-
-            .char {
-                animation: jump 800ms infinite calc(var(--char-index) * 0.075s) cubic-bezier(0.165, 0.44, 0.64, 1);
-            }
-                
-            @keyframes jump {
-                20% {
-                  transform: translateY(2%) scaleY(0.9);
-                }
-                40% {
-                  transform: translateY(-50) scaleY(1.2);
-                }
-                50% {
-                  transform: translateY(10%) scaleY(0.8);
-                }
-                70% {
-                  transform: translateY(-5%) scaleY(1);
-                }
-                80%, 100% {
-                  transform: translateY(0) scaleY(1);
-                }
-            }
-        }   
+    
+    &__img {
+        animation: pulse 1s ease-in infinite;
+    }
+    @keyframes pulse {
+        0%, 100% {
+            transform: translate(0, 5px)
+        }
+        50% {
+            transform: translate(0, 0)
+        }
     }
 }
