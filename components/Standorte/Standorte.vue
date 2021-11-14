@@ -3,10 +3,13 @@
     <div v-for="element in data" :key="element.id">
         <Accordion>
              <template v-slot:title>
-                <h3 class="title"> {{ element.title }} </h3>
+                 <div>
+                    <h3 class="title"> {{ element.title }} </h3>
+                    <p class="text__big"> {{ element.contenttext }} </p>
+                </div>
               </template>
               <template v-slot:body>
-                <div v-html="element.mapframe" />
+                <div class="content__map" v-html="element.mapframe" />
               </template>
         </Accordion>
     </div>
@@ -36,6 +39,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     @use "Standorte";
 </style>

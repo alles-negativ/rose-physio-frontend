@@ -1,3 +1,7 @@
+//Transition styling is applied in the collection components
+//Styling of the content is largely applied in collection components
+//Reason: Individual needs for different content types
+
 @use "assets/css/main/colors" as *;
 @use "assets/css/main/breakpoints" as *;
 
@@ -19,6 +23,8 @@ $contentpaddingLarge: 3em;
             justify-content: space-between;
             width: 100%;
             height: auto;
+            padding-top: $contentpadding;
+            padding-bottom: $contentpadding;
 
             .plus {
             font-size: 60px;
@@ -38,6 +44,5 @@ $contentpaddingLarge: 3em;
         border-top: 0;
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
-        transition: 500ms ease-out;
     }
 }

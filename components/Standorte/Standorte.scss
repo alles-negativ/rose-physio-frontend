@@ -21,20 +21,31 @@ $contentpaddingLarge: 3em;
     }
 }
 
-.content {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+// ::v-deep selector for individual styling of the accordion (when using scoped styles)
+::v-deep .accordion {
+     .accordion__body {
+        transition: 200ms ease-out;
 
-    .text__big {
-        width: 100%;
-    }
+        .content {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
 
-    .text {
-        width: 55%;
-    }
+            .text__big {
+                width: 100%;
+            }
 
-    .image {
-        height: auto;
+            .text {
+                width: 55%;
+            }
+
+            &__map {
+                width: 100%;
+            }
+
+            iframe {
+                width: 100%;
+            }
+        }
     }
-}  
+}
