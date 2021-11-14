@@ -63,7 +63,6 @@ export default {
             var input = this.articles.sort(function(a,b){
                 return new Date(b.date) - new Date(a.date);
             })
-            console.log(this.articles)
             for (var i=0; i<this.numberOfColumns; i++) {
                 output[i] = []
                 for (var j=i; j<input.length; j=j+this.numberOfColumns) {

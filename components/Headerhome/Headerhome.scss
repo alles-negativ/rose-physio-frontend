@@ -73,26 +73,22 @@ $contentpaddingLarge: 3em;
             }
 
             span {
-               width: 55%;
+               width: 100%;
                font-size: 35px;
                line-height: 45px;
 
                 @include tablet {
-                    width: 55%;
+                    width: 100%;
                     font-size: 55px;
                     line-height: 70px;
                 }
 
                 @include desktop {
-                    width: 55%;
+                    width: 100%;
                     font-size: 55px;
                     line-height: 70px;
                 } 
-            }
-            
-            .text {
-                margin-top: 1em;
-            }    
+            }  
         }
 
         &--image {
@@ -123,6 +119,10 @@ $contentpaddingLarge: 3em;
 
 .splitting__header {
 
+    ::v-deep .headline .word {
+            line-height: 0px;
+    }
+
     ::v-deep .headline {
         .word {
             pointer-events: none;
@@ -131,6 +131,7 @@ $contentpaddingLarge: 3em;
         .char {
             pointer-events: none;
             font-size: 35px;
+            line-height: 45px;
 
             @include tablet {
                     font-size: 55px;
@@ -141,7 +142,7 @@ $contentpaddingLarge: 3em;
                     font-size: 55px;
                     line-height: 70px;
                 } 
-        }
+            }
 
         &--fall {
 

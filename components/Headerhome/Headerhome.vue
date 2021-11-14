@@ -12,9 +12,6 @@
     <div class="header__content">
       <div class="header__content--text">
         <span class="splitting__header" v-html="header.headertext" />
-        <p class="text"></p>
-      </div>
-      <div v-if="header.contentimage"  class="header__content--image">
       </div>
     </div>  
   </div>
