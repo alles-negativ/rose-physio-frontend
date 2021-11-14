@@ -3,7 +3,9 @@
     <CookieBox />
     <Header :key="key" />
     <Navigation />
-    <Nuxt />
+    <div class="wrapper">
+      <Nuxt />
+    </div>
     <Footer />
   </div>
 </template>

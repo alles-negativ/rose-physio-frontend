@@ -1,26 +1,6 @@
 @use "assets/css/main/colors" as *;
 @use "assets/css/main/breakpoints" as *;
 
-$contentpadding: 0.75em;
-$contentpaddingLarge: 3em;
-
-.wrapper {
-    margin-top: 10em;
-    margin-bottom: 10em;
-    padding-left: $contentpadding;
-    padding-right: $contentpadding;
-
-    @include tablet {
-        padding-left: $contentpaddingLarge;
-        padding-right: $contentpaddingLarge;
-    }
-
-    @include desktop {
-        padding-left: $contentpaddingLarge;
-        padding-right: $contentpaddingLarge;
-    }
-}
-
 // ::v-deep selector for individual styling of the accordion (when using scoped styles)
 ::v-deep .accordion {
      .accordion__body {

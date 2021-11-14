@@ -3,7 +3,9 @@
     <CookieBox />
     <Headercontact />
     <Navigation />
-    <Nuxt />
+    <div class="wrapper">
+      <Nuxt />
+    </div>
     <Footer />
   </div>
 </template>

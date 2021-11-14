@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div>
     <div v-for="element in data" :key="element.id">
         <Accordion>
              <template v-slot:title>

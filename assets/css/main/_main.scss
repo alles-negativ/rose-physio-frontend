@@ -2,6 +2,29 @@
 Global definitions for overreaching elements
 */
 
+@use "breakpoints" as *;
+@use "colors" as *;
+
+$contentpadding: 0.75em;
+$contentpaddingLarge: 3em;
+
 html {
    scroll-behavior: smooth;
+}
+
+.wrapper {
+   margin-top: 10em;
+   margin-bottom: 10em;
+   padding-left: $contentpadding;
+   padding-right: $contentpadding;
+
+    @include tablet {
+        padding-left: $contentpaddingLarge;
+        padding-right: $contentpaddingLarge;
+    }
+
+    @include desktop {
+        padding-left: $contentpaddingLarge;
+        padding-right: $contentpaddingLarge;
+    }
 }

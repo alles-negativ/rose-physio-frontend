@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div>
         <div class="container">
             <div v-for="(day,weekday) in days" :key="weekday">
                 <p class="text__big">{{ weekday }}</p>

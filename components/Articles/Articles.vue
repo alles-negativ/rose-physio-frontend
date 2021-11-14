@@ -1,6 +1,6 @@
 <template>
-    <div class="wrapper"> 
-        <ul v-for="columns in sortedArticles" :key="columns.id" class="container">
+    <div class="container"> 
+        <ul v-for="columns in sortedArticles" :key="columns.id" class="container__columns">
             <li v-for="article in columns" :key="article.id" class="content">
                 <nuxt-img :src="article.images[0].url" />
                 <h3>{{ article.title }}</h3>

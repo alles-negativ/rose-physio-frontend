@@ -4,29 +4,15 @@
 $contentpadding: 0.75em;
 $contentpaddingLarge: 3em;
 
-.wrapper {
+.container {
     display: flex;
     margin-top: 10em;
-    padding-left: $contentpadding;
-    padding-right: $contentpadding;
     
     :last-child{
             margin-top: 0em;
             margin-right: 0em;
         }
-
-    @include tablet {
-        padding-left: $contentpaddingLarge;
-        padding-right: $contentpaddingLarge;
-    }
-
-    @include desktop {
-        padding-left: $contentpaddingLarge;
-        padding-right: $contentpaddingLarge;
-    }
-}
-
-.container {
+    &__columns {
     width: 100%;
     margin-top: 10em;
     margin-bottom: 1em;
@@ -53,6 +39,7 @@ $contentpaddingLarge: 3em;
         margin-bottom: 5em;
         border-bottom: thin solid $black;
     }
+}    
 }
 
 h3 {
