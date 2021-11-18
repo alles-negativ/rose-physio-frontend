@@ -4,24 +4,38 @@
 $contentpadding: 0.75em;
 $contentpaddingLarge: 3em;
 
-.header {
-    height: 450px;
-    background: $red;
+.header__wrapper {
+    height: 100%;
+    width: 100%;
     margin-bottom: $contentpadding;
 
         @include tablet {
-            min-height: 550px;
-            margin-bottom: $contentpaddingLarge;
+            margin-bottom: $contentpadding;
         }
 
         @include desktop {
-            height: 700px;
-            margin-bottom: $contentpaddingLarge;
+            margin-bottom: 15em;
         }
 
         @include desktopXL {
-            height: 700px;
-            margin-bottom: $contentpaddingLarge;
+            margin-bottom: 20em;
+        }
+}
+
+.header {
+    height: 550px;
+    background: $red;
+
+        @include tablet {
+            height: 650px;
+        }
+
+        @include desktop {
+            height: 650px;
+        }
+
+        @include desktopXL {
+            height: 750px;
         }
 
     &__links {
@@ -29,12 +43,13 @@ $contentpaddingLarge: 3em;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin-bottom: 50px;
         height: 100px;
+        margin-bottom: 50px;
         padding: $contentpadding;
 
             @include tablet {
                 padding: $contentpaddingLarge;
+                margin-bottom: 0px;
             }
 
             @include desktop {
@@ -63,21 +78,24 @@ $contentpaddingLarge: 3em;
 
             @include tablet {
                 padding: $contentpaddingLarge;
+                height: 400px;
             }
 
             @include desktop {
                 padding: $contentpaddingLarge;
+                height: 500px;
             }
 
             @include desktopXL {
                 padding: $contentpaddingLarge;
+                height: 600px;
             }
 
         &--text {
             width: 100%;
 
             @include tablet {
-                width: 55%;
+                width: 45%;
             }
 
             @include desktop {
@@ -92,7 +110,7 @@ $contentpaddingLarge: 3em;
                width: 100%; 
             }
             
-            .text {
+            .text__big {
                 margin-top: 1em;
             }    
         }
@@ -103,61 +121,75 @@ $contentpaddingLarge: 3em;
             @include tablet {
                 display: block;
                 position: absolute;
-                width: 550px;
-                height: 699px;
+                width: 320px;
+                height: 426px;
                 background-color: gray;
                 border-radius: 20px;
-                margin-left: 55%;
+                right: $contentpaddingLarge;
             }
 
             @include desktop {
                 display: block;
                 position: absolute;
-                width: 550px;
-                height: 699px;
+                width: 500px;
+                height: 666px;
                 background-color: gray;
                 border-radius: 20px;
-                margin-left: 55%;
+                right: $contentpaddingLarge;
             }
 
             @include desktopXL {
                 display: block;
                 position: absolute;
-                width: 550px;
-                height: 699px;
+                width: 630px;
+                height: 840px;
                 background-color: gray;
                 border-radius: 20px;
-                margin-left: 55%;
+                right: $contentpaddingLarge;
             }
         }
     }
 }
 
 .arrow {
-    padding-left: $contentpadding;
-    padding-right: $contentpadding;
-    padding-bottom: $contentpadding;
+    display: none;
+    bottom: 0;
 
         @include tablet {
-            padding-left: $contentpaddingLarge;
-            padding-right: $contentpaddingLarge;
-            padding-bottom: $contentpaddingLarge;
+            display: none;
         }
 
         @include desktop {
+            display: block;
             padding-left: $contentpaddingLarge;
-            padding-right: $contentpaddingLarge;
             padding-bottom: $contentpaddingLarge;
+            margin-top: 4.5em;
         }
 
         @include desktopXL {
+            display: block;
             padding-left: $contentpaddingLarge;
-            padding-right: $contentpaddingLarge;
             padding-bottom: $contentpaddingLarge;
+            margin-top: 7em;
         }
     
     &__img {
         animation: pulse 1s ease-in infinite;
+
+        @include tablet {
+            width: 25px;
+            height: auto;
+        }
+
+        @include desktop {
+            width: 38px;
+            height: auto;
+        }
+
+        @include desktopXL {
+            width: 38px;
+            height: auto;
+        }
     }
     @keyframes pulse {
         0%, 100% {

@@ -1,25 +1,28 @@
 <template>
+<div class="header__wrapper">
   <div class="header">
     <div class="header__links">
       <nuxt-link :to="localePath('/')">
         <img class="header__links--logo" src="~/assets/images/logo.svg" alt="">
       </nuxt-link>
       <div class="header__links--utility">
-        <p class="text__menu">{{ title }}</p>
+        <p class="text__menu">{{ header.title }}</p>
         <LanguageInput />
       </div>  
     </div>
     <div class="header__content">
       <div class="header__content--text">
-        <span class="splitting__header" v-html="header.headertext" />
-        <p class="text"></p>
+        <h1>{{ header.headertitle }}</h1>
+        <p class="text__big">{{ header.headertext }}</p>
       </div>
-        <div v-if="header.contentimage"  class="header__content--image">
+        <div v-if="header.headerimage">
+            <nuxt-img class="header__content--image" :src="header.images[0].url" />
         </div>
     </div>
-      <div class="arrow" onclick="arrowScroll()">
-          <img class="arrow__img" src="~/assets/images/arrow.svg" alt="">
-      </div>
+  </div>
+    <div class="arrow" onclick="arrowScroll()">
+        <img class="arrow__img" src="~/assets/images/arrow.svg" alt="">
+    </div>
   </div>
 </template>
 
@@ -34,15 +37,26 @@ export default {
   data() {
     return {
       header: [],
-      title: ""
     }
   },
   async fetch() {
     const { json: data } = await this.$kirby.find({
-        "query": "page('" + this.slug + "')"
+        "query": "page('" + this.slug + "')",
+          "select": {
+              "title": true,
+              "headertitle": true,
+              "headertext": true,
+              "headerimage": true,
+              "images": {
+                "query": "page.files",
+                "select": {
+                  "name": true,
+                  "url": true
+                }
+              }
+            }
     }, this.$nuxt.context.app.i18n.locale)
-    this.header = data.content
-    this.title = data.title
+    this.header = data
   },
   computed: {
     slug() {

@@ -12,7 +12,7 @@ h1 {
     font-size: 35px;
 
   @include tablet {
-        font-size: 45px;
+        font-size: 40px;
   }
 
   @include desktop {
@@ -70,13 +70,13 @@ p, button {
         font-weight: 500;
 
         @include tablet {
-            font-size: 24px;
-            line-height: 32px;
+            font-size: 20px;
+            line-height: 26px;
         }
 
         @include desktop {
-            font-size: 30px;
-            line-height: 38px;
+            font-size: 24px;
+            line-height: 31px;
         }
 
         @include desktopXL {

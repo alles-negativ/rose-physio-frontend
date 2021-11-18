@@ -122,30 +122,42 @@ $contentpaddingLarge: 3em;
 }
 
 .arrow {
-    padding-left: $contentpadding;
-    padding-right: $contentpadding;
-    padding-bottom: $contentpadding;
+    display: none;
+    bottom: 0;
 
         @include tablet {
-            padding-left: $contentpaddingLarge;
-            padding-right: $contentpaddingLarge;
-            padding-bottom: $contentpaddingLarge;
+            display: none;
         }
 
         @include desktop {
+            display: block;
             padding-left: $contentpaddingLarge;
-            padding-right: $contentpaddingLarge;
             padding-bottom: $contentpaddingLarge;
         }
 
         @include desktopXL {
+            display: block;
             padding-left: $contentpaddingLarge;
-            padding-right: $contentpaddingLarge;
             padding-bottom: $contentpaddingLarge;
         }
     
     &__img {
         animation: pulse 1s ease-in infinite;
+
+        @include tablet {
+            width: 25px;
+            height: auto;
+        }
+
+        @include desktop {
+            width: 38px;
+            height: auto;
+        }
+
+        @include desktopXL {
+            width: 38px;
+            height: auto;
+        }
     }
     @keyframes pulse {
         0%, 100% {
