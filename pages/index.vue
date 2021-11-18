@@ -7,7 +7,7 @@
 <script>
 export default {
   layout: 'home',
-  async asyncData({ app, params, $kirby, store }) {
+  async asyncData({ app, $kirby }) {
     const { json: page } = await $kirby.find({
       "query": "page('home')"
     }, app.i18n.locale)

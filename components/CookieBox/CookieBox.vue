@@ -3,7 +3,9 @@
     <cookie-consent>
       <template slot="message">
         <p>This website uses cookies</p>
-        <p><a class="btn btn-link" href="/my-cookies">Read more</a></p>
+        <p>
+          <a class="btn btn-link" href="/my-cookies">Read more</a>
+        </p>
       </template>
       <template slot="button">
         <button class="btn btn-info">Accept</button>

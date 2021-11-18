@@ -67,12 +67,6 @@ export default {
         return path.slice(0, path.length - 5)
       }
     }
-  },
-  mounted() {
-    this.$Splitting()
-  },
-  updated() {
-    this.$Splitting()
   }
 }
 </script>

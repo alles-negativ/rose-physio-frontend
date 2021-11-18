@@ -2,33 +2,41 @@
 @use "assets/css/main/breakpoints" as *;
 
 .cookie-consent {
+    position: fixed;
     display: flex;
-    padding: 10px;
-    align-items: center;
-    align-self: center;
+    flex-flow: row wrap;
     justify-content: center;
+    width: 300px;
+    height: auto;
+    background-color: $black;
+    bottom: 1em;
+    left: 1em;
+    border-radius: 20px;
+    padding: 0.5em;
 
     p {
-        font-weight: bold;
+        color: white;
     }
 
     button {
-        padding: 10px;
-        margin-left: 20px;
-        min-width: 140px;
-        font-weight: bold;
+        width: auto;
+        background-color: $black;
+        border: thin solid $white;
+        color: $white;
+        border-radius: 200px;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        margin-left: 1em;
 
         &:hover {
-            background-color: black;
-            color: white;
+            background-color: $white;
+            color: $black;
         }
     }
 
     .btn-link {
-        padding-left: 10px;
-        color:red;
-        text-decoration: none;
-        font-weight: bold;
+        color: $white;
+        text-decoration: underline;
 
         &:hover {
             font-style: italic;
