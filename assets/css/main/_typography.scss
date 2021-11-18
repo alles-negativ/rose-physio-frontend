@@ -18,6 +18,10 @@ h1 {
   @include desktop {
         font-size: 55px;
   }
+
+  @include desktopXL {
+        font-size: 55px;
+  }
 }
 
 h2 {
@@ -31,7 +35,19 @@ h3 {
     font-family: SpaceGrotesk;
     font-weight: 700;
     font-style: normal;
-    font-size: 40px;
+    font-size: 30px;
+
+    @include tablet {
+        font-size: 35px;
+    }
+
+    @include desktop {
+            font-size: 40px;
+    }
+
+    @include desktopXL {
+            font-size: 40px;
+    }
 }
 
 p, button {
@@ -59,6 +75,11 @@ p, button {
         }
 
         @include desktop {
+            font-size: 30px;
+            line-height: 38px;
+        }
+
+        @include desktopXL {
             font-size: 30px;
             line-height: 38px;
         }
@@ -104,6 +125,21 @@ span {
     font-family: SpaceGrotesk;
     font-weight: 600;
     font-style: normal;
-    font-size: 55px;
-    line-height: 70px;
+    font-size: 35px;
+    line-height: 45px;
+
+    @include tablet {
+        font-size: 45px;
+        line-height: 65px;
+    }
+
+    @include desktop {
+        font-size: 55px;
+        line-height: 70px;
+    }
+    
+    @include desktopXL {
+        font-size: 55px;
+        line-height: 70px;
+    } 
 }

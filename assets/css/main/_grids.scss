@@ -5,19 +5,32 @@ Should be changed within the component if needed
 
 @use "breakpoints" as *;
 
+$sitemargin: 1.5em;
+$sitemarginLarge: 3em;
+
 .grid {
     display: grid;
     grid-gap: 12px;
     grid-template-columns: 1fr;
+    margin-bottom: $sitemargin;
 
     @include tablet {
         grid-gap: 20px;
         grid-template-columns: 1fr;
+        margin-bottom: $sitemargin;
     }
 
     @include desktop {
         grid-gap: 30px;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: row dense;
+        margin-bottom: $sitemarginLarge;
+    }
+
+    @include desktopXL {
+        grid-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: row dense;
+        margin-bottom: $sitemarginLarge;
     }
 }

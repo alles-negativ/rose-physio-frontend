@@ -7,16 +7,21 @@ $contentpaddingLarge: 3em;
 .header {
     height: 450px;
     background: $red;
-    margin-bottom: 80px;
+    margin-bottom: $contentpadding;
 
         @include tablet {
             min-height: 550px;
-            margin-bottom: 500px;
+            margin-bottom: $contentpaddingLarge;
         }
 
         @include desktop {
             height: 700px;
-            margin-bottom: 500px;
+            margin-bottom: $contentpaddingLarge;
+        }
+
+        @include desktopXL {
+            height: 700px;
+            margin-bottom: $contentpaddingLarge;
         }
 
     &__links {
@@ -33,6 +38,10 @@ $contentpaddingLarge: 3em;
             }
 
             @include desktop {
+                padding: $contentpaddingLarge;
+            }
+
+            @include desktopXL {
                 padding: $contentpaddingLarge;
             }
 
@@ -60,6 +69,10 @@ $contentpaddingLarge: 3em;
                 padding: $contentpaddingLarge;
             }
 
+            @include desktopXL {
+                padding: $contentpaddingLarge;
+            }
+
         &--text {
             width: 100%;
 
@@ -71,22 +84,12 @@ $contentpaddingLarge: 3em;
                 width: 55%;
             }
 
+            @include desktopXL {
+                width: 55%;
+            }
+
             span {
-               width: 100%;
-               font-size: 35px;
-               line-height: 45px;
-
-                @include tablet {
-                    width: 55%;
-                    font-size: 55px;
-                    line-height: 70px;
-                }
-
-                @include desktop {
-                    width: 55%;
-                    font-size: 55px;
-                    line-height: 70px;
-                } 
+               width: 100%; 
             }
             
             .text {
@@ -116,6 +119,16 @@ $contentpaddingLarge: 3em;
                 border-radius: 20px;
                 margin-left: 55%;
             }
+
+            @include desktopXL {
+                display: block;
+                position: absolute;
+                width: 550px;
+                height: 699px;
+                background-color: gray;
+                border-radius: 20px;
+                margin-left: 55%;
+            }
         }
     }
 }
@@ -132,6 +145,12 @@ $contentpaddingLarge: 3em;
         }
 
         @include desktop {
+            padding-left: $contentpaddingLarge;
+            padding-right: $contentpaddingLarge;
+            padding-bottom: $contentpaddingLarge;
+        }
+
+        @include desktopXL {
             padding-left: $contentpaddingLarge;
             padding-right: $contentpaddingLarge;
             padding-bottom: $contentpaddingLarge;

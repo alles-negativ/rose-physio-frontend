@@ -6,9 +6,11 @@
                 <h3 class="title"> {{ element.title }} </h3>
               </template>
               <template v-slot:body>
+                <p class="text__big" slot="introtext"> {{ element.introtext }} </p>
                 <p class="text" slot="contenttext"> {{ element.contenttext }} </p>
-                <div class="image" slot="image"><nuxt-img :src="element.images[0].url" /></div>
-                <p class="text__big" slot="introtext"></p>
+                <div class="image" slot="image">
+                    <nuxt-img class="image image__img" :src="element.images[0].url" />
+                </div>
               </template>
           </Accordion>
         </div>

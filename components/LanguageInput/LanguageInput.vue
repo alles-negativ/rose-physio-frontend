@@ -1,7 +1,9 @@
 <template>
   <div>
-    <nuxt-link class="text text__menu" v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
-      {{ locale.name }}
+    <nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
+      <div class="text text__menu">
+        {{ locale.name }}
+      </div>
     </nuxt-link>
   </div>
 </template>

@@ -32,6 +32,13 @@ $contentpaddingLarge: 3em;
         margin-right: 2em;
     }
 
+    @include desktopXL {
+        width: 33%;
+        columns: 1;
+        column-gap: 2em;
+        margin-right: 2em;
+    }
+
     .content {
         display: flex;
         flex-flow: column nowrap;
@@ -62,6 +69,11 @@ img {
     }
 
     @include desktop {
+        width: 100%;
+        height: 500px;
+    }
+
+    @include desktopXL {
         width: 100%;
         height: 500px;
     }

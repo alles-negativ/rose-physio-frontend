@@ -31,6 +31,12 @@ footer {
         border-radius: 40px 40px 0px 0px;
     }
 
+    @include desktopXL {
+        flex-flow: column wrap;
+        padding-top: $contentpaddingLarge;
+        border-radius: 40px 40px 0px 0px;
+    }
+
   &__top {
     display: flex;
     width: 100%;
@@ -44,6 +50,10 @@ footer {
     @include desktop {
         width: 100%;
     }
+
+    @include desktopXL {
+        width: 100%;
+    }
   }
 }
 
@@ -55,12 +65,17 @@ footer {
   flex-direction: column;
   padding: $contentpadding;
 
-  @include tablet {
-        width: 50%;
+    @include tablet {
+        width: 30%;
         padding-left: $contentpaddingLarge;
     }
 
     @include desktop {
+        width: 50%;
+        padding-left: $contentpaddingLarge;
+    }
+
+    @include desktopXL {
         width: 50%;
         padding-left: $contentpaddingLarge;
     }
@@ -96,6 +111,15 @@ footer {
         padding-left: $contentpaddingLarge;
     }
 
+    @include desktopXL {
+        order: 3;
+        flex-direction: row;
+        width: 50%;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-left: $contentpaddingLarge;
+    }
+
   .text__small {
     margin-bottom: 0.5em;
     margin-right: 1em;
@@ -106,11 +130,15 @@ footer {
   grid-column: span 2;
   margin-bottom: 0.5em;
 
-  @include tablet {
+    @include tablet {
         width: 100%;
     }
 
     @include desktop {
+        width: 100%;
+    }
+
+    @include desktopXL {
         width: 100%;
     }
 }
@@ -122,11 +150,15 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   padding: $contentpadding;
 
-  @include tablet {
-        width: 50%;
+    @include tablet {
+        width: 70%;
     }
 
     @include desktop {
+        width: 50%;
+    }
+
+    @include desktopXL {
         width: 50%;
     }
   
@@ -145,9 +177,13 @@ footer {
 
   @include tablet {
       width: 100%;
-    }
+  }
 
   @include desktop {
+      width: 100%;
+  }
+
+  @include desktopXL {
       width: 100%;
   }
 }
@@ -164,9 +200,14 @@ footer {
   @include tablet {
         align-self: center;
         width: 366px;
-    }
+  }
 
   @include desktop {
+      align-self: center;
+      width: 366px;
+  }
+
+  @include desktopXL {
       align-self: center;
       width: 366px;
   }

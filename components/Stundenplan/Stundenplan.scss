@@ -16,6 +16,11 @@
         column-gap: 1em;
     }
 
+    @include desktopXL {
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 1em;
+    }
+
     .text__big {
         text-transform: uppercase;
         border-top: thin solid $black;

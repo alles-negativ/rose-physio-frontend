@@ -13,15 +13,65 @@
 
             .text__big {
                 width: 100%;
+                margin-bottom: 1em;
+                margin-top: 0.5em;
             }
 
             .text {
-                width: 55%;
+                width: 100%;
+                margin-bottom: 1em;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                @include desktop {
+                    width: 50%;
+                    margin-bottom: 0em;
+                }
+
+                @include desktopXL {
+                    width: 50%;
+                    margin-bottom: 0em;
+                }
             }
 
             .image {
                 height: auto;
+                width: 100%;
+                margin-bottom: 2em;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                @include desktop {
+                    width: 45%;
+                }
+
+                @include desktopXL {
+                    width: 45%;
+                }
+
+                &__img {
+                    width: 100%;
+                    object-fit: cover;
+                    max-height: 450px;
+                }
+                @include tablet {
+                    max-height: 450px;
+                }
+
+                @include desktop {
+                    width: 550px;
+                    max-height: 412.5px;
+                }
+
+                @include desktopXL {
+                    width: 650px;
+                    max-height: 487.5px;
+                }
             }
         }
     }
-} 
+}

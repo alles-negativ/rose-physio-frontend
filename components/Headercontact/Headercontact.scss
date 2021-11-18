@@ -8,16 +8,21 @@ $contentpaddingLarge: 3em;
 .header {
     height: 100vh;
     background: $red;
-    margin-bottom: 80px;
+    margin-bottom: $contentpadding;
 
         @include tablet {
             height: 100vh;
-            margin-bottom: 500px;
+            margin-bottom: $contentpaddingLarge;
         }
 
         @include desktop {
             height: 100vh;
-            margin-bottom: 500px;
+            margin-bottom: $contentpaddingLarge;
+        }
+
+        @include desktopXL {
+            height: 100vh;
+            margin-bottom: $contentpaddingLarge;
         }
 
     &__links {
@@ -34,6 +39,10 @@ $contentpaddingLarge: 3em;
             }
 
             @include desktop {
+                padding: $contentpaddingLarge;
+            }
+
+            @include desktopXL {
                 padding: $contentpaddingLarge;
             }
 
@@ -71,6 +80,13 @@ $contentpaddingLarge: 3em;
                 padding-bottom: $contentpaddingLarge;
             }
 
+            @include desktopXL {
+                grid-template-columns: 1fr 1fr;
+                padding-left: $contentpaddingLarge;
+                padding-right: $contentpaddingLarge;
+                padding-bottom: $contentpaddingLarge;
+            }
+
             .text__big {
                 grid-column: 1;
                 grid-row: 2;
@@ -94,6 +110,12 @@ $contentpaddingLarge: 3em;
                    text-align: right;
                    grid-column: 2;
                    grid-row: 3;
+                }
+
+                @include desktopXL {
+                   text-align: right;
+                   grid-column: 2;
+                   grid-row: 3;
                 } 
             } 
     }
@@ -111,6 +133,12 @@ $contentpaddingLarge: 3em;
         }
 
         @include desktop {
+            padding-left: $contentpaddingLarge;
+            padding-right: $contentpaddingLarge;
+            padding-bottom: $contentpaddingLarge;
+        }
+
+        @include desktopXL {
             padding-left: $contentpaddingLarge;
             padding-right: $contentpaddingLarge;
             padding-bottom: $contentpaddingLarge;

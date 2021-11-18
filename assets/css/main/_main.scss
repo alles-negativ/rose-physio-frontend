@@ -27,4 +27,9 @@ html {
         padding-left: $contentpaddingLarge;
         padding-right: $contentpaddingLarge;
     }
+
+    @include desktopXL {
+        padding-left: $contentpaddingLarge;
+        padding-right: $contentpaddingLarge;
+    }
 }

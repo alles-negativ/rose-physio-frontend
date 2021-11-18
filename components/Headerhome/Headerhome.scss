@@ -7,14 +7,18 @@ $contentpaddingLarge: 3em;
 .header {
     height: 100vh;
     background: $red;
-    margin-bottom: 80px;
+    margin-bottom: $contentpadding;
 
         @include tablet {
-            margin-bottom: 500px;
+            margin-bottom: $contentpaddingLarge;
         }
 
         @include desktop {
-            margin-bottom: 500px;
+            margin-bottom: $contentpaddingLarge;
+        }
+
+        @include desktopXL {
+            margin-bottom: $contentpaddingLarge;
         }
 
     &__links {
@@ -33,6 +37,11 @@ $contentpaddingLarge: 3em;
             }
 
             @include desktop {
+                margin-bottom: 85px;
+                padding: $contentpaddingLarge;
+            }
+
+            @include desktopXL {
                 margin-bottom: 85px;
                 padding: $contentpaddingLarge;
             }
@@ -61,58 +70,16 @@ $contentpaddingLarge: 3em;
                 padding: $contentpaddingLarge;
             }
 
+            @include desktopXL {
+                padding: $contentpaddingLarge;
+            }
+
         &--text {
             width: 100%;
 
-            @include tablet {
-                width: 100%;
-            }
-
-            @include desktop {
-                width: 100%;
-            }
-
             span {
                width: 100%;
-               font-size: 35px;
-               line-height: 45px;
-
-                @include tablet {
-                    width: 100%;
-                    font-size: 55px;
-                    line-height: 70px;
-                }
-
-                @include desktop {
-                    width: 100%;
-                    font-size: 55px;
-                    line-height: 70px;
-                } 
             }  
-        }
-
-        &--image {
-            display: none;
-
-            @include tablet {
-                display: block;
-                position: absolute;
-                width: 550px;
-                height: 699px;
-                background-color: gray;
-                border-radius: 20px;
-                margin-left: 55%;
-            }
-
-            @include desktop {
-                display: block;
-                position: absolute;
-                width: 550px;
-                height: 699px;
-                background-color: gray;
-                border-radius: 20px;
-                margin-left: 55%;
-            }
         }
     }
 }
@@ -134,15 +101,20 @@ $contentpaddingLarge: 3em;
             font-size: 35px;
             line-height: 45px;
 
-            @include tablet {
-                    font-size: 55px;
-                    line-height: 70px;
+                @include tablet {
+                    font-size: 45px;
+                    line-height: 65px;
                 }
 
                 @include desktop {
                     font-size: 55px;
                     line-height: 70px;
-                } 
+                }
+                
+                @include desktopXL {
+                    font-size: 55px;
+                    line-height: 70px;
+                }
             }
 
         &--fall {
