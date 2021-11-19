@@ -4,38 +4,33 @@
 $contentpadding: 0.75em;
 $contentpaddingLarge: 3em;
 
+.container > :last-child {
+    margin-top: 15em;
+}
+
 .container {
     display: flex;
     margin-bottom: 0em;
-    
-    :last-child{
-            margin-top: 0em;
-            margin-right: 0em;
-        }
 
-    &__container {
+    &__columns {
         width: 100%;
-        margin-top: 10em;
         margin-bottom: 1em;
 
     @include tablet {
-        width: 50%;
+        width: 100%;
         columns: 1;
-        column-gap: 2.5em;
         margin-right: 2em;
     }
 
     @include desktop {
-        width: 33%;
+        width: 50%;
         columns: 1;
-        column-gap: 2em;
         margin-right: 2em;
     }
 
     @include desktopXL {
-        width: 33%;
+        width: 50%;
         columns: 1;
-        column-gap: 2em;
         margin-right: 2em;
     }
 

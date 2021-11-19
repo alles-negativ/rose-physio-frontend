@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <ul v-for="columns in sortedPeople" :key="columns.id" class="container_columns">
+        <ul v-for="columns in sortedPeople" :key="columns.id" class="container__columns">
             <li v-for="person in columns" :key="person.id" class="content">
                 <nuxt-img :src="person.images[0].url" />
                 <h3>{{ person.title }}</h3>
@@ -48,10 +48,10 @@ export default {
                     this.numberOfColumns = 1
                 }
                 else if(window.innerWidth > 1200 ) {
-                    this.numberOfColumns = 3
+                    this.numberOfColumns = 2
                 }
                 else {
-                    this.numberOfColumns = 2
+                    this.numberOfColumns = 1
                 }
            } 
         }
