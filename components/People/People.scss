@@ -6,6 +6,7 @@ $contentpaddingLarge: 3em;
 
 .container > :last-child {
     margin-top: 15em;
+    margin-right: 0em;
 }
 
 .container {
@@ -25,13 +26,13 @@ $contentpaddingLarge: 3em;
     @include desktop {
         width: 50%;
         columns: 1;
-        margin-right: 2em;
+        margin-right: 5em;
     }
 
     @include desktopXL {
         width: 50%;
         columns: 1;
-        margin-right: 2em;
+        margin-right: 5em;
     }
 
     .content {

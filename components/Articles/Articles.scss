@@ -12,6 +12,7 @@ $contentpaddingLarge: 3em;
 
 .container > :last-child {
     margin-top: 7.5em;
+    margin-right: 0em;
 }
 
 .container {
@@ -25,32 +26,29 @@ $contentpaddingLarge: 3em;
     @include tablet {
         width: 100%;
         columns: 1;
-        column-gap: 2em;
         margin-right: 2em;
     }
 
     @include desktop {
         width: 50%;
         columns: 1;
-        column-gap: 2em;
-        margin-right: 2em;
+        margin-right: 3em;
     }
 
     @include desktopXL {
         width: 33%;
         columns: 1;
-        column-gap: 2em;
-        margin-right: 2em;
+        margin-right: 3em;
     }
 
-    .content {
-        display: flex;
-        flex-flow: column nowrap;
-        width: 100%;
-        page-break-inside: avoid;
-        margin-bottom: 5em;
-        border-bottom: thin solid $black;
-    }
+        .content {
+            display: flex;
+            flex-flow: column nowrap;
+            width: 100%;
+            page-break-inside: avoid;
+            margin-bottom: 5em;
+            border-bottom: thin solid $black;
+        }
     }    
 }
 
