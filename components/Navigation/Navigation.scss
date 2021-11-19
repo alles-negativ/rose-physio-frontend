@@ -121,6 +121,20 @@ nav {
         border-radius: 50%;
         border: thin solid $white;
 
+        .image__link--en {
+            display: none;
+        }
+
+        &.en {
+            .image__link--en {
+                display: block;
+            }
+
+            .image__link--de {
+                display: none;
+            }
+        }
+
         @include tablet {
             display: block;
         }
@@ -146,6 +160,8 @@ nav {
     &__link {
         width: 35px;
         height: 35px;
+
+
     }
 }
 
