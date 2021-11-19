@@ -1,7 +1,7 @@
 <template>
   <div>
     <CookieBox />
-    <Headerhome />
+    <Headerhome :key="key" />
     <Navigation />
     <div class="wrapper">
       <Nuxt />
@@ -9,3 +9,23 @@
     <Footer />
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      key: 0,
+    };
+  },
+  watch: {
+      $route() {
+        this.forceRerender()
+      }
+  },
+  methods: {
+    forceRerender() {
+      this.key += 1;
+    }
+  }
+}
+</script>
