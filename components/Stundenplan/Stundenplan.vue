@@ -1,15 +1,17 @@
 <template>
     <div>
         <div class="container">
-            <div v-for="(day,weekday) in days" :key="weekday">
+            <div class="content__container"  v-for="(day,weekday) in days" :key="weekday">
                 <p class="text__big">{{ weekday }}</p>
-                <div v-for="course in day" :key="course.id">
-                    <div class="content">
-                        <p class="text__big">{{ course.title }}</p>
-                        <p>{{ course.starttime.substring(0,5) }} - {{ course.endtime.substring(0,5) }}</p>
+                    <div class="content" v-for="course in day" :key="course.id">
+                        <div class="content__text">
+                            <p class="text__big">{{ course.title }}</p>
+                            <div class="text__time">
+                                <p>{{ course.starttime.substring(0,5) }} - {{ course.endtime.substring(0,5) }}</p>
+                            </div>
+                        </div>    
                         <p>{{ course.instructor }}</p>
                     </div>
-                </div>
             </div>
         </div>
     </div>    

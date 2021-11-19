@@ -4,7 +4,6 @@
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    width: 100%;
 
     @include tablet {
         grid-template-columns: repeat(5, 1fr);
@@ -29,21 +28,88 @@
 
     .content {
         display: flex;
-        flex-flow: column wrap;
-        height: 12em;
-        width: 100%;
-        margin-bottom: 1em;
+        flex-flow: row;
+        padding-bottom: 1em;
+        padding-top: 1em;
         border-bottom: thin solid $black;
+        justify-content: space-between;
+        
+            @include tablet {
+                flex-flow: column wrap;
+            }
+
+            @include desktop {
+                flex-flow: column wrap;
+            }
+
+            @include desktopXL {
+                flex-flow: column wrap;
+            }
+
+        &__text {
+            display: flex;
+            flex-flow: column wrap;
+            height: 5em;
+
+            @include tablet {
+                height: 10em;
+            }
+
+            @include desktop {
+                height: 10em;
+            }
+
+            @include desktopXL {
+                height: 10em;
+            }
+        }
 
         .text__big {
             text-transform: none;
             border-top: none;
             border-bottom: none;
-        }
+            font-size: 20px;
 
-        :last-child {
-            margin-top: 3em;
-            border-bottom: none;
+            @include tablet {
+            font-size: 20px;
+            line-height: 26px;
+            }
+
+            @include desktop {
+                font-size: 24px;
+                line-height: 31px;
+            }
+
+            @include desktopXL {
+                font-size: 30px;
+                line-height: 38px;
+            }
+        }    
+
+        .text__time {
+            display: flex;
+            border: thin solid $black;
+            border-radius: 200px;
+            width: 120px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0.25em;
         }
+    }
+}
+
+.content__container > :last-child {
+    border-bottom: 0px;
+
+    @include tablet {
+        border-bottom: thin solid $black;
+    }
+
+    @include desktop {
+        border-bottom: thin solid $black;
+    }
+
+    @include desktopXL {
+        border-bottom: thin solid $black;
     }
 }
