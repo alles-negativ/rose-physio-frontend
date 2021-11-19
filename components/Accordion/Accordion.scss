@@ -3,9 +3,7 @@
 
 @use "assets/css/main/colors" as *;
 @use "assets/css/main/breakpoints" as *;
-
-$contentpadding: 0.75em;
-$contentpaddingLarge: 3em;
+@use "assets/css/main/main" as *;
 
 .accordion {
     width: 100%;

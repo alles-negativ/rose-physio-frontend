@@ -1,23 +1,28 @@
 @use "assets/css/main/colors" as *;
 @use "assets/css/main/breakpoints" as *;
+@use "assets/css/main/main" as *;
 
 .container {
     display: grid;
     grid-template-columns: 1fr;
+    margin-bottom: $margin;
 
     @include tablet {
         grid-template-columns: repeat(5, 1fr);
         column-gap: 0.75em;
+        margin-bottom: $marginLarge;
     }
 
     @include desktop {
         grid-template-columns: repeat(5, 1fr);
         column-gap: 1em;
+        margin-bottom: $marginLarge;
     }
 
     @include desktopXL {
         grid-template-columns: repeat(5, 1fr);
         column-gap: 1em;
+        margin-bottom: $marginLarge;
     }
 
     .text__big {
