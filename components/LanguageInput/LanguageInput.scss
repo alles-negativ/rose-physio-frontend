@@ -1,27 +1,66 @@
 @use "assets/css/main/colors" as *;
 @use "assets/css/main/typography" as *;
 
-.text {
-    font-family: SpaceGrotesk;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 26px;
+.switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    border: thin solid $black;
+    border-radius: 200px;
+    margin-left: 0.5em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
 
-    &__menu {
-        font-weight: 500;
-        font-size: 15px;
-        line-height: auto;
-        text-transform: capitalize;
-        color: $black;
-        margin-left: 1em;
-        border: thin solid $black;
-        border-radius: 200px;
-        padding-left: 0.3em;
-        padding-right: 0.3em;
+.text__menu--de {
+    text-transform: uppercase;
+    color: $black;
 
-        &:hover {
-            text-decoration: underline;
-        }
+    &.Deutsch {
+        text-decoration: none;
+    }
+
+    &.English {
+        text-decoration: underline;
     }
 }
+
+.text__menu--en {
+    text-transform: uppercase;
+    color: $black;
+    margin-left: 0.5em;
+
+    &.Deutsch {
+        text-decoration: underline;
+    }
+
+    &.English {
+        text-decoration: none;
+    }
+}
+
+// .text {
+//     font-family: SpaceGrotesk;
+//     font-weight: 400;
+//     font-style: normal;
+//     font-size: 18px;
+//     line-height: 26px;
+
+//     &__menu {
+//         font-weight: 500;
+//         font-size: 15px;
+//         line-height: auto;
+//         text-transform: capitalize;
+//         color: $black;
+//         margin-left: 1em;
+//         border: thin solid $black;
+//         border-radius: 200px;
+//         padding-left: 0.3em;
+//         padding-right: 0.3em;
+
+//         &:hover {
+//             text-decoration: underline;
+//         }
+//     }
+// }
