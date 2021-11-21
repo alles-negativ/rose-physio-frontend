@@ -2,7 +2,7 @@
     <div class="container">
         <ul v-for="columns in sortedPeople" :key="columns.id" class="container__columns">
             <li v-for="person in columns" :key="person.id" class="content">
-                <nuxt-img :src="person.images[0].url" />
+                <nuxt-img :src="person.images[0].url" :alt="person.images[0].alt" />
                 <h3>{{ person.title }}</h3>
                 <p class="text__big">{{ person.introtext }}</p>
                 <p>{{ person.contenttext }}</p>
@@ -33,7 +33,8 @@ export default {
                     "query": "page.files",
                     "select": {
                         "name": true,
-                        "url": true
+                        "url": true,
+                        "alt": true
                     }
                 }
             }

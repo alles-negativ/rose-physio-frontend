@@ -16,7 +16,7 @@
         <p class="text__big">{{ header.headertext }}</p>
       </div>
         <div v-if="header.headerimage">
-            <nuxt-img class="header__content--image" :src="header.images[0].url" />
+            <nuxt-img class="header__content--image" :src="header.images[0].url" :alt="header.images[0].alt" />
         </div>
     </div>
   </div>
@@ -51,7 +51,8 @@ export default {
                 "query": "page.files",
                 "select": {
                   "name": true,
-                  "url": true
+                  "url": true,
+                  "alt": true
                 }
               }
             }

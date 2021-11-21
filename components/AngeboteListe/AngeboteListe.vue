@@ -9,7 +9,7 @@
                 <p class="text__big" slot="introtext"> {{ element.introtext }} </p>
                 <p class="text" slot="contenttext"> {{ element.contenttext }} </p>
                 <div class="image" slot="image">
-                    <nuxt-img class="image image__img" :src="element.images[0].url" />
+                    <nuxt-img class="image image__img" :src="element.images[0].url" :alt="element.images[0].alt" />
                 </div>
               </template>
           </Accordion>
@@ -38,7 +38,8 @@ export default {
                     "query": "page.files",
                     "select": {
                         "name": true,
-                        "url": true
+                        "url": true,
+                        "alt": true
                     }
                 }
             }

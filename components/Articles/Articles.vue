@@ -2,7 +2,7 @@
     <div class="container"> 
         <ul v-for="columns in sortedArticles" :key="columns.id" class="container__columns">
             <li v-for="article in columns" :key="article.id" class="content">
-                <nuxt-img :src="article.images[0].url" />
+                <nuxt-img :src="article.images[0].url" :alt="article.images[0].alt" />
                 <h3>{{ article.title }}</h3>
                 <p class="text__big">{{ $moment(article.date).format("DD.MM.YYYY") }}</p>
                 <p>{{ article.contenttext }}</p>
@@ -33,7 +33,8 @@ export default {
                     "query": 'page.files',
                     "select": {
                         "name": true,
-                        "url": true
+                        "url": true,
+                        "alt": true
                     }
                 }
             }
