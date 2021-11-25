@@ -23,7 +23,7 @@ import linkClickRouting from "../../mixins/linkClickRouting";
 export default {
   name: 'Headerhome',
 
-  mixins: [linkClickRouting],
+  // mixins: [linkClickRouting],
 
   data() {
     return {
@@ -49,10 +49,10 @@ export default {
     }
   },
   mounted() {
-    // this.$Splitting()
+    this.$Splitting()
   },
   updated() {
-    // this.$Splitting()
+    this.$Splitting()
   }
 }
 </script>
