@@ -1,9 +1,10 @@
 <template>
   <div class="header">
     <div class="header__links">
-      <nuxt-link :to="localePath('/')">
+      <!-- <nuxt-link :to="localePath('/')">
         <img class="header__links--logo" src="/logo_c.svg" alt="">
-      </nuxt-link>
+      </nuxt-link> -->
+      <img class="header__links--logo" src="/logo_c.svg" alt="">
       <div class="header__links--utility">
         <p class="text__menu">{{ title }}</p>
         <LanguageInput />

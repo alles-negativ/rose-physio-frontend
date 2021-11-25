@@ -1,7 +1,7 @@
 <template>
   <div>
     <CookieBox />
-    <Headerhome :key="key" />
+    <Headercontact :key="key" />
     <Navigation />
     <div class="wrapper">
       <Nuxt />
