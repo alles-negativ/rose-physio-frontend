@@ -13,54 +13,22 @@
     padding-right: 0.25em;
 }
 
-.text__menu--de {
+.text__menu {
     text-transform: uppercase;
     color: $black;
+    text-decoration: none;
+    padding-left: 5px;
 
-    &.Deutsch {
-        text-decoration: none;
+    p {
+        font-size: 15px;
+        font-weight: 450;
+    }
+    
+    &:last-child {
+        padding-right: 5px;
     }
 
-    &.English {
+    &.nuxt-link-exact-active {
         text-decoration: underline;
     }
 }
-
-.text__menu--en {
-    text-transform: uppercase;
-    color: $black;
-    margin-left: 0.5em;
-
-    &.Deutsch {
-        text-decoration: underline;
-    }
-
-    &.English {
-        text-decoration: none;
-    }
-}
-
-// .text {
-//     font-family: SpaceGrotesk;
-//     font-weight: 400;
-//     font-style: normal;
-//     font-size: 18px;
-//     line-height: 26px;
-
-//     &__menu {
-//         font-weight: 500;
-//         font-size: 15px;
-//         line-height: auto;
-//         text-transform: capitalize;
-//         color: $black;
-//         margin-left: 1em;
-//         border: thin solid $black;
-//         border-radius: 200px;
-//         padding-left: 0.3em;
-//         padding-right: 0.3em;
-
-//         &:hover {
-//             text-decoration: underline;
-//         }
-//     }
-// }
