@@ -1,11 +1,10 @@
 <template>
   <div>
-    <nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
-      <div class="switch">
-        <p :class="locale.name" class="text__menu text__menu--de">DE</p>
-        <p :class="locale.name" class="text__menu text__menu--en">EN</p>
-      </div>
-    </nuxt-link>
+    <div class="switch">
+      <nuxt-link class="text__menu" v-for="locale in $nuxt.$i18n.locales" :key="locale.code" :to="switchLocalePath(locale.code)">
+          <p>{{ locale.code }}</p>
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
