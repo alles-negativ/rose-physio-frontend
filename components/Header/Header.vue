@@ -20,8 +20,8 @@
         </div>
     </div>
   </div>
-    <div class="arrow" onclick="arrowScroll()">
-        <img class="arrow__img" src="~/assets/images/arrow.svg" alt="">
+    <div class="arrow">
+        <img class="arrow__img" src="~/assets/images/arrow.svg" alt="arrow" onclick="arrowScroll()">
     </div>
   </div>
 </template>
