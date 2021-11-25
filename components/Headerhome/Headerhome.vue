@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header__links">
       <nuxt-link :to="localePath('/')">
-        <img class="header__links--logo" src="~/assets/images/logo_c.svg" alt="">
+        <img class="header__links--logo" src="~/assets/images/logo_c.png" alt="">
       </nuxt-link>
       <div class="header__links--utility">
         <p class="text__menu">{{ title }}</p>
