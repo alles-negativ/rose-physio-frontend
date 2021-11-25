@@ -10,6 +10,12 @@ $contentpaddingLarge: 3em;
 $margin: 5em;
 $marginLarge: 7.5em;
 
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: $white;
+}
+
 .wrapper {
    margin-top: 10em;
    margin-bottom: 10em;
