@@ -18,6 +18,11 @@
     color: $black;
     text-decoration: none;
     padding-left: 5px;
+
+    p {
+        font-size: 15px;
+        font-weight: 450;
+    }
     
     &:last-child {
         padding-right: 5px;
