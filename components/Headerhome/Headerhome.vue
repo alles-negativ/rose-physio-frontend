@@ -4,6 +4,7 @@
       <nuxt-link :to="localePath('/')">
         <img class="header__links--logo" src="/logo_c.svg" alt="">
       </nuxt-link>
+      <img class="header__links--logo" src="/logo_c.svg" alt="">
       <div class="header__links--utility">
         <p class="text__menu">{{ title }}</p>
         <LanguageInput />
@@ -23,7 +24,7 @@ import linkClickRouting from "../../mixins/linkClickRouting";
 export default {
   name: 'Headerhome',
 
-  // mixins: [linkClickRouting],
+  mixins: [linkClickRouting],
 
   data() {
     return {
