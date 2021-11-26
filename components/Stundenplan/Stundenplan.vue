@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1>{{ stundenplan.title }}</h1>
         <div class="container">
             <div class="content__container"  v-for="(day,weekday) in days" :key="weekday">
                 <p class="text__big">{{ weekday }}</p>
@@ -24,6 +25,7 @@ export default {
     data() {
         return {
             courses: [],
+            stundenplan: [] 
         }
     },
     async fetch() {
@@ -38,6 +40,14 @@ export default {
             }
         }, this.$nuxt.context.app.i18n.locale)
         this.courses = data
+
+        const { json: sttitle } = await this.$kirby.find({
+            "query": "page('stundenplan')",
+            "select": {
+                "title": true,
+            }
+        }, this.$nuxt.context.app.i18n.locale)
+        this.stundenplan = sttitle
     },
 
     computed: {

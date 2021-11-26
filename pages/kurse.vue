@@ -1,8 +1,5 @@
 <template>
   <main id="content">
-    <div class="grid">
-      <h1>Stundenplan</h1>
-    </div>
     <Stundenplan />
     <KurseListe />
     <div class="grid">
@@ -19,6 +16,6 @@ export default {
       "query": "page('kurse')"
     }, app.i18n.locale)
     return { page }
-  }
+  },
 }
 </script>
