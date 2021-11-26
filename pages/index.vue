@@ -12,6 +12,18 @@ export default {
       "query": "page('home')"
     }, app.i18n.locale)
     return { page }
+  },
+  head() {
+    return {
+      titleTemplate: '%s - home',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Home page description'
+        }
+      ]
+    }
   }
 }
 </script>
