@@ -56,6 +56,7 @@ export default {
     '~plugins/nuxt-kirby-kql',
     {src: '~/plugins/alles-negativ-splitting', ssr: false},
     '~/plugins/preview.client.js'
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
