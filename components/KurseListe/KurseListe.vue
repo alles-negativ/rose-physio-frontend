@@ -6,7 +6,7 @@
                 <h3 class="title"> {{ element.title }} </h3>
               </template>
               <template v-slot:body>
-                <p class="text" slot="contenttext"> {{ element.introtext }} </p>
+                <div class="text" slot="contenttext" v-html="element.introtext"></div>
               </template>
           </Accordion>
         </div>

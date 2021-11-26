@@ -12,7 +12,7 @@
     <div class="content__wrapper">
       <div class="header__content">
           <span>{{ contact.headertitle }}</span>
-          <p class="text__big">{{ contact.headertext }}</p>
+          <div class="text__big" v-html="contact.headertext"></div>
           <div class="header__content--text">
             <p class="text" v-html="contact.headertram"/>
             <p class="text">{{ contact.headeropening }}</p>

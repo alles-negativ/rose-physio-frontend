@@ -1,7 +1,7 @@
 <template>
   <main id="content">
     <h3>{{ page.content.contenttitle }}</h3>
-    <p>{{ page.content.contenttext }}</p>
+    <div v-html="page.content.contenttext"></div>
     <Standorte />
   </main>
 </template>
