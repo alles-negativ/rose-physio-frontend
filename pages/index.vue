@@ -15,13 +15,23 @@ export default {
   },
   head() {
     return {
-      titleTemplate: '%s - home',
+      titleTemplate: '%s - ' + this.page.content.title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Home page description'
-        }
+          content: this.page.content.meta_description,
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: this.page.content.meta_keywords,
+        },
+        {
+          hid: 'locale',
+          name: 'locale',
+          content: this.$i18n.locale,
+        },
       ]
     }
   }

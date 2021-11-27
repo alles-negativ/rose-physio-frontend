@@ -16,14 +16,19 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'rose-physio',
+    title: 'Rose Physio',
     htmlAttrs: {
       lang: 'de'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'content from config' },
+      { hid: 'author', name: 'author', content: 'alles-negativ' },
+      { hid: 'keywords', name: 'keywords', content: 'Physio,Physiotherapie,Zürich,Ergotherapie,Massage,Pilates,Kurse' },
+      { hid: 'theme-color', name: 'theme-color', content: '#ffffff' },
+      { hid: 'robots', name: 'robots', content: 'all' },
+      { hid: 'referrer', name: 'referrer', content: 'no-referrer-when-downgrade' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
