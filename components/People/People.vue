@@ -4,8 +4,8 @@
             <li v-for="person in columns" :key="person.id" class="content">
                 <nuxt-img :src="person.images[0].url" :alt="person.images[0].alt" />
                 <h3>{{ person.title }}</h3>
-                <p class="text__big">{{ person.introtext }}</p>
-                <p>{{ person.contenttext }}</p>
+                <div class="text__big" v-html="person.introtext"></div>
+                <div class="text" v-html="person.contenttext"></div>
             </li>
         </ul>
     </div>
@@ -18,7 +18,7 @@ export default {
     data() {
         return {
             people: [],
-            numberOfColumns: 0
+            numberOfColumns: 1
         }
     },
     async fetch() {

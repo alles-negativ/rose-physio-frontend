@@ -16,14 +16,29 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'rose-physio',
+    title: 'Rose Physio',
     htmlAttrs: {
       lang: 'de'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'content from config' },
+      { hid: 'author', name: 'author', content: 'alles-negativ' },
+      { hid: 'keywords', name: 'keywords', content: 'Physio,Physiotherapie,Zürich,Ergotherapie,Massage,Pilates,Kurse' },
+      { hid: 'theme-color', name: 'theme-color', content: '#ffffff' },
+      { hid: 'robots', name: 'robots', content: 'all' },
+      { hid: 'referrer', name: 'referrer', content: 'no-referrer-when-downgrade' },
+      { hid: 'og:locale', property: 'og:locale', content: 'de_CH' },
+      { hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'en_GB' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Rose Physio - Physiotherapie' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:title', property: 'og:title', content: 'Physiotherapie in Zürich' },
+      { hid: 'og:description', property: 'og:description', content: 'Wir sind eine Physio-Praxis mit vier Standorten im Raum Zürich. Wir bieten Ihnen eine rundum Behandlung von Physioteherapie über Ergotherapie und Massage bis Pilates an.' },
+      { hid: 'og:image', property: 'og:image', content: 'http://localhost:3000/_ipx/_/http://localhost:8888/rose-physio-backend/media/pages/home/testarticle/149afd1e99-1635501254/sketchgatekeepercat.jpg' },
+      { hid: 'og:image:width', property: 'og:image:width', content: '600' },
+      { hid: 'og:image:height', property: 'og:image:height', content: '600' },
+      { hid: 'og:image:alt', property: 'og:image:alt', content: 'The gray furred gatekeeper cat' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -56,6 +71,7 @@ export default {
     '~plugins/nuxt-kirby-kql',
     {src: '~/plugins/alles-negativ-splitting', ssr: false},
     '~/plugins/preview.client.js'
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -91,7 +107,25 @@ export default {
     defaultLocale: 'de',
     vueI18n: {
       fallbackLocale: 'de',
-    }
+      messages: {
+        de: {
+          locations: 'Standorte',
+          contact: 'Kontakt',
+          open: 'Öffnungszeiten',
+          accept: 'Akzeptieren',
+          readmore: 'mehr',
+          cookie: 'Diese Website verwendet Cookies',
+        },
+        en: {
+          locations: 'Locations',
+          contact: 'Contact',
+          open: 'Opening Hours',
+          accept: 'Accept',
+          readmore: 'read more',
+          cookie: 'This website uses cookies',
+        }
+      }
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -118,7 +152,7 @@ export default {
   image: {
     domains: [
       'http://localhost:8888',
-      'https://aammon.ch/'
+      'https://backend.rose-physio.ch/'
     ]
   }
 }

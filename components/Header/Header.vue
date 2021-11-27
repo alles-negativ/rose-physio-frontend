@@ -13,7 +13,7 @@
     <div class="header__content">
       <div class="header__content--text">
         <h1>{{ header.headertitle }}</h1>
-        <p class="text__big">{{ header.headertext }}</p>
+        <div class="text__big" v-html="header.headertext"></div>
       </div>
         <div v-if="header.headerimage">
             <nuxt-img class="header__content--image" :src="header.images[0].url" :alt="header.images[0].alt" />

@@ -52,9 +52,7 @@ h3 {
 
 p, button {
     font-family: SpaceGrotesk;
-    font-weight: 400;
     font-style: normal;
-    font-size: 18px;
     line-height: 26px;
 }
 
@@ -82,7 +80,7 @@ p, button {
         @include desktopXL {
             font-size: 30px;
             line-height: 38px;
-        }
+        }   
 
         &--black {
             color: $black;
@@ -96,6 +94,25 @@ p, button {
             line-height: 30px;
         }
     }
+
+    &__big > p {
+        font-weight: 500;
+
+        @include tablet {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        @include desktop {
+            font-size: 24px;
+            line-height: 31px;
+        }
+
+        @include desktopXL {
+            font-size: 30px;
+            line-height: 38px;
+        }
+    }     
 
     &__medium {
         font-size: 18px;
@@ -142,4 +159,9 @@ span {
         font-size: 55px;
         line-height: 70px;
     } 
+}
+
+a {
+    color: $black;
+    text-decoration: underline;
 }
