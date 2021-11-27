@@ -55,9 +55,9 @@ export default {
 
   publicRuntimeConfig: {
     kirby: {
-      url: process.env.KIRBY_SITE || 'http://localhost:8888/rose-physio-backend',
-      username: process.env.KIRBY_USERNAME || 'hello@alles-negativ.ch',
-      password: process.env.KIRBY_PASSWORD || 'letmein123'
+      url: process.env.KIRBY_SITE,
+      username: process.env.KIRBY_USERNAME,
+      password: process.env.KIRBY_PASSWORD
     }
   },
 
