@@ -9,11 +9,7 @@
                 <div class="text__big" slot="introtext" v-html="element.introtext"></div>
                 <div class="text" slot="contenttext" v-html="element.contenttext"></div>
                 <div class="image" slot="image">
-                    <nuxt-img class="image image__img"
-                        :src="element.images[0].url" 
-                        :alt="element.images[0].alt" 
-                        sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
-                    />
+                    <nuxt-img class="image image__img" :src="element.images[0].url" :alt="element.images[0].alt" />
                 </div>
               </template>
           </Accordion>
