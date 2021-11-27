@@ -152,7 +152,7 @@ export default {
   image: {
     domains: [
       'http://localhost:8888',
-      'https://backend.rose-physio.ch/'
+      'http://backend.rose-physio.ch/'
     ]
   }
 }
