@@ -5,7 +5,7 @@
         <div class="contact">
           <p class="text__small">{{ footer.headeremail }}</p>
           <p class="text__small">{{ footer.headertel }}</p>
-          <p class="text__small">Öffnungszeiten <br>{{ footer.headeropening }}</p>
+          <p class="text__small">{{ $t('open') }}<br>{{ footer.headeropening }}</p>
         </div>
         <div class="legal">
           <nuxt-link :to="localePath('/' + 'kontakt#impressum')">
@@ -13,7 +13,7 @@
           </nuxt-link>
         </div>
       <div class="standorte">
-        <p class="text__footer">Standorte</p>
+        <p class="text__footer">{{ $t('locations') }}</p>
         <div v-for="location in locations" :key="location.id">
           <p class="standorte__item">{{ location.contenttext }}</p>
         </div>

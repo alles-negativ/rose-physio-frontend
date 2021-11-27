@@ -1,8 +1,8 @@
 <template>
     <div id="impressum" class="container"> 
-        <h1> {{ impressum.impressumtitle }} </h1>
+        <h1>Impressum</h1>
         <div class="text" v-html="impressum.impressumtext"></div>
-        <h3> {{ impressum.contacttitle }} </h3>
+        <h3> {{ $t('contact') }} </h3>
         <div class="text" v-html="impressum.contacttext"></div>
     </div>
 </template>
