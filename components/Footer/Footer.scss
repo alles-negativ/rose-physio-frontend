@@ -3,7 +3,11 @@
 @use "assets/css/main/main" as *;
 
 footer {
-  margin-top: 20em;
+  margin-top: $marginLarge;
+}
+
+a { 
+  color: $white;
 }
 
 .container {
