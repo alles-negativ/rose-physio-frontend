@@ -97,6 +97,14 @@ export default {
     defaultLocale: 'de',
     vueI18n: {
       fallbackLocale: 'de',
+    },
+    messages: {
+      de: {
+        locations: 'Standorte'
+      },
+      en: {
+        locations: 'Locations'
+      }
     }
   },
 
