@@ -111,12 +111,18 @@ export default {
         de: {
           locations: 'Standorte',
           contact: 'Kontakt',
-          open: 'Öffnungszeiten'
+          open: 'Öffnungszeiten',
+          accept: 'Akzeptieren',
+          readmore: 'mehr',
+          cookie: 'Diese Website verwendet Cookies',
         },
         en: {
           locations: 'Locations',
           contact: 'Contact',
-          open: 'Opening Hours'
+          open: 'Opening Hours',
+          accept: 'Accept',
+          readmore: 'read more',
+          cookie: 'This website uses cookies',
         }
       }
     },

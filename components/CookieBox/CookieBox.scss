@@ -17,7 +17,7 @@
     margin-left: 1em;
     margin-right: 1em;
     border-radius: 20px;
-    padding: 0.5em;
+    padding: 0.25em;
     animation: pulse 1s ease-in infinite;
 
     @include tablet {
@@ -27,6 +27,7 @@
         top: 5em;
         width: 250px;
         height: 75px;
+        padding: 0.5em;
         margin-right: 0em;
     }
 
@@ -37,6 +38,7 @@
         top: 5em;
         width: 300px;
         height: 75px;
+        padding: 0.5em;
         margin-right: 0em;
     }
 
@@ -47,6 +49,7 @@
         top: 5em;
         width: 300px;
         height: 75px;
+        padding: 0.5em;
         margin-right: 0em;
     }
 
