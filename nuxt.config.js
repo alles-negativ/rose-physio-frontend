@@ -107,15 +107,19 @@ export default {
     defaultLocale: 'de',
     vueI18n: {
       fallbackLocale: 'de',
-    },
-    messages: {
-      de: {
-        locations: 'Standorte'
-      },
-      en: {
-        locations: 'Locations'
+      messages: {
+        de: {
+          locations: 'Standorte',
+          contact: 'Kontakt',
+          open: 'Öffnungszeiten'
+        },
+        en: {
+          locations: 'Locations',
+          contact: 'Contact',
+          open: 'Opening Hours'
+        }
       }
-    }
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
