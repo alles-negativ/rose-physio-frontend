@@ -18,7 +18,7 @@ export default {
     data() {
         return {
             articles: [],
-            numberOfColumns: 0
+            numberOfColumns: 1
         }
     },
     async fetch() {
