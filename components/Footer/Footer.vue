@@ -8,8 +8,9 @@
           <p class="text__small">Öffnungszeiten <br>{{ footer.headeropening }}</p>
         </div>
         <div class="legal">
-          <p class="text__small">Impressum</p>
-          <p class="text__small">Legal</p>
+          <nuxt-link :to="localePath('/' + 'kontakt#impressum')">
+            <p class="text__small">Impressum</p>
+          </nuxt-link>
         </div>
       <div class="standorte">
         <p class="text__footer">Standorte</p>
