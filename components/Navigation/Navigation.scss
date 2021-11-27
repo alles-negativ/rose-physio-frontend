@@ -76,6 +76,13 @@ nav {
             transition: 0.2s;
         }
 
+        &.nuxt-link-active {
+            background: $black;
+            background-image: url('~assets/icons/home_white.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
         &.nuxt-link-exact-active {
             background: $white;
             background-image: url('~assets/icons/home_black.svg');
@@ -185,8 +192,16 @@ nav li a {
   color: $white;
 }
 
-nav li a.nuxt-link-exact-active {
-  color: $black;
-  background-color: $white;
-  border-radius: 200px;
+nav li {
+    a.nuxt-link-exact-active  {
+        color: $black;
+        background-color: $white;
+        border-radius: 200px;
+    }
+
+    a.nuxt-link-active  {
+        color: $black;
+        background-color: $white;
+        border-radius: 200px;
+    }
 }

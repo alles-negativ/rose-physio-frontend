@@ -3,6 +3,7 @@
     <h3>{{ page.content.contenttitle }}</h3>
     <div v-html="page.content.contenttext"></div>
     <Standorte />
+    <Impressum />
   </main>
 </template>
 

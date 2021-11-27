@@ -1,0 +1,20 @@
+@use "assets/css/main/colors" as *;
+@use "assets/css/main/breakpoints" as *;
+@use "assets/css/main/main" as *;
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+h3 {
+    margin-top: 1em;
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+.text {
+    margin-bottom: 1.5em;
+}
