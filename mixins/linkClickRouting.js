@@ -52,7 +52,10 @@
         }
         const animations = [
           {name: "headline--fall", time: 600, delay: 50},
-          {name: "headline--jump", time: 800, delay: 75}
+          {name: "headline--jump", time: 800, delay: 75},
+          {name: "headline--flip", time: 4000, delay: 75},
+          {name: "headline--float", time: 2200, delay: 50},
+          {name: "headline--jog", time: 2000, delay: 25}
         ]
         const splitting_links = this.$el.querySelectorAll(".splitting__header a")
         for (let i = 0; i < splitting_links.length; i++) {
@@ -90,7 +93,7 @@
           setTimeout(function(){
             this.startLoop(links, animations)
           }.bind(this), 1000)
-        }.bind(this), 2 * (animation.time + num_of_chars * animation.delay))
+        }.bind(this), 1 * (animation.time + num_of_chars * animation.delay))
       },
       removeListeners() {
         for (let i = 0; i < this.links.length; i++) {
