@@ -136,6 +136,10 @@ p, button {
         line-height: auto;
         text-transform: capitalize;
     }
+
+    a:hover {
+        color: $red;
+    }
 }
 
 span {
@@ -164,4 +168,8 @@ span {
 a {
     color: $black;
     text-decoration: underline;
+
+    &:hover {
+        color: $white;
+    }
 }

@@ -15,33 +15,33 @@
         width: 100%;
         margin-bottom: 1em;
 
-    @include tablet {
-        width: 100%;
-        columns: 1;
-        margin-right: 2em;
-    }
+        @include tablet {
+            width: 100%;
+            columns: 1;
+            margin-right: 2em;
+        }
 
-    @include desktop {
-        width: 50%;
-        columns: 1;
-        margin-right: 5em;
-    }
+        @include desktop {
+            width: 50%;
+            columns: 1;
+            margin-right: 5em;
+        }
 
-    @include desktopXL {
-        width: 50%;
-        columns: 1;
-        margin-right: 5em;
-    }
+        @include desktopXL {
+            width: 50%;
+            columns: 1;
+            margin-right: 5em;
+        }
 
-    .content {
-        display: flex;
-        flex-flow: column nowrap;
-        width: 100%;
-        page-break-inside: avoid;
-        margin-bottom: 5em;
-        border-bottom: thin solid $black;
+        .content {
+            display: flex;
+            flex-flow: column nowrap;
+            width: 100%;
+            page-break-inside: avoid;
+            margin-bottom: 5em;
+            border-bottom: thin solid $black;
+        }
     }
-}
 }
 
 h3 {

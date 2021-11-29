@@ -1,6 +1,6 @@
 <template>
     <div class="accordion">
-        <div class="accordion__title" v-on:click="toggle">
+        <div onmouseover="hoverarrowE()" onmouseleave="hoverarrowL()" class="accordion__title" v-on:click="toggle">
           <slot name="title">Default Title</slot>
           <p v-bind:class="{ rotate: show }" class="plus">+</p>
         </div>

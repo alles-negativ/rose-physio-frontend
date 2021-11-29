@@ -3,19 +3,23 @@
 @use "assets/css/main/main" as *;
 
 .header {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     background: $red;
     margin-bottom: $contentpadding;
 
         @include tablet {
+            height: 100vh;
             margin-bottom: $contentpaddingLarge;
         }
 
         @include desktop {
+            height: 100vh;
             margin-bottom: $contentpaddingLarge;
         }
 
         @include desktopXL {
+            height: 100vh;
             margin-bottom: $contentpaddingLarge;
         }
 
