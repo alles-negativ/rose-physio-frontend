@@ -54,10 +54,10 @@ export default {
     }
   },
   mounted() {
-    this.$Splitting()
+    // this.$Splitting()
   },
   updated() {
-    this.$Splitting()
+    // this.$Splitting()
   }
 }
 </script>
