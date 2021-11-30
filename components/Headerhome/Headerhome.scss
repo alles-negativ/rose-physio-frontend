@@ -104,7 +104,8 @@
     ::v-deep .headline {
 
         .word {
-            pointer-events: none;
+            // problems with safari
+            // pointer-events: none;
         }
 
         .char {
