@@ -19,12 +19,17 @@
     text-decoration: none;
     padding-left: 5px;
 
+    &:hover p {
+        color: $black;
+    }
+
     p {
         font-size: 15px;
         font-weight: 450;
 
         &:hover {
             text-decoration: underline;
+            color: $black;
         }
     }
     
