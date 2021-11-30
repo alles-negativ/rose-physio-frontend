@@ -20,11 +20,15 @@
 
 <script>
 import linkClickRouting from "../../mixins/linkClickRouting";
+import animationsHeader from "../../mixins/animationsHeader";
 
 export default {
   name: 'Headerhome',
 
-  mixins: [linkClickRouting],
+  mixins: [
+    linkClickRouting, 
+    animationsHeader
+  ],
 
   data() {
     return {
