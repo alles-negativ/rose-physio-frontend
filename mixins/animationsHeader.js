@@ -47,7 +47,7 @@ export default {
             while ($nuxt.isAnimation == true) {
                 setTimeout(function(){
                     this.startLoop(links)
-                }.bind(this), 1000)
+                }.bind(this), 500)
                 return
             }
             const link = links[Math.floor(Math.random() * links.length)]
@@ -60,7 +60,8 @@ export default {
                 link.classList.remove(animation.name)
                 setTimeout(function(){
                     this.startLoop(links)
-                }.bind(this), 1000)
+                }.bind(this), Math.floor(Math.random() * (1500 - 200 + 1) ) + 500)
+                // Math.floor(Math.random() * (max - min + 1) ) + min
             }.bind(this), animation.repeat * (animation.time + num_of_chars * animation.delay))
         },
     },
