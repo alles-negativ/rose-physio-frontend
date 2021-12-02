@@ -177,6 +177,10 @@ a {
   display: flex;
   justify-content: center;
 
+  @include mobileXS {
+      width: 100%;
+  }
+
   @include tablet {
       width: 100%;
   }
@@ -198,6 +202,12 @@ a {
   height: 50px;
   margin-bottom: 34px;
   align-self: center;
+
+  @include mobileXS {
+        align-self: center;
+        height: 50px;
+        width: 320px;
+  }
 
   @include tablet {
         align-self: center;

@@ -112,7 +112,7 @@ export default {
           locations: 'Standorte',
           contact: 'Kontakt',
           open: 'Öffnungszeiten',
-          accept: 'Akzeptieren',
+          accept: 'Oke! 👍',
           readmore: 'mehr',
           cookie: 'Diese Website verwendet Cookies',
         },
@@ -120,7 +120,7 @@ export default {
           locations: 'Locations',
           contact: 'Contact',
           open: 'Opening Hours',
-          accept: 'Accept',
+          accept: 'Oke! 👍',
           readmore: 'read more',
           cookie: 'This website uses cookies',
         }
