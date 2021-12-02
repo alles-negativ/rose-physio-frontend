@@ -33,12 +33,14 @@
                 font-size: 60px;
                 font-weight: 300;
                 transition-duration: 200ms;
+                transform-origin: 45%;
         }
     }
 
 .rotate {
     transform: rotate(45deg);
     transition-duration: 300ms;
+    transform-origin: 45%;
 }
 
     &__body {
@@ -69,7 +71,7 @@
       transform-origin: left center;
   }
   
-  #container:hover #halfclip {
+  #container .animated1 {
       animation: cliprotate 2s 1;
       transform: rotate(180deg);
   } 
@@ -86,7 +88,7 @@
     height: 100%;
     right: 0px;
     position: absolute;
-    border: solid 1px transparent;
+    border: solid 3px transparent;
     border-top-color: $black;
     border-left-color: $black;
     border-radius: 50%;
@@ -96,7 +98,7 @@
       width: 200%;
       transform: rotate(-45deg);
   }
-  #container:hover #clipped {
+  #container .animated2 {
       transform: rotate(135deg);
       animation: rotate 1s linear 2;
   }
@@ -114,7 +116,7 @@
       opacity: 0;
   }
   
-  #container:hover #fixed {
+  #container .animated3 {
       opacity: 1;
       animation: showfixed 2s 1;
   }
