@@ -93,7 +93,23 @@
     }
 
     ::v-deep p {
-        line-height: 60px;
+        font-size: 28px;
+        line-height: 45px;
+        
+                @include tablet {
+                    font-size: 45px;
+                    line-height: 65px;
+                }
+
+                @include desktop {
+                    font-size: 55px;
+                    line-height: 70px;
+                }
+                
+                @include desktopXL {
+                    font-size: 55px;
+                    line-height: 70px;
+                }
 
         a {
             color: white;
@@ -104,13 +120,13 @@
     ::v-deep .headline {
 
         .word {
-            // problems with safari
-            // pointer-events: none;
+            // fix for with safari 
+            transform: perspective(0);
         }
 
         .char {
             pointer-events: none;
-            font-size: 35px;
+            font-size: 28px;
             line-height: 45px;
 
                 @include tablet {
