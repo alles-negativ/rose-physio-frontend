@@ -1,6 +1,6 @@
 <template>
     <div class="accordion">
-        <div onmouseover="hoverarrowE()" onmouseleave="hoverarrowL()" class="accordion__title" v-on:click="toggle">
+        <div class="accordion__title" v-on:click="toggle" @mouseenter="toggleH" @mouseleave="clearT" :class="animate ? 'green': '' ">
           <slot name="title">Default Title</slot>
           <p v-bind:class="{ rotate: show }" class="plus">+</p>
         </div>
@@ -23,13 +23,15 @@ export default {
 
     data() {
         return {
-            show: false
+            show: false,
+            timeout: 0,
+            animate: false
         }
     },
     methods: {
         toggle: function() {
-        this.show = !this.show;
-        },
+            this.show = !this.show;
+            },
         beforeEnter: function(el) {
         el.style.height = '0';
         },
@@ -41,9 +43,20 @@ export default {
         },
         leave: function(el) {
         el.style.height = '0';
+        },
+        toggleH: function() {  
+            this.timeout = setTimeout(() => this.show = true, 2000);
+            if (this.show == false) {
+                this.animate = true;
+            }
+        },
+        clearT: function() {
+            clearTimeout(this.timeout);
+            this.animate = false;
+        },
     }
-  }
-}
+}        
+
 </script>
 
 <style lang="scss">

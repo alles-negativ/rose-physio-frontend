@@ -152,6 +152,7 @@
     display: none;
     bottom: 0;
     cursor: pointer;
+    position: absolute;
 
         &:hover {
             animation: pulseBig 0.5s ease-out infinite;

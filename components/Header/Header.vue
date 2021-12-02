@@ -19,10 +19,10 @@
             <nuxt-img class="header__content--image" :src="header.images[0].url" :alt="header.images[0].alt" />
         </div>
     </div>
-  </div>
     <div class="arrow">
         <img class="arrow__img" src="~/assets/images/arrow.svg" alt="arrow" onclick="arrowScroll()">
     </div>
+  </div>
   </div>
 </template>
 
