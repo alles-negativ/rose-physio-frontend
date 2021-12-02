@@ -40,6 +40,9 @@ export default {
     },
     methods: {
         toggle: function() {
+            if (this.show == false) {
+                this.clearT()
+            }
             this.show = !this.show;
         },
         beforeEnter: function(el) {
@@ -55,7 +58,7 @@ export default {
             el.style.height = '0';
         },
         toggleH: function() {  
-            this.timeout = setTimeout(() => ( this.show = true, this.animate = false), 2000);
+            this.timeout = setTimeout(() => ( this.show = true, this.animate = false ), 2000);
             if (this.show == false) {
                 this.animate = true;
             }

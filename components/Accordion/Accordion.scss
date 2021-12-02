@@ -72,8 +72,17 @@
   }
   
   #container .animated1 {
-      animation: cliprotate 2s 1;
-      transform: rotate(180deg);
+
+    @include desktop {
+        animation: cliprotate 2s 1;
+        transform: rotate(180deg);
+    }
+    
+    @include desktopXL {
+        animation: cliprotate 2s 1;
+        transform: rotate(180deg);
+    }
+
   } 
   
   @keyframes cliprotate {
@@ -98,9 +107,18 @@
       width: 200%;
       transform: rotate(-45deg);
   }
+
   #container .animated2 {
-      transform: rotate(135deg);
-      animation: rotate 1s linear 2;
+
+    @include desktop {
+        transform: rotate(135deg);
+        animation: rotate 1s linear 2;
+    }
+    
+    @include desktopXL {
+        transform: rotate(135deg);
+        animation: rotate 1s linear 2;
+    }   
   }
   
   
@@ -117,8 +135,16 @@
   }
   
   #container .animated3 {
-      opacity: 1;
-      animation: showfixed 2s 1;
+
+    @include desktop {
+        opacity: 1;
+        animation: showfixed 2s 1;
+    }
+    
+    @include desktopXL {
+        opacity: 1;
+        animation: showfixed 2s 1;
+    } 
   }
   
   
