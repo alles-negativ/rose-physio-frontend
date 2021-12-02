@@ -40,6 +40,9 @@ export default {
     },
     methods: {
         toggle: function() {
+            if (this.show == false) {
+                this.clearT()
+            }
             this.show = !this.show;
         },
         beforeEnter: function(el) {
