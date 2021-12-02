@@ -1,10 +1,17 @@
 /*
 Breakpoints for different screen sizes
 */
+$phoneXS-width: 379.98px;
 $phone-width: 575.98px;
 $tablet-width: 767.98px;
 $desktop-width: 1199.98px;
 $desktopXL-width: 1440.02px;
+
+@mixin mobileXS {
+  @media (max-width: #{$phoneXS-width}) {
+    @content;
+  }
+}
 
 @mixin mobile {
   @media (max-width: #{$phone-width}) {
