@@ -1,8 +1,18 @@
 <template>
     <div class="accordion">
         <div onmouseover="hoverarrowE()" onmouseleave="hoverarrowL()" class="accordion__title" v-on:click="toggle">
-          <slot name="title">Default Title</slot>
-          <p v-bind:class="{ rotate: show }" class="plus">+</p>
+            <slot name="title">Default Title</slot>
+            <div class="right">
+                <p v-bind:class="{ rotate: show }" class="plus">+</p>
+                <div id="container">
+                    <div id="halfclip">
+                        <div class="halfcircle" id="clipped">
+                        </div>
+                    </div>
+                    <div class="halfcircle" id="fixed">
+                    </div>
+                </div>
+            </div>
         </div>
         <transition name="accordion"
           v-on:before-enter="beforeEnter" v-on:enter="enter"
