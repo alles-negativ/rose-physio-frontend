@@ -55,7 +55,7 @@ export default {
             el.style.height = '0';
         },
         toggleH: function() {  
-            this.timeout = setTimeout(() => ( this.show = true, this.animate = false), 2000);
+            this.timeout = setTimeout(() => ( this.show = true, this.animate = false ), 2000);
             if (this.show == false) {
                 this.animate = true;
             }
