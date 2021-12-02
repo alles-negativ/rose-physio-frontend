@@ -2,11 +2,11 @@ export default {
     data() {
         return {
             animations: [
-                {name: "headline--fall", time: 600, delay: 50},
-                {name: "headline--jump", time: 800, delay: 75},
-                {name: "headline--flip", time: 4000, delay: 75},
-                {name: "headline--float", time: 2200, delay: 50},
-                {name: "headline--jog", time: 2000, delay: 25}
+                {name: "headline--fall", time: 600, delay: 50, repeat: 2},
+                {name: "headline--jump", time: 800, delay: 75, repeat: 2},
+                {name: "headline--flip", time: 4000, delay: 75, repeat: 1},
+                {name: "headline--float", time: 2200, delay: 50, repeat: 2},
+                {name: "headline--jog", time: 2000, delay: 25, repeat: 2}
             ]
         };
     },
@@ -22,15 +22,17 @@ export default {
             for (let i = 0; i < splitting_links.length; i++) {
                 splitting_links[i].classList.add("headline");
                 const animation = this.animations[Math.floor(Math.random() * this.animations.length)]
-                splitting_links[i].onmouseenter = function(){
+                splitting_links[i].onmouseenter = function() {
                     this.classList.add(animation.name);
+                    $nuxt.isAnimation = true
                     this.classList.add('isAnimation');
                 }
                 splitting_links[i].onmouseleave = function(){
+                    $nuxt.isAnimation = false
                     setTimeout(function(){
                         this.classList.remove(animation.name);
                         this.classList.remove('isAnimation');
-                    }.bind(this),1000)
+                    }.bind(this), 500)
                 }
                 splitting_links[i].setAttribute("data-splitting","")
             }
@@ -42,6 +44,12 @@ export default {
             }
         },
         startLoop(links) {
+            while ($nuxt.isAnimation == true) {
+                setTimeout(function(){
+                    this.startLoop(links)
+                }.bind(this), 1000)
+                return
+            }
             const link = links[Math.floor(Math.random() * links.length)]
             const animation = this.animations[Math.floor(Math.random() * this.animations.length)]
             link.classList.add(animation.name);
@@ -53,7 +61,7 @@ export default {
                 setTimeout(function(){
                     this.startLoop(links)
                 }.bind(this), 1000)
-            }.bind(this), 2 * (animation.time + num_of_chars * animation.delay))
+            }.bind(this), animation.repeat * (animation.time + num_of_chars * animation.delay))
         },
     },
 };
