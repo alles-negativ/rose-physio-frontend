@@ -19,7 +19,7 @@
           </div> 
           <div class="header__content--contact">
             <div class="linkwrapper">
-              <a class="text text__big--white" href="mailto:info@rose-physio-fake.ch?subject=Termin&body=Guten%20Tag%2C%0A%0Aich%20w%C3%BCrde%20gerne%20einen%20Termin%20abmachen.%0A%0AGruss">{{ contact.headeremail }}</a>
+              <a class="text text__big--white" href="mailto:info@rose-physio-fake.ch">{{ contact.headeremail }}</a>
             </div>
             <div class="linkwrapper">
               <a class="text text__big--white" href="tel:+4733378901">{{ contact.headertel }}</a>

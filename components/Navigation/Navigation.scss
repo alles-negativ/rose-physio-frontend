@@ -167,8 +167,6 @@ nav {
     &__link {
         width: 35px;
         height: 35px;
-
-
     }
 }
 
@@ -180,9 +178,22 @@ p {
     padding-bottom: 4px;
     padding-top: 4px;
 
+        @include mobileXS {
+            font-size: 13px;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-bottom: 4px;
+            padding-top: 4px;
+        }
+
     &.en {
         padding-left: 8px;
-        padding-right: 8px; 
+        padding-right: 8px;
+        
+        @include mobileXS {
+            padding-left: 6px;
+            padding-right: 6px;
+        }
     }
 }
 
