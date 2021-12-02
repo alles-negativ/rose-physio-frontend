@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header__links">
       <nuxt-link :to="localePath('index')">
-        <img class="header__links--logo" src="/logo_c.svg" alt="">
+        <img class="header__links--logo" src="/logo_c.svg" alt="Logo Rose Physio">
       </nuxt-link>
       <!-- <img class="header__links--logo" src="/logo_c.svg" alt=""> -->
       <div class="header__links--utility">
@@ -20,11 +20,15 @@
 
 <script>
 import linkClickRouting from "../../mixins/linkClickRouting";
+import animationsHeader from "../../mixins/animationsHeader";
 
 export default {
   name: 'Headerhome',
 
-  mixins: [linkClickRouting],
+  mixins: [
+    linkClickRouting, 
+    animationsHeader
+  ],
 
   data() {
     return {
@@ -50,10 +54,10 @@ export default {
     }
   },
   mounted() {
-    this.$Splitting()
+    // this.$Splitting()
   },
   updated() {
-    this.$Splitting()
+    // this.$Splitting()
   }
 }
 </script>

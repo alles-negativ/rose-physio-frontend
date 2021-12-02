@@ -151,6 +151,12 @@
 .arrow {
     display: none;
     bottom: 0;
+    cursor: pointer;
+    position: absolute;
+
+        &:hover {
+            animation: pulseBig 0.5s ease-out infinite;
+        }
 
         @include tablet {
             display: none;
@@ -191,6 +197,15 @@
     @keyframes pulse {
         0%, 100% {
             transform: translate(0, 5px)
+        }
+        50% {
+            transform: translate(0, 0)
+        }
+    }
+
+    @keyframes pulseBig {
+        0%, 100% {
+            transform: translate(0, 10px)
         }
         50% {
             transform: translate(0, 0)

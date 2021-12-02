@@ -33,7 +33,7 @@ export default {
       { hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'en_GB' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'Rose Physio - Physiotherapie' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:title', property: 'og:title', content: 'Physiotherapie in Zürich' },
+      { hid: 'og:title', property: 'og:title', content: 'Rose Physio - Physiotherapie in Zürich' },
       { hid: 'og:description', property: 'og:description', content: 'Wir sind eine Physio-Praxis mit vier Standorten im Raum Zürich. Wir bieten Ihnen eine rundum Behandlung von Physioteherapie über Ergotherapie und Massage bis Pilates an.' },
       { hid: 'og:image', property: 'og:image', content: 'http://localhost:3000/_ipx/_/http://localhost:8888/rose-physio-backend/media/pages/home/testarticle/149afd1e99-1635501254/sketchgatekeepercat.jpg' },
       { hid: 'og:image:width', property: 'og:image:width', content: '600' },
@@ -55,9 +55,9 @@ export default {
 
   publicRuntimeConfig: {
     kirby: {
-      url: process.env.KIRBY_SITE || 'http://localhost:8888/rose-physio-backend',
-      username: process.env.KIRBY_USERNAME || 'hello@alles-negativ.ch',
-      password: process.env.KIRBY_PASSWORD || 'letmein123'
+      url: process.env.KIRBY_SITE,
+      username: process.env.KIRBY_USERNAME,
+      password: process.env.KIRBY_PASSWORD
     }
   },
 

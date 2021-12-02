@@ -44,14 +44,12 @@
           this.$router && this.$router.push(this.localePath(href));
         }
       },
-  
       addListeners() {
         this.links = this.$el.getElementsByTagName("a");
         for (let i = 0; i < this.links.length; i++) {
           this.links[i].addEventListener("click", this.navigate, false);
         }
       },
-  
       removeListeners() {
         for (let i = 0; i < this.links.length; i++) {
           this.links[i].removeEventListener("click", this.navigate, false);
