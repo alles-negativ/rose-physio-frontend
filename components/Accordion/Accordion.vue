@@ -2,8 +2,6 @@
     <div class="accordion">
         <div class="accordion__title" v-on:click="toggle" @mouseenter="toggleH" @mouseleave="clearT" :class="animate ? 'green': '' ">
           <slot name="title">Default Title</slot>
-          <p v-bind:class="{ rotate: show }" class="plus">+</p>
-            <slot name="title">Default Title</slot>
             <div class="right">
                 <p v-bind:class="{ rotate: show }" class="plus">+</p>
                 <div id="container">
