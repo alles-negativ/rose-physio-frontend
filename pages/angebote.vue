@@ -8,6 +8,7 @@
   </main>
 </template>
 
+
 <script>
 import metaTags from "../mixins/metaTags";
 

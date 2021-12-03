@@ -2,6 +2,9 @@
 @use "assets/css/main/breakpoints" as *;
 @use "assets/css/main/main" as *;
 
+h1 {
+    margin-bottom: 0.5em;
+}
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -29,6 +32,18 @@
         text-transform: uppercase;
         border-top: thin solid $black;
         border-bottom: thin solid $black;
+
+            @include mobileXS {
+                margin-bottom: -1px;
+            }
+
+            @include mobile {
+                margin-bottom: -1px;
+            }
+
+            @include tablet {
+                margin-bottom: -1px;
+            }
     }
 
     .content {
@@ -38,9 +53,18 @@
         padding-top: 1em;
         border-bottom: thin solid $black;
         justify-content: space-between;
+
+            @include mobileXS {
+                margin-bottom: -1px;
+            }
+
+            @include mobile {
+                margin-bottom: -1px;
+            }
         
             @include tablet {
                 flex-flow: column wrap;
+                margin-bottom: -1px;
             }
 
             @include desktop {
@@ -104,7 +128,7 @@
 }
 
 .content__container > :last-child {
-    border-bottom: 0px;
+    // border-bottom: 0px;
 
     @include tablet {
         border-bottom: thin solid $black;

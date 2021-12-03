@@ -6,21 +6,18 @@
 .header {
     height: 100vh;
     background: $red;
-    margin-bottom: $contentpadding;
+    margin-bottom: $marginHeader;
 
         @include tablet {
-            height: 100vh;
-            margin-bottom: $contentpaddingLarge;
+            margin-bottom: $marginHeader;
         }
 
         @include desktop {
-            height: 100vh;
-            margin-bottom: $contentpaddingLarge;
+            margin-bottom: $marginHeaderMedium;
         }
 
         @include desktopXL {
-            height: 100vh;
-            margin-bottom: $contentpaddingLarge;
+            margin-bottom: $marginHeaderMedium;
         }
 
     &__links {
