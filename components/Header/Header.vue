@@ -17,6 +17,7 @@
       </div>
         <div v-if="header.headerimage">
             <nuxt-img class="header__content--image" :src="header.images[0].url" :alt="header.images[0].alt" />
+            <!-- <div class="positioner"></div> -->
         </div>
     </div>
     <div class="arrow">

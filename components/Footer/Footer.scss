@@ -4,6 +4,18 @@
 
 footer {
   margin-top: $marginLarge;
+
+  @include tablet {
+        margin-top: $marginXLarge;
+    }
+
+    @include desktop {
+        margin-top: $marginXXLarge;
+    }
+
+    @include desktopXL {
+        margin-top: $marginXXLarge;
+    }
 }
 
 a { 

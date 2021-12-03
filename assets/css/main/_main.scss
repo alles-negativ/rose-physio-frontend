@@ -7,8 +7,16 @@ Global definitions for overreaching elements
 
 $contentpadding: 0.75em;
 $contentpaddingLarge: 3em;
+
 $margin: 5em;
 $marginLarge: 7.5em;
+$marginXLarge: 15em;
+$marginXXLarge: 20em;
+
+$marginHeader: 5em;
+$marginHeaderMedium: 10em;
+$marginHeaderLarge: 20em;
+$marginHeaderXLarge: 30em;
 
 $logosize: 75px;
 
@@ -17,7 +25,6 @@ body {
 }
 
 .wrapper {
-   margin-top: 10em;
    margin-bottom: 10em;
    padding-left: $contentpadding;
    padding-right: $contentpadding;
