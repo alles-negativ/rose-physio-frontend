@@ -35,10 +35,10 @@ export default {
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:title', property: 'og:title', content: 'Rose Physio - Physiotherapie in Zürich' },
       { hid: 'og:description', property: 'og:description', content: 'Wir sind eine Physio-Praxis mit vier Standorten im Raum Zürich. Wir bieten Ihnen eine rundum Behandlung von Physioteherapie über Ergotherapie und Massage bis Pilates an.' },
-      { hid: 'og:image', property: 'og:image', content: 'http://localhost:3000/_ipx/_/http://localhost:8888/rose-physio-backend/media/pages/home/testarticle/149afd1e99-1635501254/sketchgatekeepercat.jpg' },
-      { hid: 'og:image:width', property: 'og:image:width', content: '600' },
-      { hid: 'og:image:height', property: 'og:image:height', content: '600' },
-      { hid: 'og:image:alt', property: 'og:image:alt', content: 'The gray furred gatekeeper cat' },
+      { hid: 'og:image', property: 'og:image', content: '/static/rose-physio-static-image.jpg' },
+      { hid: 'og:image:width', property: 'og:image:width', content: '2121' },
+      { hid: 'og:image:height', property: 'og:image:height', content: '1414' },
+      { hid: 'og:image:alt', property: 'og:image:alt', content: 'Patient is treated with care and awareness for the important problems.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
