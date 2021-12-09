@@ -56,6 +56,10 @@ p, button {
     line-height: 26px;
 }
 
+p {
+    min-height: 10px;
+}
+
 .text {
     font-family: SpaceGrotesk, sans-serif;
     font-weight: 400;
