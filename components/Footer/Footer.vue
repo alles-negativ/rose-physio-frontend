@@ -3,8 +3,12 @@
     <div class="container">
       <div class="container__top">
         <div class="contact">
-          <p class="text__small">{{ footer.headeremail }}</p>
-          <p class="text__small">{{ footer.headertel }}</p>
+          <p class="text__small">
+            <a :href="'mailto:' + footer.headeremail">{{ footer.headeremail }}</a>
+          </p>
+          <p class="text__small">
+            <a :href="'tel:' + footer.headertel.replace(/\s+/g, '')">{{ footer.headertel }}</a>
+          </p>
           <p class="text__small">{{ $t('open') }}<br>{{ footer.headeropening }}</p>
         </div>
         <div class="legal">
