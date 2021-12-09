@@ -38,7 +38,7 @@ export default {
       { hid: 'og:image', property: 'og:image', content: 'https://peaceful-dubinsky-42a054.netlify.app/rose-physio-static-image.jpg' },
       { hid: 'og:image:width', property: 'og:image:width', content: '2121' },
       { hid: 'og:image:height', property: 'og:image:height', content: '1414' },
-      { hid: 'og:image:alt', property: 'og:image:alt', content: 'Patient is treated with care and awareness for the important problems.' },
+      { hid: 'og:image:alt', property: 'og:image:alt', content: 'Patient is treated with care and awareness regarding the important problems.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -143,10 +143,6 @@ export default {
 
   axios: {
     proxy: false // Can be also an object with default options
-  },
-
-  proxy: {
-    '/api/': { target: 'http://localhost:8000/api/query', pathRewrite: {'^/api/': ''}, changeOrigin: true }
   },
 
   image: {

@@ -148,7 +148,7 @@
         &--fall {
 
             .char {
-                animation: fall 600ms 2 calc(var(--char-index) * 0.05s) cubic-bezier(0.165, 0.44, 0.64, 1);
+                animation: fall 600ms 4 calc(var(--char-index) * 0.05s) cubic-bezier(0.165, 0.44, 0.64, 1);
             }
                 
             @keyframes fall {
@@ -252,7 +252,7 @@
         &--jog {
 
             .char {
-                animation: jog 500ms 2 calc(var(--char-index) * 0.025s) linear;
+                animation: jog 500ms 4 calc(var(--char-index) * 0.025s) linear;
             }
                 
             @keyframes jog {

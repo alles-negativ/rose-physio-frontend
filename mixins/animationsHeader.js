@@ -2,11 +2,11 @@ export default {
     data() {
         return {
             animations: [
-                {name: "headline--fall", time: 600, delay: 50, repeat: 2},
+                {name: "headline--fall", time: 600, delay: 50, repeat: 4},
                 {name: "headline--jump", time: 800, delay: 75, repeat: 2},
-                {name: "headline--flip", time: 4000, delay: 75, repeat: 1},
+                // {name: "headline--flip", time: 4000, delay: 75, repeat: 1},
                 {name: "headline--float", time: 2200, delay: 50, repeat: 2},
-                {name: "headline--jog", time: 2000, delay: 25, repeat: 2}
+                {name: "headline--jog", time: 500, delay: 25, repeat: 4}
             ]
         };
     },

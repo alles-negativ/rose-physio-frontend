@@ -19,10 +19,10 @@
           </div> 
           <div class="header__content--contact">
             <div class="linkwrapper">
-              <a class="text text__big--white" href="mailto:info@rose-physio-fake.ch">{{ contact.headeremail }}</a>
+              <a class="text text__big--white" :href="'mailto:' + contact.headeremail">{{ contact.headeremail }}</a>
             </div>
             <div class="linkwrapper">
-              <a class="text text__big--white" href="tel:+4733378901">{{ contact.headertel }}</a>
+              <a class="text text__big--white" :href="'tel:' + contact.headertel.replace(/\s+/g, '')">{{ contact.headertel }}</a>
             </div>
           </div>
       </div>
