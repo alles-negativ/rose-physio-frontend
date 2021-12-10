@@ -1,6 +1,6 @@
 <template>
   <main id="content">
-    <Stundenplan />
+    <!-- <Stundenplan /> -->
     <KurseListe />
     <div class="grid">
       <h1>{{ page.content.contenttitle }}</h1>

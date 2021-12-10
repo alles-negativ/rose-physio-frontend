@@ -60,7 +60,7 @@ export default {
                 link.classList.remove(animation.name)
                 setTimeout(function(){
                     this.startLoop(links)
-                }.bind(this), Math.floor(Math.random() * (1500 - 200 + 1) ) + 500)
+                }.bind(this), Math.floor(Math.random() * (1000 - 500 + 1) ) + 500)
                 // Math.floor(Math.random() * (max - min + 1) ) + min
             }.bind(this), animation.repeat * (animation.time + num_of_chars * animation.delay))
         },
