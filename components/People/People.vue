@@ -45,14 +45,14 @@ export default {
     methods: {
         getScreen: function(){
             if (process.client) {
-                if (window.innerWidth < 575) {
+                if (window.innerWidth < 759.98) {
                     this.numberOfColumns = 1
                 }
-                else if(window.innerWidth > 1200 ) {
-                    this.numberOfColumns = 2
+                else if(window.innerWidth > 1439.98 ) {
+                    this.numberOfColumns = 3
                 }
                 else {
-                    this.numberOfColumns = 1
+                    this.numberOfColumns = 2
                 }
            } 
         }
