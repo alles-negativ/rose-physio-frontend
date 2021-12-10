@@ -3,7 +3,7 @@
 @use "assets/css/main/main" as *;
 
 .container > :last-child {
-    margin-top: 7.5em;
+    // margin-top: 7.5em;
     margin-right: 0em;
 
     @include tablet {
@@ -17,7 +17,7 @@
         }
 
         @include desktopXL {
-            margin-top: 15em;
+            // margin-top: 15em;
             margin-right: 0em;
         }
 }
