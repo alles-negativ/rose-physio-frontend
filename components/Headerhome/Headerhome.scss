@@ -4,12 +4,17 @@
 
 .header {
     height: auto;
-    min-height: 100vh;
+    // min-height: 100vh;
     background: $red;
     margin-bottom: $marginHeader;
 
         @include tablet {
-            height: 100vh;
+            height: auto;
+            margin-bottom: $marginHeader;
+        }
+
+        @include tabletXL {
+            height: auto;
             margin-bottom: $marginHeader;
         }
 
@@ -29,22 +34,18 @@
         align-items: center;
         background-color: $white;
         width: 100%;
-        margin-bottom: 25px;
         height: 100px;
         padding: $contentpadding;
 
             @include tablet {
-                margin-bottom: 70px;
                 padding: $contentpaddingLarge;
             }
 
             @include desktop {
-                margin-bottom: 85px;
                 padding: $contentpaddingLarge;
             }
 
             @include desktopXL {
-                margin-bottom: 85px;
                 padding: $contentpaddingLarge;
             }
 
@@ -62,6 +63,8 @@
         display: flex;
         flex-flow: row nowrap;
         padding: $contentpadding;
+        padding-bottom: 2.5em;
+        padding-top: 2em;
 
             @include tablet {
                 padding: $contentpaddingLarge;
@@ -73,6 +76,7 @@
 
             @include desktopXL {
                 padding: $contentpaddingLarge;
+                padding-top: 5em;
             }
 
         &--text {
@@ -101,9 +105,14 @@
                     line-height: 65px;
                 }
 
+                // @include tabletXL {
+                //     font-size: 70px;
+                //     line-height: 93px;
+                // }
+
                 @include desktop {
-                    font-size: 55px;
-                    line-height: 70px;
+                    font-size: 57px;
+                    line-height: 80px;
                 }
                 
                 @include desktopXL {
@@ -134,9 +143,14 @@
                     line-height: 65px;
                 }
 
+                // @include tabletXL {
+                //     font-size: 70px;
+                //     line-height: 93px;
+                // }
+
                 @include desktop {
-                    font-size: 55px;
-                    line-height: 70px;
+                    font-size: 57px;
+                    line-height: 80px;
                 }
                 
                 @include desktopXL {

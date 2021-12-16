@@ -4,6 +4,7 @@ Breakpoints for different screen sizes
 $phoneXS-width: 379.98px;
 $phone-width: 575.98px;
 $tablet-width: 767.98px;
+$tabletXL-width: 1023.98px;
 $desktop-width: 1199.98px;
 $desktopXL-width: 1440.02px;
 
@@ -21,6 +22,12 @@ $desktopXL-width: 1440.02px;
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin tabletXL {
+  @media (min-width: #{$tabletXL-width}) and (max-width: #{$desktop-width}) {
     @content;
   }
 }
