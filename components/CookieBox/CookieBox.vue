@@ -3,11 +3,6 @@
     <cookie-consent>
       <template slot="message">
         <p>{{ $t('cookie') }}</p>
-        <a class="btn btn-link" href="/my-cookies">
-          <p>
-            {{ $t('readmore') }}
-          </p>
-        </a>
       </template>
       <template slot="button">
         <div class="accept__button">
