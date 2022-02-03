@@ -9,7 +9,8 @@
           <p class="text__small">
             <a :href="'tel:' + footer.headertel.replace(/\s+/g, '')">{{ footer.headertel }}</a>
           </p>
-          <p class="text__small">{{ $t('open') }}<br>{{ footer.headeropening }}</p>
+          <p class="text__small" id="heading" >{{ $t('open') }}</p>
+          <p class="text__small" v-html="footer.headeropening" />
         </div>
         <div class="legal">
           <nuxt-link :to="localePath('/' + 'kontakt#impressum')">
