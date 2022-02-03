@@ -6,7 +6,7 @@
     <div class="wrapper">
       <Nuxt />
     </div>
-    <Footer />
+    <Footer :key="key" />
   </div>
 </template>
 
