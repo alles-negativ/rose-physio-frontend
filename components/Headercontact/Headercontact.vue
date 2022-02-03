@@ -15,6 +15,7 @@
           <div class="text__big" v-html="contact.headertext"></div>
           <div class="header__content--text">
             <p class="text" v-html="contact.headertram"/>
+            <br>
             <p class="text" v-html="contact.headeropening"/>
           </div> 
           <div class="header__content--contact">
