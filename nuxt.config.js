@@ -82,6 +82,9 @@ export default {
     // '@nuxtjs/device',
     '@nuxt/image',
     // '@nuxtjs/html-validator'
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-219520330-1'
+    }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
