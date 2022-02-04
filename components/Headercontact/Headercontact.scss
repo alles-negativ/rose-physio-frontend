@@ -4,7 +4,8 @@
 @use "assets/css/main/main" as *;
 
 .header {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     background: $red;
     margin-bottom: $marginHeader;
 

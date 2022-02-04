@@ -12,6 +12,7 @@
     display: flex;
     position: absolute;
     justify-content: center;
+    text-align: center;
     align-items: center;
     flex-flow: column wrap;
     width: 100%;
