@@ -115,6 +115,8 @@ export default {
           accept: 'Oke! 👍',
           readmore: 'mehr',
           cookie: 'Diese Website verwendet Cookies',
+          errormessage: '404 - Seite nicht gefunden',
+          link: 'Zurück zu Home'
         },
         en: {
           locations: 'Locations',
@@ -123,6 +125,8 @@ export default {
           accept: 'Oke! 👍',
           readmore: 'read more',
           cookie: 'This website uses cookies',
+          errormessage: '404 - Page not found',
+          link: 'back to home'
         }
       }
     },
