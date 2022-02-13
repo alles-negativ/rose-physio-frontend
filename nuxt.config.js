@@ -91,7 +91,9 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/i18n',
-    '@nuxtjs/moment'
+    '@nuxtjs/moment',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap'
   ],
 
   // Translation configuration
@@ -157,5 +159,13 @@ export default {
       'http://localhost:8888',
       'http://backend.rose-physio.ch/'
     ]
-  }
+  },
+
+  robots: {
+    /* module options */
+  },
+
+  sitemap: {
+    hostname: 'https://www.rose-physio.ch',
+  },
 }

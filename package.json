@@ -13,6 +13,8 @@
     "@nuxtjs/i18n": "^7.1.0",
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/ngrok": "^2.0.0",
+    "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/sitemap": "^2.4.0",
     "axios": "^0.23.0",
     "core-js": "^3.15.1",
     "dart-sass": "^1.25.0",
