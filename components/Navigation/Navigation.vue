@@ -12,11 +12,11 @@
                     </nuxt-link>
                 </li>
                 <li class="image image__phone">
-                    <a class="image image_link" href="tel:+4733378901"></a>
+                    <a class="image image_link" href="tel:0442813000"></a>
                 </li>
                 <li :class="$i18n.locale" class="image image__mail">
-                    <a class="image image__link--de" href="mailto:info@rose-physio-fake.ch?subject=Termin&body=Guten%20Tag%2C%0A%0Aich%20w%C3%BCrde%20gerne%20einen%20Termin%20abmachen.%0A%0AGruss"></a>
-                    <a class="image image__link--en" href="mailto:info@rose-physio-fake.ch?subject=Termin&body=THISISTHEENGLISHVERSION%20Tag%2C%0A%0Aich%20w%C3%BCrde%20gerne%20einen%20Termin%20abmachen.%0A%0AGruss"></a>
+                    <a class="image image__link--de" href="mailto:info@rose-physio.ch"></a>
+                    <a class="image image__link--en" href="mailto:info@rose-physio.ch"></a>
                 </li>
             </ul>
         </div>    
