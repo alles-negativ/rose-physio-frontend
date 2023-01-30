@@ -49,6 +49,10 @@ export default {
     script: [
       // { src: "https://unpkg.com/splitting/dist/splitting.min.js" }
       // script in static folder for global JS
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-E82G26JW2S",
+        async: true
+      },
       {src: "/script.js"}
     ]
   },
