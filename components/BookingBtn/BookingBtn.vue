@@ -8,9 +8,10 @@
     <div class="popup" id="popup">
         <h4>{{ $t('choose') }}</h4>
       <div class="text__menu" v-for="element in data" :key="element.id">
-          <p v-if="element.appointments">
-            > <a class="popup-link" :href="element.appointments" target="_blank">{{ element.title }}</a>
-          </p>
+          <div class="popup-link--container" v-if="element.appointments">
+            <p class="popup-arrow">></p>
+            <a class="popup-link" :href="element.appointments" target="_blank">{{ element.title }}</a>
+          </div>
       </div>
     </div>
     <div @click="closePopup" class="bg-close" id="bg-close">
