@@ -5,7 +5,9 @@
              <template v-slot:title>
                  <div>
                     <h3 class="title"> {{ element.title }} </h3>
-                    <p class="text__big"> {{ element.contenttext }} </p>
+                    <p class="text__big"> {{ element.contenttext }} 
+                        <a v-if="element.appointments" :href="element.appointments" @click.self.stop target="_blank">Termin Buchen!</a>
+                    </p>
                 </div>
               </template>
               <template v-slot:body>
@@ -31,6 +33,7 @@ export default {
             "select": {
                 "title": true,
                 "contenttext": true,
+                "appointments": true,
                 "mapframe": true
             }
         }, this.$nuxt.context.app.i18n.locale)

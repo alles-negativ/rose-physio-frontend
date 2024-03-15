@@ -20,6 +20,14 @@
     }
 }
 
+a {
+    color: red;
+}
+
+a:hover {
+    font-style: italic;
+}
+
 ::v-deep .accordion {
      .accordion__body {
         transition: 200ms ease-out;
