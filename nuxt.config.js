@@ -1,4 +1,4 @@
-const Sass = require('sass')
+const Sass = require("sass");
 
 export default {
   // server: {
@@ -8,74 +8,116 @@ export default {
   ssr: true,
 
   // create a static page
-  target: 'static',
+  target: "static",
 
   generate: {
-    fallback: true
+    fallback: true,
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Rose Physio',
+    title: "Rose Physio",
     htmlAttrs: {
-      lang: 'de'
+      lang: "de",
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'content from config' },
-      { hid: 'author', name: 'author', content: 'alles-negativ.ch' },
-      { hid: 'keywords', name: 'keywords', content: 'Physio,Physiotherapie,Zürich,Ergotherapie,Massage,Pilates,Kurse,Stauffacher,Rotes Schloss,Dietikon,Oerlikon,Winterthur' },
-      { hid: 'theme-color', name: 'theme-color', content: '#ffffff' },
-      { hid: 'robots', name: 'robots', content: 'all' },
-      { hid: 'referrer', name: 'referrer', content: 'no-referrer-when-downgrade' },
-      { hid: 'og:locale', property: 'og:locale', content: 'de_CH' },
-      { hid: 'og:locale:alternate', property: 'og:locale:alternate', content: 'en_GB' },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Rose Physio - Physiotherapie' },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:title', property: 'og:title', content: 'Rose Physio - Physiotherapie in Zürich' },
-      { hid: 'og:description', property: 'og:description', content: 'Wir sind eine Physio-Praxis mit fünf Standorten im Raum Zürich. Wir bieten Ihnen eine rundum Behandlung von Physioteherapie über Ergotherapie und Massage bis Pilates an.' },
-      { hid: 'og:image', property: 'og:image', content: 'https://www.rose-physio.ch/rose-physio-static-image.jpg' },
-      { hid: 'og:image:width', property: 'og:image:width', content: '2121' },
-      { hid: 'og:image:height', property: 'og:image:height', content: '1414' },
-      { hid: 'og:image:alt', property: 'og:image:alt', content: 'Der Patient wird mit Sorgfalt und Bewusstsein für die wichtigen Probleme behandelt.' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: "content from config",
+      },
+      { hid: "author", name: "author", content: "alles-negativ.ch" },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content:
+          "Physio,Physiotherapie,Zürich,Ergotherapie,Massage,Pilates,Kurse,Stauffacher,Rotes Schloss,Dietikon,Oerlikon,Winterthur",
+      },
+      { hid: "theme-color", name: "theme-color", content: "#ffffff" },
+      { hid: "robots", name: "robots", content: "all" },
+      {
+        hid: "referrer",
+        name: "referrer",
+        content: "no-referrer-when-downgrade",
+      },
+      { hid: "og:locale", property: "og:locale", content: "de_CH" },
+      {
+        hid: "og:locale:alternate",
+        property: "og:locale:alternate",
+        content: "en_GB",
+      },
+      {
+        hid: "og:site_name",
+        property: "og:site_name",
+        content: "Rose Physio - Physiotherapie",
+      },
+      { hid: "og:type", property: "og:type", content: "website" },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Rose Physio - Physiotherapie in Zürich",
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content:
+          "Wir sind eine Physio-Praxis mit fünf Standorten im Raum Zürich. Wir bieten Ihnen eine rundum Behandlung von Physioteherapie über Ergotherapie und Massage bis Pilates an.",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "https://www.rose-physio.ch/rose-physio-static-image.jpg",
+      },
+      { hid: "og:image:width", property: "og:image:width", content: "2121" },
+      { hid: "og:image:height", property: "og:image:height", content: "1414" },
+      {
+        hid: "og:image:alt",
+        property: "og:image:alt",
+        content:
+          "Der Patient wird mit Sorgfalt und Bewusstsein für die wichtigen Probleme behandelt.",
+      },
+      { name: "format-detection", content: "telephone=no" },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: "stylesheet", href: "https://unpkg.com/splitting/dist/splitting.css" },
-      { rel: "stylesheet", href: "https://unpkg.com/splitting/dist/splitting-cells.css" }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href: "https://unpkg.com/splitting/dist/splitting.css",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://unpkg.com/splitting/dist/splitting-cells.css",
+      },
     ],
     script: [
       // { src: "https://unpkg.com/splitting/dist/splitting.min.js" }
       // script in static folder for global JS
       {
         src: "https://www.googletagmanager.com/gtag/js?id=G-E82G26JW2S",
-        async: true
+        async: true,
       },
-      {src: "/script.js"}
-    ]
+      { src: "/script.js" },
+    ],
   },
 
   publicRuntimeConfig: {
     kirby: {
       url: process.env.KIRBY_SITE,
       username: process.env.KIRBY_USERNAME,
-      password: process.env.KIRBY_PASSWORD
-    }
+      password: process.env.KIRBY_PASSWORD,
+    },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '~/assets/css/global.scss'
-  ],
+  css: ["~/assets/css/global.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~plugins/nuxt-kirby-kql',
-    {src: '~/plugins/alles-negativ-splitting', ssr: false},
-    '~/plugins/preview.client.js'
-
+    "~plugins/nuxt-kirby-kql",
+    { src: "~/plugins/alles-negativ-splitting", ssr: false },
+    "~/plugins/preview.client.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -84,60 +126,67 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // '@nuxtjs/device',
-    '@nuxt/image',
+    "@nuxt/image",
     // '@nuxtjs/html-validator'
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-219520330-1'
-    }]
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-219520330-1",
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/i18n',
-    '@nuxtjs/moment',
-    '@nuxtjs/robots',
-    '@nuxtjs/sitemap'
+    "@nuxtjs/axios",
+    "@nuxtjs/i18n",
+    "@nuxtjs/moment",
+    "@nuxtjs/robots",
+    "@nuxtjs/sitemap",
   ],
 
   // Translation configuration
   i18n: {
-    strategy: 'prefix',
+    strategy: "prefix",
     locales: [
       {
-         code: 'de',
-         name: 'Deutsch'
+        code: "de",
+        name: "Deutsch",
       },
       {
-         code: 'en',
-         name: 'English'
-      }
+        code: "en",
+        name: "English",
+      },
     ],
-    defaultLocale: 'de',
+    defaultLocale: "de",
     vueI18n: {
-      fallbackLocale: 'de',
+      fallbackLocale: "de",
       messages: {
         de: {
-          locations: 'Standorte',
-          contact: 'Kontakt',
-          open: 'Öffnungszeiten',
-          accept: 'Oke! 👍',
-          readmore: 'mehr',
-          cookie: 'Diese Website verwendet Cookies',
-          errormessage: '404 - Seite nicht gefunden',
-          link: 'Zurück zu Home'
+          locations: "Standorte",
+          contact: "Kontakt",
+          open: "Öffnungszeiten",
+          accept: "Oke! 👍",
+          readmore: "mehr",
+          cookie: "Diese Website verwendet Cookies",
+          errormessage: "404 - Seite nicht gefunden",
+          link: "Zurück zu Home",
+          appointment: "Termin Buchen!",
+          choose: "Wählen Sie Ihren Standort",
         },
         en: {
-          locations: 'Locations',
-          contact: 'Contact',
-          open: 'Opening Hours',
-          accept: 'Oke! 👍',
-          readmore: 'read more',
-          cookie: 'This website uses cookies',
-          errormessage: '404 - Page not found',
-          link: 'back to home'
-        }
-      }
+          locations: "Locations",
+          contact: "Contact",
+          open: "Opening Hours",
+          accept: "Oke! 👍",
+          readmore: "read more",
+          cookie: "This website uses cookies",
+          errormessage: "404 - Page not found",
+          link: "back to home",
+          appointment: "Book appointment!",
+          choose: "Choose your location",
+        },
+      },
     },
   },
 
@@ -145,24 +194,21 @@ export default {
   build: {
     loaders: {
       scss: {
-        implementation: Sass
-      }
+        implementation: Sass,
+      },
     },
     extend(config, ctx) {
       // You can extend webpack config here
       config.resolve.alias["vue$"] = "vue/dist/vue.esm.js";
-    }
+    },
   },
 
   axios: {
-    proxy: false // Can be also an object with default options
+    proxy: false, // Can be also an object with default options
   },
 
   image: {
-    domains: [
-      'http://localhost:8888',
-      'http://backend.rose-physio.ch/'
-    ]
+    domains: ["http://localhost:8888", "http://backend.rose-physio.ch/"],
   },
 
   robots: {
@@ -170,6 +216,6 @@ export default {
   },
 
   sitemap: {
-    hostname: 'https://www.rose-physio.ch',
+    hostname: "https://www.rose-physio.ch",
   },
-}
+};
