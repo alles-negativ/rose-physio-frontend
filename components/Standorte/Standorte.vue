@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div name="container" class="container">
     <div v-for="element in data" :key="element.id">
         <Accordion>
              <template v-slot:title>
