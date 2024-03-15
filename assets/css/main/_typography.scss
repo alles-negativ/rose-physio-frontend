@@ -50,6 +50,25 @@ h3 {
     }
 }
 
+h4 {
+    font-family: SpaceGrotesk, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+
+    @include tablet {
+        font-size: 26px;
+    }
+
+    @include desktop {
+            font-size: 30px;
+    }
+
+    @include desktopXL {
+            font-size: 30px;
+    }
+}
+
 p, button {
     font-family: SpaceGrotesk, sans-serif;
     font-style: normal;

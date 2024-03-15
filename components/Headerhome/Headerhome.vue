@@ -6,7 +6,7 @@
       </nuxt-link>
       <!-- <img class="header__links--logo" src="/logo_c.svg" alt=""> -->
       <div class="header__links--utility">
-        <p class="text__menu">{{ title }}</p>
+        <BookingBtn />
         <LanguageInput />
       </div>  
     </div>
