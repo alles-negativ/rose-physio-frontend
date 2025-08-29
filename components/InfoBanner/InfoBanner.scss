@@ -1,0 +1,64 @@
+@use "assets/css/main/colors" as *;
+@use "assets/css/main/breakpoints" as *;
+@use "assets/css/main/main" as *;
+
+.info__banner {
+  padding: 10px 0px;
+  overflow: hidden;
+}
+
+.scrolling__container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scrolling__text {
+  display: inline-block;
+  // white-space: nowrap;
+  color: $white;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0 20px;
+  font-family: SpaceGrotesk, sans-serif;
+  font-weight: 700;
+  
+  // Create multiple copies of the text using CSS content
+  &::before {
+    content: attr(data-text) " ";
+    display: inline-block;
+    // white-space: nowrap;
+    padding: 0 20px;
+  }
+  
+  &::after {
+    content: attr(data-text) " ";
+    display: inline-block;
+    // white-space: nowrap;
+    padding: 0 20px;
+  }
+  
+  // Create a seamless infinite loop
+  animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+// Ensure the animation works smoothly on all devices
+@media (prefers-reduced-motion: reduce) {
+  .scrolling__text {
+    animation-duration: 40s;
+  }
+}
+
+p { 
+  color: $white;
+}

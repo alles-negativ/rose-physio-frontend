@@ -1,6 +1,7 @@
 <template>
 <div class="header__wrapper">
   <div class="header">
+    <InfoBanner />
     <div class="header__links">
       <nuxt-link :to="localePath('/')">
         <img class="header__links--logo" src="/logo_c.svg" alt="">
