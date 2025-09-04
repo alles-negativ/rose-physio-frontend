@@ -1,24 +1,15 @@
 <template>
     <div class="container"> 
-        <ul v-for="columns in sortedArticles" :key="columns.id" class="container__columns">
-            <li v-for="article in columns" :key="article.id" class="content">
-                <nuxt-img :src="article.images[0].url" :alt="article.images[0].alt" />
-                <h3>{{ article.title }}</h3>
-                <!-- <p class="text__big">{{ $moment(article.date).format("DD.MM.YYYY") }}</p> -->
-                <div class="text" v-html="article.contenttext"></div>
-            </li>
-        </ul>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.2269443723594!2d8.533985812469675!3d47.36670187104853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479009ff64a00161%3A0x67e3626ba84d1280!2sBeethovenstrasse%2024%2C%208002%20Z%C3%BCrich!5e1!3m2!1sen!2sch!4v1756994213949!5m2!1sen!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Articles',
+    name: 'Location',
 
     data() {
         return {
-            articles: [],
-            numberOfColumns: 1
         }
     },
     async fetch() {
@@ -84,5 +75,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @use "Articles";
+    @use "Location";
 </style>

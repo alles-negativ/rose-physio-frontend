@@ -16,8 +16,8 @@ export default {
         return {
             bannerText: '',
             bannerTexts: {
-                de: 'Wir ziehen um. 🎉 Ab dem 29. September sind wir neu an der Bethoveenstrasse 24 zu finden.',
-                en: 'We are moving. 🎉 From September 29th, you can find us at the new location on Bethoveenstrasse 24.'
+                de: 'Wir ziehen um. 🎉 Ab dem 29. September sind wir neu an der Beethovenstrasse 24 zu finden.',
+                en: 'We are moving. 🎉 From September 29th, you can find us at the new location on Beethovenstrasse 24.'
             }
         }
     },

@@ -5,6 +5,7 @@
     <Navigation />
     <div class="wrapper">
       <Nuxt />
+      <Location />
     </div>
     <Footer :key="key" />
   </div>
